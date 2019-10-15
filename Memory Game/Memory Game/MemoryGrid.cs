@@ -86,7 +86,7 @@ namespace Memory_Game
             }
         }
 
-        public List<Card> getCardsAsList()
+        public List<Card> GetCardsAsList()
         {
             return cards;
         }
