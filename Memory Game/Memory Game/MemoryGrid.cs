@@ -10,7 +10,6 @@ namespace Memory_Game
 {
     class MemoryGrid
     {
-
         private Grid grid;
         private int cols;
         private int rows;
@@ -23,7 +22,7 @@ namespace Memory_Game
 
         public MemoryGrid(Grid grid, int cols, int rows, Difficulty difficulty, int amountOfCards)
         {
-            game = Game.getGame();
+            game = Game.GetGame();
             cards = new List<Card>();
 
             this.grid = grid;
@@ -70,7 +69,7 @@ namespace Memory_Game
         private void CardClick(object sender, MouseButtonEventArgs e)
         {
             Card card = (Card)sender;
-            card.flip();
+            card.Flip();
         }
 
         private void InitializeGameGrid(int cols, int rows)
@@ -86,7 +85,7 @@ namespace Memory_Game
             }
         }
 
-        public List<Card> getCardsAsList()
+        public List<Card> GetCardsAsList()
         {
             return cards;
         }

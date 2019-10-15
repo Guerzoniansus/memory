@@ -10,7 +10,7 @@ namespace Memory_Game
     class Card : Image
     {
 
-        public ImageSource image
+        public ImageSource Image
         {
             get { return this.Source; }
             set { this.Source = value; }
@@ -30,33 +30,33 @@ namespace Memory_Game
             this.id = id;
             this.backImage = backImage;
             this.frontImage = frontImage;
-            image = backImage;
+            Image = backImage;
 
             this.flipped = false;
             this.found = false;
         }
 
-        public bool isFlipped()
+        public bool IsFlipped()
         {
             return flipped;
         }
 
-        public bool isFound()
+        public bool IsFound()
         {
             return found;
         }
 
-        public void setFoundTrue()
+        public void SetFoundTrue()
         {
             found = true;
         }
 
 
-        public void flip()
+        public void Flip()
         {
             // if (image == frontImage) image = backImage, ELSE image = frontImage
             // if (flipped == false) flipped = true, ELSE flipped = false;
-            image = (image == frontImage) ? backImage : frontImage;
+            Image = (Image == frontImage) ? backImage : frontImage;
             flipped = (flipped == false) ? true : false;
         }
 

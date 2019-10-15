@@ -44,63 +44,63 @@ namespace Memory_Game
             this.amountOfCards = 16;
         }
 
-        public static void setGame(Game game)
+        public static void SetGame(Game game)
         {
             Game.game = game;
         }
 
-        public static Game getGame()
+        public static Game GetGame()
         {
             return Game.game;
         }
 
-        public void setGrid(MemoryGrid grid)
+        public void SetGrid(MemoryGrid grid)
         {
             this.memoryGrid = grid;
         }
 
-        public void setPlayers(string player1, string player2)
+        public void SetPlayers(string player1, string player2)
         {
             this.player1 = player1;
             this.player2 = player2;
         }
 
-        public double getScore(string player)
+        public double GetScore(string player)
         {
             return scores[player];
         }
 
-        public string getTurn()
+        public string GetTurn()
         {
             return turn;
         }
 
-        public void setTurn(string playerName)
+        public void SetTurn(string playerName)
         {
             turn = playerName;
         }
 
-        public void setScore(string player, double newScore)
+        public void SetScore(string player, double newScore)
         {
             scores[player] = newScore;
         }
 
-        public void setMultiplayer(bool isTheGameMultiplayer)
+        public void SetMultiplayer(bool isTheGameMultiplayer)
         {
             isMultiplayer = isTheGameMultiplayer;
         }
 
-        public void setDifficulty(Difficulty difficulty)
+        public void SetDifficulty(Difficulty difficulty)
         {
             this.difficulty = difficulty;
         }
 
-        public Difficulty getDifficulty()
+        public Difficulty GetDifficulty()
         {
             return difficulty;
         }
 
-        public int getTimeLeft()
+        public int GetTimeLeft()
         {
             return time;
         }
