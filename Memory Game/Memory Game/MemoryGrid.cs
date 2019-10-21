@@ -37,11 +37,6 @@ namespace Memory_Game
             AddImages();
         }
 
-        public void Reset()
-        {
-            cards = new List<Card>();
-        }
-
         /// <summary>
         /// Deze is speciaal voor wanneer het spel geladen wordt en je al van te voren een bestaande lijst met kaarten hebt (van je save file)
         /// </summary>
@@ -56,6 +51,11 @@ namespace Memory_Game
             this.difficulty = difficulty;
             this.amountOfCards = amountOfCards;
             LoadImages();
+        }
+        public void Reset()
+        {
+            cards = new List<Card>();
+            AddImages();
         }
 
         /// <summary>

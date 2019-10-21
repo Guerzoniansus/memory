@@ -76,6 +76,7 @@ namespace Memory_Game
             scores = new Dictionary<string, double>();
             scores.Add(player1, 0);
             scores.Add(player2, 0);
+            memoryGrid.Reset();
         }
 
         public void SetGrid(MemoryGrid grid)

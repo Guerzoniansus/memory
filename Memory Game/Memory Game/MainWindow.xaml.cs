@@ -54,7 +54,7 @@ namespace Memory_Game
         }
         private void ButtonClickReset(object sender, RoutedEventArgs e)
         {
-
+            game.Reset();
         }
 
         private void ButtonClickSave(object sender, RoutedEventArgs e)
