@@ -41,7 +41,7 @@ namespace Memory_Game
             windowGrid = GameGrid;
 
         }
-        
+
         /// <summary>
         /// Get the grid of the window
         /// </summary>
@@ -49,6 +49,26 @@ namespace Memory_Game
         public Grid getWindowGrid()
         {
             return windowGrid;
+        }
+
+        private void ButtonClickMenu(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void ButtonClickReset(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonClickSave(object sender, RoutedEventArgs e)
+        {
+            SaveUtils.SaveGame();
+        }
+
+        private void ButtonClickLoad(object sender, RoutedEventArgs e)
+        {
+            SaveUtils.LoadGame();
+
         }
     }
 }

@@ -29,3 +29,5 @@ C:\Users\warfu\Documents\GitHub\memory\Memory Game\Memory Game\obj\Debug\Memory 
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\bin\Debug\YamlDotNet.dll
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\bin\Debug\YamlDotNet.xml
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\Memory Game.csproj.CopyComplete
+C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\bin\Debug\Memory Game.exe.config
+C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\App.baml

@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Memory_Game"
         mc:Ignorable="d"
-        Title="MainWindow">
-    <Grid x:Name="GameGrid" Margin="0,128.428,0,0">
-        
+        Title="MainWindow"
+        Background="#00FFE1">
+    <Grid>
+        <Button 
+            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
+            x:Name="Menu"
+            Click="ButtonClickMenu"
+            Content="Menu"
+            Background="White" RenderTransformOrigin="0.98,0.575" Margin="953.828,-87.25,-250,549.665"
+         />
+        <Button 
+            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
+            x:Name="Reset"
+            Click="ButtonClickReset"
+            Content="Reset"
+            Background="White" RenderTransformOrigin="0.98,0.575" Margin="833.072,-87.25,-150,549.665"
+         />
+        <Button 
+            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
+            x:Name="Save"
+            Click="ButtonClickSave"
+            Content="Save"
+            Background="White" RenderTransformOrigin="0.98,0.575" Margin="701.613,-87.25,-50,549.665"
+         />
+        <Button 
+            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
+            x:Name="Load"
+            Click="ButtonClickLoad"
+            Content="Load"
+            Background="White" RenderTransformOrigin="0.98,0.575" Margin="560.269,-87.25,50,549.665"
+         />
+        <Grid x:Name="GameGrid" Margin="0,128.428,0,0"/>
     </Grid>
+
 </Window>

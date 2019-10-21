@@ -62,9 +62,11 @@ namespace Memory_Game
 
             var rootMappingNode = (YamlMappingNode)stream.Documents[0].RootNode;
 
+            // Voeg de game data en grid data toe aan de save file
             SaveGameData(rootMappingNode, game);
             SaveGridData(rootMappingNode, grid);
 
+            // Sla het bestand op
             using (TextWriter writer = File.CreateText("memory.yaml")) { 
                 stream.Save(writer, false);
                 writer.Close();
@@ -120,8 +122,21 @@ namespace Memory_Game
             // Ik heb dit gebruikt voor deze code https://dotnetfiddle.net/rrR2Bb wat onderdeel is van https://aaubry.net/pages/yamldotnet.html
             // Vraag me niet hoe het werkt, ik weet het ook niet zelfs al ben ik degene die het maakte, het was zo moeilijk en zo veel trial and error en random dingen proberen dat ik ervan wou huilen
 
-            // Maak een nieuwe yaml object
+            // Check if a save file exists. The try catch is nodig omdat het programma anders crasht als er geen savefile bestaat
+            try
+            {
+              File.OpenText("memory.yaml");
+            }
+            catch (System.IO.FileNotFoundException e)
+            {
+                Console.WriteLine("File does not exist");
+                return;
+            }
+
+            // Maak een nieuwe yaml object  
+
             var input = File.OpenText("memory.yaml");
+
             var yaml = new YamlStream();
             yaml.Load(input);
 
@@ -191,7 +206,6 @@ namespace Memory_Game
             Console.WriteLine("Amount of cards: " + amountOfCards);
             Console.WriteLine("Score player 1: " + scorePlayer1);
             Console.WriteLine("Score player 2: " + scorePlayer2);
-
         }
 
 

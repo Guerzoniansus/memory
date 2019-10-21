@@ -68,6 +68,16 @@ namespace Memory_Game
             return Game.game;
         }
 
+
+        public void Reset()
+        {
+            this.time = STARTING_TIME;
+            this.turn = player1;
+            scores = new Dictionary<string, double>();
+            scores.Add(player1, 0);
+            scores.Add(player2, 0);
+        }
+
         public void SetGrid(MemoryGrid grid)
         {
             this.memoryGrid = grid;
