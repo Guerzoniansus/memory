@@ -35,8 +35,6 @@ namespace Memory_Game
 
             InitializeGameGrid(cols, rows);
             AddImages();
-
-
         }
 
         public void Reset()

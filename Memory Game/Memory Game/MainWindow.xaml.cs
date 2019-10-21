@@ -21,32 +21,29 @@ namespace Memory_Game
     public partial class MainWindow : Window
     {
         MemoryGrid grid;
-        private Grid windowGrid;
+        private static Grid windowGrid;
 
         private const int NR_OF_COLS = 4;
         private const int NR_OF_ROWS = 4;
+
         Game game;
 
         public MainWindow()
         {
             game = new Game();
             Game.SetGame(game);
-            MainWindow window = this;
-
             InitializeComponent();
             grid = new MemoryGrid(GameGrid, NR_OF_COLS, NR_OF_ROWS, Difficulty.EASY, 16);
             game.SetGrid(grid);
-            game.SetGridWindow(window);
-
             windowGrid = GameGrid;
 
         }
 
         /// <summary>
-        /// Get the grid of the window
+        /// Get the grid of the window (aka GameGrid)
         /// </summary>
         /// <returns>GameGrid</returns>
-        public Grid getWindowGrid()
+        public static Grid getWindowGrid()
         {
             return windowGrid;
         }

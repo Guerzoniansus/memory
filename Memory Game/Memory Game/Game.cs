@@ -88,15 +88,15 @@ namespace Memory_Game
             return memoryGrid;
         }
 
-        public void SetGridWindow(MainWindow window)
-        {
-            this.gridWindow = window;
-        }
+        //public void SetGridWindow(MainWindow window)
+        //{
+        //    this.gridWindow = window;
+        //}
 
-        public MainWindow GetGridWindow()
-        {
-            return gridWindow;
-        }
+        //public MainWindow GetGridWindow()
+        //{
+        //    return gridWindow;
+        //}
 
         public void SetPlayers(string player1, string player2)
         {

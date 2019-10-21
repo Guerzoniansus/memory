@@ -165,7 +165,6 @@ namespace Memory_Game
             game.SetAmountOfCards(amountOfCards);
             game.SetScore(player1, scorePlayer1);
             game.SetScore(player2, scorePlayer2);
-            game.SetGridWindow(Game.GetGame().GetGridWindow());
 
             // Laad de grid en kaart data
             var cardIds = (YamlMappingNode)mapping.Children[new YamlScalarNode("cards")];
@@ -186,7 +185,7 @@ namespace Memory_Game
             }
 
 
-            MemoryGrid grid = new MemoryGrid(Game.GetGame().GetGridWindow().getWindowGrid(), 4, 4, difficulty, amountOfCards, cards);
+            MemoryGrid grid = new MemoryGrid(MainWindow.getWindowGrid(), 4, 4, difficulty, amountOfCards, cards);
             game.SetGrid(grid);
 
             // Zet de game als de nieuwe game
