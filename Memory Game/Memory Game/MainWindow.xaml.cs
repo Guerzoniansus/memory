@@ -20,11 +20,6 @@ namespace Memory_Game
     /// </summary>
     public partial class MainWindow : Window
     {
-        MemoryGrid grid;
-        private static Grid windowGrid;
-
-        private const int NR_OF_COLS = 4;
-        private const int NR_OF_ROWS = 4;
 
         Game game;
 
@@ -33,38 +28,28 @@ namespace Memory_Game
             game = new Game();
             Game.SetGame(game);
             InitializeComponent();
-            grid = new MemoryGrid(GameGrid, NR_OF_COLS, NR_OF_ROWS, Difficulty.EASY, 16);
-            game.SetGrid(grid);
-            windowGrid = GameGrid;
 
         }
 
-        /// <summary>
-        /// Get the grid of the window (aka GameGrid)
-        /// </summary>
-        /// <returns>GameGrid</returns>
-        public static Grid getWindowGrid()
+        private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            return windowGrid;
+            // quit knop die ervoor zorgt dat de app afsluit
+            Application.Current.Shutdown();
         }
 
-        private void ButtonClickMenu(object sender, RoutedEventArgs e)
+        private void Highscore_Click(object sender, RoutedEventArgs e)
         {
 
         }
-        private void ButtonClickReset(object sender, RoutedEventArgs e)
-        {
-            game.Reset();
-        }
 
-        private void ButtonClickSave(object sender, RoutedEventArgs e)
+        private void NewGame_Click(object sender, RoutedEventArgs e)
         {
-            SaveUtils.SaveGame();
-        }
+            // hier moet code komen dat die naar window1 gaat
+            NewGame NewGame = new NewGame();
 
-        private void ButtonClickLoad(object sender, RoutedEventArgs e)
-        {
-            SaveUtils.LoadGame();
+            NewGame.Show();
+
+            this.Close();
 
         }
     }

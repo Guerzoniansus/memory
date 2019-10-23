@@ -185,7 +185,7 @@ namespace Memory_Game
             }
 
 
-            MemoryGrid grid = new MemoryGrid(MainWindow.getWindowGrid(), 4, 4, difficulty, amountOfCards, cards);
+            MemoryGrid grid = new MemoryGrid(GameWindow.getWindowGrid(), 4, 4, difficulty, amountOfCards, cards);
             game.SetGrid(grid);
 
             // Zet de game als de nieuwe game

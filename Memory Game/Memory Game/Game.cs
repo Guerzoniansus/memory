@@ -16,8 +16,6 @@ namespace Memory_Game
 
         // TODO wat constanten voor de score formules
 
-        // TODO getters and setters maken voor alles
-
         // TODO kiezen welke van de twee we gebruiken:
         private string player1, player2;
         private List<string> players;

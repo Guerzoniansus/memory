@@ -1,0 +1,44 @@
+﻿<Window x:Class="Memory_Game.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Memory_Game"
+        mc:Ignorable="d"
+        Title="GameWindow"
+        Background="#00FFE1"
+        WindowStyle="None"
+        WindowState="Maximized">
+    <Grid>
+        <Button 
+            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
+            x:Name="Menu"
+            Click="ButtonClickMenu"
+            Content="Menu"
+            Background="White" RenderTransformOrigin="0.98,0.575" Margin="953.828,-400,-250,549.665"
+         />
+        <Button 
+            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
+            x:Name="Reset"
+            Click="ButtonClickReset"
+            Content="Reset"
+            Background="White" RenderTransformOrigin="0.98,0.575" Margin="833.072,-400,-150,549.665"
+         />
+        <Button 
+            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
+            x:Name="Save"
+            Click="ButtonClickSave"
+            Content="Save"
+            Background="White" RenderTransformOrigin="0.98,0.575" Margin="701.613,-400,-50,549.665"
+         />
+        <Button 
+            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
+            x:Name="Load"
+            Click="ButtonClickLoad"
+            Content="Load"
+            Background="White" RenderTransformOrigin="0.98,0.575" Margin="560.269,-400,50,549.665"
+         />
+        <Grid x:Name="GameGrid" Margin="0,128.428,0,0"/>
+    </Grid>
+
+</Window>
