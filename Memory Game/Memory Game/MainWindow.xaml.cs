@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Memory_Game
 {
     /// <summary>
@@ -19,19 +20,51 @@ namespace Memory_Game
     /// </summary>
     public partial class MainWindow : Window
     {
+        MemoryGrid grid;
+        private static Grid windowGrid;
+
         private const int NR_OF_COLS = 4;
         private const int NR_OF_ROWS = 4;
-        MemoryGrid grid;
+
         Game game;
 
         public MainWindow()
         {
             game = new Game();
-            Game.setGame(game);
-
+            Game.SetGame(game);
             InitializeComponent();
             grid = new MemoryGrid(GameGrid, NR_OF_COLS, NR_OF_ROWS, Difficulty.EASY, 16);
-            game.setGrid(grid);
+            game.SetGrid(grid);
+            windowGrid = GameGrid;
+
+        }
+
+        /// <summary>
+        /// Get the grid of the window (aka GameGrid)
+        /// </summary>
+        /// <returns>GameGrid</returns>
+        public static Grid getWindowGrid()
+        {
+            return windowGrid;
+        }
+
+        private void ButtonClickMenu(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void ButtonClickReset(object sender, RoutedEventArgs e)
+        {
+            game.Reset();
+        }
+
+        private void ButtonClickSave(object sender, RoutedEventArgs e)
+        {
+            SaveUtils.SaveGame();
+        }
+
+        private void ButtonClickLoad(object sender, RoutedEventArgs e)
+        {
+            SaveUtils.LoadGame();
 
         }
     }

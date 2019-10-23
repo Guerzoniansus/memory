@@ -21,6 +21,7 @@ namespace Memory_Game
 
         Game game;
 
+        
         public MemoryGrid(Grid grid, int cols, int rows, Difficulty difficulty, int amountOfCards)
         {
             game = Game.GetGame();
@@ -34,6 +35,53 @@ namespace Memory_Game
 
             InitializeGameGrid(cols, rows);
             AddImages();
+        }
+
+        /// <summary>
+        /// Deze is speciaal voor wanneer het spel geladen wordt en je al van te voren een bestaande lijst met kaarten hebt (van je save file)
+        /// </summary>
+        public MemoryGrid(Grid grid, int cols, int rows, Difficulty difficulty, int amountOfCards, List<Card> cards)
+        {
+            game = Game.GetGame();
+            this.cards = cards;
+
+            this.grid = grid;
+            this.cols = cols;
+            this.rows = rows;
+            this.difficulty = difficulty;
+            this.amountOfCards = amountOfCards;
+            LoadImages();
+        }
+        public void Reset()
+        {
+            cards = new List<Card>();
+            AddImages();
+        }
+
+        /// <summary>
+        /// Deze is speciaal voor wanneer kaarten geladen worden van een save file
+        /// </summary>
+        private void LoadImages()
+        {
+            int i = 0;
+
+            // Verwijder de oude kaarten
+            grid.Children.Clear();
+
+            for (int row = 0; row < rows; row++)
+            {
+                for (int col = 0; col < cols; col++)
+                {
+                    if (cards[i] == null) continue;
+
+                    Grid.SetColumn(cards[i], col);
+                    Grid.SetRow(cards[i], row);
+                    cards[i].MouseDown += new MouseButtonEventHandler(CardClick);
+                    grid.Children.Add(cards[i]);
+
+                    i++;
+                }
+            }
         }
 
         private void AddImages()
@@ -52,7 +100,7 @@ namespace Memory_Game
                     // ImageSource frontImage =
 
                     // Replace de line hieronder met: Card card = new Card(cardId, frontImage, backImage) zodra je de TODOS hierboven hebt gedaan;
-                    Card card = new Card(cardId, new BitmapImage(new Uri("frontTestImage.png", UriKind.Relative)), new BitmapImage((new Uri("backTestImage.png", UriKind.Relative))));
+                    Card card = new Card(cardId, "frontTestImage.png", "backTestImage.png");
 
                     card.MouseDown += new MouseButtonEventHandler(CardClick);
 
@@ -71,6 +119,24 @@ namespace Memory_Game
         {
             Card card = (Card)sender;
             card.Flip();
+
+            // Ik gebruikte de code hieronder om saven en laden te testen. 
+            // De 2e kaart (boven aan) savet, de derde kaart (boven aan) laadt als je op ze klikt
+
+            //if (card.getId() == 1)
+            //{
+            //    SaveUtils.SaveGame();
+            //}
+
+            //else if (card.getId() == 2)
+            //{
+            //    SaveUtils.LoadGame();
+            //}
+
+            //else
+            //{
+            //    card.Flip();
+            //}
         }
 
         private void InitializeGameGrid(int cols, int rows)
