@@ -124,7 +124,7 @@
             Style="{StaticResource RoundButtonTemplate}"
             BorderBrush="Black"
             x:Name="Hoofdmenu"
-            Content="Hoofdmenu"
+            Content="Main Menu"
             FontSize="24"
             BorderThickness="65"
                   MaxHeight="60px"
