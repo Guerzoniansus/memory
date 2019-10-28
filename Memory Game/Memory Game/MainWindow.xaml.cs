@@ -47,9 +47,12 @@ namespace Memory_Game
         private void NewGame_Click(object sender, RoutedEventArgs e)
         {
             // hier moet code komen dat die naar window1 gaat
-            NewGame NewGame = new NewGame();
+            //NewGame NewGame = new NewGame();
 
-            NewGame.Show();
+            //NewGame.Show();
+
+            DifficultyWindow dWindow = new DifficultyWindow();
+            dWindow.Show();
 
             this.Close();
 

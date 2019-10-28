@@ -3,8 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:difficulty"
+        xmlns:local="clr-namespace:Memory_Game"
         mc:Ignorable="d"
+        WindowStyle="None"
+        WindowState="Maximized"
         Title="Difficulty" Height="450" Width="800">
 
     <Viewbox>
@@ -38,7 +40,7 @@
             <Button x:Name="Closebutton" Background="White" Content="Return" Click="Closebutton_Click" Margin="278,183,50,17" Grid.Row="2" />
 
             <Label Content="Start Game" Background="White" BorderBrush="Black" BorderThickness="2" FontSize="50" Grid.Column="2" Margin="82,10,82,127"/>
-            <Label TextOptions.TextFormattingMode="Display" FontSize="40" Content="Choose Difficulty!" Grid.Column="2" Margin="51,158,51,11"/>
+            <Label FontSize="40" Content="Choose Difficulty!" Grid.Column="2" Margin="51,158,51,11"/>
 
 
             <Image Source="/img/2.jpg" Grid.Column="3" Margin="50,114,50,137" Grid.Row="1" Grid.RowSpan="2">
@@ -49,7 +51,7 @@
                 </Image.Effect>
             </Image>
 
-            <Image Source="/img/4.jpg" Margin="50,115,49,137" Grid.Row="1" Grid.RowSpan="2">
+            <Image Source="/img/4.jpg" Width="175px" Height="175px" Margin="50,115,49,137" Grid.Row="1" Grid.RowSpan="2">
                 <Image.Effect>
                     <DropShadowEffect>
 

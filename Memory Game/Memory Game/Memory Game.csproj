@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DifficultyWindow.xaml.cs">
+      <DependentUpon>DifficultyWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NewGame.xaml.cs">
       <DependentUpon>NewGame.xaml</DependentUpon>
     </Compile>
@@ -62,6 +65,10 @@
     <Compile Include="GameWindow.xaml.cs">
       <DependentUpon>GameWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="DifficultyWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -106,6 +113,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="img\desktop.ini" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,6 +125,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="frontTestImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\2.jpg" />
+    <Resource Include="img\2.png" />
+    <Resource Include="img\3.jpg" />
+    <Resource Include="img\3.png" />
+    <Resource Include="img\4.jpg" />
+    <Resource Include="img\4.png" />
+    <Resource Include="img\k.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
