@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Release\
 Memory_Game
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\App.xaml
 3-2011516809
 
@@ -16,5 +16,5 @@ C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Mem
 11646239635
 MainWindow.xaml;GameWindow.xaml;NewGame.xaml;
 
-False
+True
 
