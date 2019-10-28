@@ -19,7 +19,7 @@ namespace Memory_Game
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     /// 
-    /// test.5
+    /// test.6
     public partial class MainWindow : Window
     {
 
