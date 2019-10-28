@@ -18,9 +18,9 @@ namespace difficulty
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DifficultyWindow : Window
     {
-        public MainWindow()
+        public DifficultyWindow()
         {
 
         }
