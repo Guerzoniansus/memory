@@ -21,22 +21,29 @@ namespace Memory_Game
         public NewGame()
         {
             InitializeComponent();
+            button.Name = "ProceedBtn";
+            button.Click += ProceedBtn_Click;
+        }
+        Button button = new Button();
+
+        private void ProceedBtn_Click(Object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Goed getypt, Leuke namen!");
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BackBtn_Click(Object sender, RoutedEventArgs e)
         {
 
-            MainWindow mainWindow = new MainWindow();
-
-            mainWindow.Show();
-            this.Close();
         }
-
-        private void Play_Click(object sender, RoutedEventArgs e)
+        private void SpBtn_Click(Object sender, RoutedEventArgs e)
         {
-            GameWindow gameWindow = new GameWindow();
-            gameWindow.Show();
-            this.Close();
+
         }
+        private void MpBtn_Click(Object sender, RoutedEventArgs e)
+        {
+
+        }
+       
+
     }
 }
