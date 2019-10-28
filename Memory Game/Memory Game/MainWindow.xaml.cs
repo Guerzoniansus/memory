@@ -56,5 +56,16 @@ namespace Memory_Game
             this.Close();
 
         }
+
+        private void LoadGameClick(object sender, RoutedEventArgs e)
+        {
+         
+            GameWindow GameWindow = new GameWindow();
+            SaveUtils.LoadGame();
+            GameWindow.Show();
+           
+            this.Hide();
+
+        }
     }
 }
