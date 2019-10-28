@@ -30,7 +30,9 @@ namespace Memory_Game
         }
         public void Button_Click1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Game starting in some time idk meuk dit");
+            GameWindow gameWindow = new GameWindow();
+            gameWindow.Show();
+            this.Close();
         }
 
         private void Closebutton_Click(object sender, RoutedEventArgs e)

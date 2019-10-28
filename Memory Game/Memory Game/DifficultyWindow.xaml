@@ -51,7 +51,7 @@
                 </Image.Effect>
             </Image>
 
-            <Image Source="/img/4.jpg" Width="175px" Height="175px" Margin="50,115,49,137" Grid.Row="1" Grid.RowSpan="2">
+            <Image Source="/img/4.png" Width="175" Height="175" Stretch="Fill" Margin="50,115,49,137" Grid.Row="1" Grid.RowSpan="2">
                 <Image.Effect>
                     <DropShadowEffect>
 
