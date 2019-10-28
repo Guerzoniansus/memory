@@ -18,32 +18,58 @@ namespace Memory_Game
     /// </summary>
     public partial class NewGame : Window
     {
+        
+
         public NewGame()
         {
             InitializeComponent();
-            button.Name = "ProceedBtn";
-            button.Click += ProceedBtn_Click;
+         
         }
-        Button button = new Button();
-
+        string player1 = P1Input.Text;
+        string player2 = P2Input.Text;
+       
+        private void SpBtn_Click(Object sender, RoutedEventArgs e)
+        {
+           
+            P2Input.Visibility = Visibility.Hidden;
+            P2Text.Visibility = Visibility.Hidden;
+            Game.GetGame().SetMultiplayer(false);
+        }
+        private void MpBtn_Click(Object sender, RoutedEventArgs e)
+        {
+            P2Input.Visibility = Visibility.Visible;
+            P2Text.Visibility = Visibility.Visible;
+            Game.GetGame().SetMultiplayer(true);
+            
+        }
+        
         private void ProceedBtn_Click(Object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Goed getypt, Leuke namen!");
+           Game.GetGame().SetPlayers(player1, player2);
+            Game.GetGame().SetAmountOfCards(CardAmount);
+
+
+            
+           GameWindow gameWindow = new GameWindow();
+            gameWindow.Show();
+            this.Close();
         }
 
         private void BackBtn_Click(Object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow = new MainWindow();
 
-        }
-        private void SpBtn_Click(Object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void MpBtn_Click(Object sender, RoutedEventArgs e)
-        {
+            mainWindow.Show();
+            this.Close();
 
         }
        
+       
+       
+           
+
+
+
 
     }
 }

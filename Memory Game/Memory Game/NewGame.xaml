@@ -49,6 +49,7 @@
             Content="Single Player"
             Width="100" Height="50"
             Background="White"
+            Click="SpBtn_Click"
                     />
         <!--Multiplayer Button-->
         <Button
@@ -58,6 +59,7 @@
             Content="Multiplayer"
             Width="100" Height="50"
             Background="White"
+            Click="MpBtn_Click"
                     />
       </Grid>
 
@@ -68,6 +70,7 @@
           Margin="0 10"
           FontFamily="Comic Sans MS"
           HorizontalAlignment="Center"
+          x:Name="P1Text"
              />
 
       <!--Player 1 name input box-->
@@ -76,7 +79,7 @@
           Margin="0 5 0 0"
           HorizontalAlignment="Center"
           Width="200"
-          Name="Player1Input"
+          x:Name="P1Input"
              />
       <!--Player 2 text-->
       <TextBlock
@@ -85,6 +88,7 @@
           Margin="0 10"
           FontFamily="Comic Sans MS"
           HorizontalAlignment="Center"
+          x:Name="P2Text"
                 />
 
       <!--Player 2 name input box-->
@@ -93,7 +97,7 @@
           Margin="0 0 0 10"
           HorizontalAlignment="Center"
           Width="200"
-          Name="Player2Input"
+          x:Name="P2Input"
                 
              />
       <!--Number of cards-->
@@ -104,11 +108,12 @@
                 />
 
       <!--Number of cards dropdown-->
-      <ComboBox Width="50" Margin="0 10 0 0" Padding="2" SelectedIndex="0">
+      <ComboBox Width="50" Margin="0 10 0 0" Padding="2" SelectedIndex="0" x:Name="CardAmount">
         <ComboBoxItem>16</ComboBoxItem>
         <ComboBoxItem>18</ComboBoxItem>
         <ComboBoxItem>20</ComboBoxItem>
         <ComboBoxItem>22</ComboBoxItem>
+        <ComboBoxItem>24</ComboBoxItem>
       </ComboBox>
 
 
@@ -125,9 +130,10 @@
             Grid.Column="0"
             Margin="0 0 0 0"
             Content="Return"
-            Name="BackBtn"
+            x:Name="BackBtn"
             HorizontalAlignment="Center"
             Width="100"
+            Click="BackBtn_Click"
                 />
 
         <!--Next Button-->
