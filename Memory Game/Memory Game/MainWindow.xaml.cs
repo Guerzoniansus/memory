@@ -30,21 +30,6 @@ namespace Memory_Game
             game = new Game();
             Game.SetGame(game);
             InitializeComponent();
-
-            Highscores highscores = new Highscores();
-
-            highscores.TryAddNewScore(new HighscoreData("frank", 400, Difficulty.MEDIUM, false));
-            highscores.TryAddNewScore(new HighscoreData("thijs", 200, Difficulty.EASY, false));
-            highscores.TryAddNewScore(new HighscoreData("bob", 600, Difficulty.HARD, false));
-            highscores.TryAddNewScore(new HighscoreData("bob", 600, Difficulty.HARD, true));
-            highscores.TryAddNewScore(new HighscoreData("bob", 700, Difficulty.HARD, false));
-            highscores.TryAddNewScore(new HighscoreData("wawgfawge", 200, Difficulty.EASY, false));
-            highscores.TryAddNewScore(new HighscoreData("AAAAAAAAAAAAAA", 500, Difficulty.HARD, false));
-            highscores.TryAddNewScore(new HighscoreData("BBBBBBBBBBBBBBBB", 656, Difficulty.HARD, false));
-            highscores.TryAddNewScore(new HighscoreData("CCCCCCCCCCCCCCC", 677, Difficulty.HARD, false));
-            highscores.TryAddNewScore(new HighscoreData("DDDDDDDDDDDDDDD", 688, Difficulty.HARD, false));
-
-            highscores.LoadScores();
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
