@@ -58,6 +58,7 @@
     <Compile Include="DifficultyWindow.xaml.cs">
       <DependentUpon>DifficultyWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Highscores.cs" />
     <Compile Include="NewGame.xaml.cs">
       <DependentUpon>NewGame.xaml</DependentUpon>
     </Compile>
