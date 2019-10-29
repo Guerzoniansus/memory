@@ -66,6 +66,7 @@ namespace Memory_Game
             Checkbox_Medium.IsChecked = false;
             Checkbox_Hard.IsChecked = false;
 
+
             difficulty = Difficulty.EASY;
         }
 
