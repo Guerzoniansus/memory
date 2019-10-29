@@ -90,8 +90,9 @@
             BorderBrush="#fff"
             x:Name="LoadGame"
             Content="Load Game"
+            Click="LoadGameClick"
                   MaxHeight="40px"
-            Background="White" Margin="0.4,0.6,0,0.8" RenderTransformOrigin="0.5,0.5" Grid.Column="3" Grid.Row="3"
+            Background="White" Margin="0.4,0.6,0,0.8" RenderTransformOrigin="0.5,0.503" Grid.Column="3" Grid.Row="3"
             >
             <Button.RenderTransform>
                 <TransformGroup>

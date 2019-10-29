@@ -29,15 +29,15 @@ namespace Memory_Game
              scorePlayer2: 0
            cards:
              0:
-             frontImageUrl: frontTestImage.png
-             backImageUrl: backTestImage.png
-             flipped: True
-             found: False
+                frontImageUrl: frontTestImage.png
+                backImageUrl: backTestImage.png
+                flipped: True
+                found: False
              1:
-             frontImageUrl: frontTestImage.png
-             backImageUrl: backTestImage.png
-             flipped: False
-             found: False
+                frontImageUrl: frontTestImage.png
+                backImageUrl: backTestImage.png
+                flipped: False
+                found: False
          * 
          */
 

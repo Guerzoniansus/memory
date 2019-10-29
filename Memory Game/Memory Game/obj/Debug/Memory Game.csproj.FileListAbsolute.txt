@@ -35,6 +35,7 @@ C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\GameWindow.baml
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\NewGame.g.cs
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\NewGame.baml
+<<<<<<< HEAD
 C:\Users\Jesse\Documents\Memorygame saveload\memory\Memory Game\Memory Game\bin\Debug\Memory Game.exe.config
 C:\Users\Jesse\Documents\Memorygame saveload\memory\Memory Game\Memory Game\bin\Debug\Memory Game.exe
 C:\Users\Jesse\Documents\Memorygame saveload\memory\Memory Game\Memory Game\bin\Debug\Memory Game.pdb
@@ -59,3 +60,27 @@ C:\Users\Jesse\Documents\Memorygame saveload\memory\Memory Game\Memory Game\obj\
 C:\Users\Jesse\Documents\Memorygame saveload\memory\Memory Game\Memory Game\obj\Debug\Memory Game.pdb
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\DifficultyWindow.g.cs
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\DifficultyWindow.baml
+=======
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\bin\Debug\Memory Game.exe.config
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\bin\Debug\Memory Game.exe
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\bin\Debug\Memory Game.pdb
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\bin\Debug\YamlDotNet.dll
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\bin\Debug\YamlDotNet.xml
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Memory Game.csprojAssemblyReference.cache
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\MainWindow.g.cs
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\GameWindow.g.cs
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\NewGame.g.cs
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\App.g.cs
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Memory Game_MarkupCompile.cache
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Memory Game_MarkupCompile.lref
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\App.baml
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\MainWindow.baml
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\GameWindow.baml
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\NewGame.baml
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Memory Game.g.resources
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Memory_Game.Properties.Resources.resources
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Memory Game.csproj.GenerateResource.cache
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Memory Game.csproj.CopyComplete
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Memory Game.exe
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Memory Game.pdb
+>>>>>>> origin/Frank
