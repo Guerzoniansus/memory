@@ -4,29 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
-C:\Users\Jesse\Documents\Memorygame saveload\memory\Memory Game\Memory Game\obj\Release\
-=======
-C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Release\
->>>>>>> origin/Frank
+C:\Users\warfu\Documents\GitHub\memory\Memory Game\Memory Game\obj\Release\
 Memory_Game
 none
 false
 TRACE
-<<<<<<< HEAD
-C:\Users\Jesse\Documents\Memorygame saveload\memory\Memory Game\Memory Game\App.xaml
-3-2011516809
+C:\Users\warfu\Documents\GitHub\memory\Memory Game\Memory Game\App.xaml
+4-1186599343
 
-121474618123
-11-1012999563
-=======
-C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\App.xaml
-3-2011516809
-
-121474618123
-11646239635
->>>>>>> origin/Frank
-MainWindow.xaml;GameWindow.xaml;NewGame.xaml;
+141417829134
+121592829905
+DifficultyWindow.xaml;MainWindow.xaml;GameWindow.xaml;NewGame.xaml;
 
 True
 
