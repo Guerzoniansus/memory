@@ -59,3 +59,5 @@ C:\Users\Jesse\Documents\Memorygame saveload\memory\Memory Game\Memory Game\obj\
 C:\Users\Jesse\Documents\Memorygame saveload\memory\Memory Game\Memory Game\obj\Debug\Memory Game.pdb
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\DifficultyWindow.g.cs
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\DifficultyWindow.baml
+C:\Users\Jesse\Documents\Memorygame saveload\memory\Memory Game\Memory Game\obj\Debug\DifficultyWindow.g.cs
+C:\Users\Jesse\Documents\Memorygame saveload\memory\Memory Game\Memory Game\obj\Debug\DifficultyWindow.baml
