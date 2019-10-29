@@ -38,7 +38,7 @@ namespace Memory_Game
 
         ~Highscores()
         {
-            //SaveScores();
+            SaveScores();
         }
 
         public void SaveScores()
