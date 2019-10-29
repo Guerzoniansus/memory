@@ -1,0 +1,38 @@
+﻿<Window x:Class="Memory_Game.QuitConfirm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Memory_Game"
+        mc:Ignorable="d"
+         WindowStyle="None"
+        Title="QuitConfirm" Height="300" Width="500"
+        AllowsTransparency="True"
+        Background="{x:Null}"
+        WindowStartupLocation="CenterScreen"
+        >
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard>
+                <Storyboard FillBehavior="HoldEnd" AutoReverse="False">
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.3"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Grid>
+        <Border BorderThickness="4" Background="#00FFE1" CornerRadius="20" Grid.RowSpan="2" BorderBrush="#FF707070">
+ 
+        </Border>
+        <Button
+                Style="{StaticResource RoundButtonTemplate}"
+                Content="Quit" Margin="155.2,48,155,196.4" Click="Confirm"
+            />
+        <Button
+            Style="{StaticResource RoundButtonTemplate}"
+            Content="Return" Margin="155.2,195,155,49.4" Click="Return"
+            />
+    </Grid>
+</Window>

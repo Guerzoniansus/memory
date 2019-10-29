@@ -37,8 +37,14 @@ namespace Memory_Game
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            // quit knop die ervoor zorgt dat de app afsluit
-            Application.Current.Shutdown();
+
+            QuitConfirm QuitConfirm = new QuitConfirm();
+
+            QuitConfirm.Show();
+            //if (MessageBox.Show("Do you want to exit?", "Confirm", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            //{
+            //    Application.Current.Shutdown();
+            //}
         }
 
         private void Highscore_Click(object sender, RoutedEventArgs e)

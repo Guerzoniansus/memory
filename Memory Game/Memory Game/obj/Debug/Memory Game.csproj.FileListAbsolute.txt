@@ -61,3 +61,5 @@ C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Mem
 C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Rules.baml
 C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Highscores.g.cs
 C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Highscores.baml
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\QuitConfirm.g.cs
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\QuitConfirm.baml
