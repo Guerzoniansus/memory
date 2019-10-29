@@ -8,12 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/2.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/2.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/3.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/3.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/4.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/4.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/k.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("highscores.yaml")]
 
 

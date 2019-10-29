@@ -62,7 +62,7 @@ namespace Memory_Game
 
             var rootMappingNode = (YamlMappingNode)stream.Documents[0].RootNode;
 
-            // Voeg de game data en grid data toe aan de save file
+            // Voeg de game data en grid data toe aan de save file, opgesplitst in 2 methoden om het overzichtelijker te maken
             SaveGameData(rootMappingNode, game);
             SaveGridData(rootMappingNode, grid);
 
@@ -72,8 +72,9 @@ namespace Memory_Game
                 writer.Close();
             }
 
-
         }
+
+
         private static void SaveGameData(YamlMappingNode rootMappingNode, Game game)
         {
             // Voeg alle game data toe aan rootMappingNode in de yaml file
@@ -125,7 +126,8 @@ namespace Memory_Game
             // Check if a save file exists. The try catch is nodig omdat het programma anders crasht als er geen savefile bestaat
             try
             {
-              File.OpenText("memory.yaml");
+              var testinput = File.OpenText("memory.yaml");
+              testinput.Close();
             }
             catch (System.IO.FileNotFoundException e)
             {

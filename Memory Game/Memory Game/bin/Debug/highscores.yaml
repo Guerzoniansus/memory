@@ -1,0 +1,14 @@
+version: 1
+singleplayer:
+  0: bob-700-HARD
+  1: DDDDDDDDDDDDDDD-688-HARD
+  2: CCCCCCCCCCCCCCC-677-HARD
+  3: BBBBBBBBBBBBBBBB-656-HARD
+  4: bob-600-HARD
+multiplayer:
+  0: bob-600-HARD
+  1: Empty 1-0-EASY
+  2: Empty 2-0-EASY
+  3: Empty 3-0-EASY
+  4: Empty 4-0-EASY
+...
