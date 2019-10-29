@@ -10,35 +10,39 @@
         WindowStyle="None"
         WindowState="Maximized">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="126*"/>
+            <RowDefinition Height="403*"/>
+        </Grid.RowDefinitions>
         <Button 
             Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
             x:Name="Menu"
             Click="ButtonClickMenu"
             Content="Menu"
-            Background="White" RenderTransformOrigin="0.98,0.575" Margin="953.828,-400,-250,549.665"
+            Background="White" RenderTransformOrigin="0.98,0.575" Margin="687.915,38,0,45.965"
          />
         <Button 
             Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
             x:Name="Reset"
             Click="ButtonClickReset"
             Content="Reset"
-            Background="White" RenderTransformOrigin="0.98,0.575" Margin="833.072,-400,-150,549.665"
+            Background="White" RenderTransformOrigin="0.98,0.575" Margin="609.387,36.4,78.685,48.365"
          />
         <Button 
             Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
             x:Name="Save"
             Click="ButtonClickSave"
             Content="Save"
-            Background="White" RenderTransformOrigin="0.98,0.575" Margin="701.613,-400,-50,549.665"
+            Background="White" RenderTransformOrigin="0.98,0.575" Margin="523.4,35.6,152.213,46.765"
          />
         <Button 
             Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
             x:Name="Load"
             Click="ButtonClickLoad"
             Content="Load"
-            Background="White" RenderTransformOrigin="0.98,0.575" Margin="560.269,-400,50,549.665"
+            Background="White" RenderTransformOrigin="0.98,0.575" Margin="423.669,35.6,238.2,49.165"
          />
-        <Grid x:Name="GameGrid" Margin="0,128.428,0,0"/>
+        <Grid x:Name="GameGrid" Margin="0,5.328,0,0" Grid.Row="1"/>
     </Grid>
 
 </Window>

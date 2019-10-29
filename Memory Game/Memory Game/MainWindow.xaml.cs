@@ -19,7 +19,6 @@ namespace Memory_Game
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     /// 
-    /// test.7
     public partial class MainWindow : Window
     {
 
@@ -55,6 +54,17 @@ namespace Memory_Game
             dWindow.Show();
 
             this.Close();
+
+        }
+
+        private void LoadGameClick(object sender, RoutedEventArgs e)
+        {
+         
+            GameWindow GameWindow = new GameWindow();
+            SaveUtils.LoadGame();
+            GameWindow.Show();
+           
+            this.Hide();
 
         }
     }
