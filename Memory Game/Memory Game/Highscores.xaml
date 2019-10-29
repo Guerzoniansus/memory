@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Memory_Game"
         mc:Ignorable="d"
-        Title="Highscores" Height="450" Width="800">
+        Title="Highscores" WindowStyle="None"
+        WindowState="Maximized"
+     Height="450" Width="800"
+           MinHeight="400" MinWidth="650">
     <Grid Background="	#00FFE1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="172*"/>
+            <RowDefinition Height="271*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="142*"/>
             <ColumnDefinition Width="111*"/>
@@ -15,12 +22,12 @@
         <Button 
             Style="{StaticResource RoundButtonTemplate}"
             BorderBrush="Black"
-            x:Name="Highscores"
+            x:Name="Highscore"
             Content="Highscores"
             FontSize="24"
             BorderThickness="65"
             MaxHeight="60px"
-            Background="white" Margin="0,64,0,258.6" RenderTransformOrigin="0.5,0.5" Grid.Column="1"
+            Background="white" Margin="0,64,0,5.1" RenderTransformOrigin="0.5,0.5" Grid.Column="1"
             >
 
 
@@ -32,9 +39,17 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        
-        
-        <ListBox Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="59.3,237.3,0,0" VerticalAlignment="Top" Width="100"/>
+
+
+        <ListBox HorizontalAlignment="Center" Margin="10,10,10,0" Name="listBox1"  VerticalAlignment="Top" Width="201.6" Height="200" Grid.Column="1" Grid.Row="1">
+            <ListBoxItem Content="Coffie"></ListBoxItem>
+            <ListBoxItem Content="Tea"></ListBoxItem>
+            <ListBoxItem Content="Orange Juice"></ListBoxItem>
+            <ListBoxItem Content="Milk"></ListBoxItem>
+            <ListBoxItem Content="Iced Tea"></ListBoxItem>
+            <ListBoxItem Content="Mango Shake"></ListBoxItem>
+            <ListBoxItem Content="Tea with milk and sugar"></ListBoxItem>
+        </ListBox>
 
 
     </Grid>

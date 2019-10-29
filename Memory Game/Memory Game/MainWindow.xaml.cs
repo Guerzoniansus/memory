@@ -43,7 +43,11 @@ namespace Memory_Game
 
         private void Highscore_Click(object sender, RoutedEventArgs e)
         {
+            Highscores Highscores = new Highscores();
 
+            Highscores.Show();
+
+            this.Close();
         }
 
         private void NewGame_Click(object sender, RoutedEventArgs e)
