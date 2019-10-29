@@ -27,9 +27,9 @@
             </StackPanel>
 
 
-            <CheckBox Content="Medium" FontSize="30" Margin="140,33,131,144" RenderTransformOrigin="2.654,0.824" Grid.Column="2" Checked="CheckBox_Checked_2" Grid.Row="1"/>
-            <CheckBox Content="Hard" FontSize="30" Margin="139,33,144,144" RenderTransformOrigin="2.654,0.824" Grid.Column="3" Checked="CheckBox_Checked_1" Grid.Row="1"/>
-            <CheckBox Content="Easy" FontSize="30" Margin="151,33,166,144" RenderTransformOrigin="2.654,0.824" Grid.Row="1"/>
+            <CheckBox x:Name="Checkbox_Hard" Content="Medium" FontSize="30" Margin="140,33,131,144" RenderTransformOrigin="2.654,0.824" Grid.Column="2" Checked="CheckBox_Checked_Hard" Grid.Row="1"/>
+            <CheckBox x:Name="Checkbox_Medium" Content="Hard" FontSize="30" Margin="139,33,144,144" RenderTransformOrigin="2.654,0.824" Grid.Column="3" Checked="CheckBox_Checked_Medium" Grid.Row="1"/>
+            <CheckBox x:Name="Checkbox_Easy" Content="Easy" FontSize="30" Margin="151,33,166,144" RenderTransformOrigin="2.654,0.824" Grid.Row="1" Checked="CheckBox_Checked_Easy"/>
 
 
           

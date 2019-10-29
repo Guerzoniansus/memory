@@ -19,17 +19,26 @@ namespace Memory_Game
     /// </summary>
     public partial class DifficultyWindow : Window
     {
+        Difficulty difficulty;
         public DifficultyWindow()
         {
-            InitializeComponent();   
+            InitializeComponent();
+            Checkbox_Easy.IsChecked = true;
+            Game.GetGame().SetDifficulty(difficulty);
+
         }
 
+        
         public void Button_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Are you sure you want to quit?");
         }
         public void Button_Click1(object sender, RoutedEventArgs e)
         {
+
+            Game.GetGame().SetDifficulty(difficulty);
+
+
             GameWindow gameWindow = new GameWindow();
             gameWindow.Show();
             this.Close();
@@ -45,21 +54,30 @@ namespace Memory_Game
 
         }
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        public void CheckBox_Checked_Easy(object sender, RoutedEventArgs e)
         {
-            Game.GetGame().SetDifficulty(Difficulty.EASY);
+
+            // Als medium of hard gecheckt zijn, uncheck ze
+
+            // Als ze allebei NIET gecheckt zijn, EN deze WEL gecheckt was - 
+            // cancel de uncheck (want anders is helemaal niks gecheckt)
+
+            Checkbox_Easy.IsChecked = false;
+            Checkbox_Medium.IsChecked = false;
+            Checkbox_Hard.IsChecked = false;
+
+            difficulty = Difficulty.EASY;
         }
 
-        private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
+        public void CheckBox_Checked_Medium(object sender, RoutedEventArgs e)
         {
             Game.GetGame().SetDifficulty(Difficulty.MEDIUM);
         }
 
-        private void CheckBox_Checked_2(object sender, RoutedEventArgs e)
+        public void CheckBox_Checked_Hard(object sender, RoutedEventArgs e)
         {
             Game.GetGame().SetDifficulty(Difficulty.HARD);
         }
 
-     
     }
 }
