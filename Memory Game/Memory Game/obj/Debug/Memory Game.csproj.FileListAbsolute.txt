@@ -57,3 +57,5 @@ C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Mem
 C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Memory Game.csproj.CopyComplete
 C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Memory Game.exe
 C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Memory Game.pdb
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Rules.g.cs
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Rules.baml

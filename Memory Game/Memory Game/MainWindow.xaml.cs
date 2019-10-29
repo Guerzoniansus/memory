@@ -64,7 +64,7 @@ namespace Memory_Game
             SaveUtils.LoadGame();
             GameWindow.Show();
            
-            this.Hide();
+            this.Close();
 
         }
     }

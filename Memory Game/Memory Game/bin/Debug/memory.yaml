@@ -6,7 +6,7 @@ game:
   isMultiplayer: False
   time: 300
   turn: undefined
-  amountOfCards: 16
+  amountOfCards: 20
   scorePlayer1: 0
   scorePlayer2: 0
 cards:
@@ -28,7 +28,7 @@ cards:
   3:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: False
+    flipped: True
     found: False
   4:
     frontImageUrl: frontTestImage.png
@@ -43,7 +43,7 @@ cards:
   6:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: False
+    flipped: True
     found: False
   7:
     frontImageUrl: frontTestImage.png
@@ -63,7 +63,7 @@ cards:
   10:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   11:
     frontImageUrl: frontTestImage.png
@@ -73,7 +73,7 @@ cards:
   12:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: False
+    flipped: True
     found: False
   13:
     frontImageUrl: frontTestImage.png

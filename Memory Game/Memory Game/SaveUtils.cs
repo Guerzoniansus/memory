@@ -127,7 +127,7 @@ namespace Memory_Game
             {
               File.OpenText("memory.yaml");
             }
-            catch (System.IO.FileNotFoundException e)
+            catch (FileNotFoundException)
             {
                 Console.WriteLine("File does not exist");
                 return;
