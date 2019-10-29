@@ -57,11 +57,7 @@ namespace Memory_Game
         public void CheckBox_Checked_Easy(object sender, RoutedEventArgs e)
         {
 
-            // Als medium of hard gecheckt zijn, uncheck ze
-
-            // Als ze allebei NIET gecheckt zijn, EN deze WEL gecheckt was - 
-            // cancel de uncheck (want anders is helemaal niks gecheckt)
-
+         
             Checkbox_Medium.IsChecked = false;
             Checkbox_Hard.IsChecked = false;
            
@@ -71,7 +67,6 @@ namespace Memory_Game
 
         public void Checkbox_Unchecked_Easy(object sender, RoutedEventArgs e)
         {
-            //if medium en hard zijn geunchecked, doe dit hieronder
 
             if (Checkbox_Medium.IsChecked == false && Checkbox_Hard.IsChecked == false)
             {
