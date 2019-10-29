@@ -180,7 +180,7 @@ namespace Memory_Game
         
 
         /// <summary>
-        /// 
+        /// Gets the current score, calculates the new score and sets it
         /// </summary>
         public void CalculateScore(int streakscore, int player)
         {
