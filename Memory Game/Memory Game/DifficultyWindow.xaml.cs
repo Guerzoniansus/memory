@@ -62,22 +62,61 @@ namespace Memory_Game
             // Als ze allebei NIET gecheckt zijn, EN deze WEL gecheckt was - 
             // cancel de uncheck (want anders is helemaal niks gecheckt)
 
-            Checkbox_Easy.IsChecked = false;
             Checkbox_Medium.IsChecked = false;
             Checkbox_Hard.IsChecked = false;
-
+           
 
             difficulty = Difficulty.EASY;
         }
 
+        public void Checkbox_Unchecked_Easy(object sender, RoutedEventArgs e)
+        {
+            //if medium en hard zijn geunchecked, doe dit hieronder
+
+            if (Checkbox_Medium.IsChecked == false && Checkbox_Hard.IsChecked == false)
+            {
+              Checkbox_Easy.IsChecked = true;
+            }
+
+            
+        }
+
+        public void Checkbox_Unchecked_Medium(object sender, RoutedEventArgs e)
+        {
+            if (Checkbox_Easy.IsChecked == false && Checkbox_Hard.IsChecked == false)
+            {
+                Checkbox_Medium.IsChecked = true;
+            }
+            
+        }
+
+        public void Checkbox_Unchecked_Hard(object sender, RoutedEventArgs e)
+        {
+
+            if (Checkbox_Easy.IsChecked == false && Checkbox_Medium.IsChecked == false)
+            {
+                Checkbox_Hard.IsChecked = true;
+            }
+        }
+
         public void CheckBox_Checked_Medium(object sender, RoutedEventArgs e)
         {
-            Game.GetGame().SetDifficulty(Difficulty.MEDIUM);
+            
+            Checkbox_Easy.IsChecked = false;
+            Checkbox_Hard.IsChecked = false;
+
+            difficulty = Difficulty.MEDIUM;
+
         }
 
         public void CheckBox_Checked_Hard(object sender, RoutedEventArgs e)
         {
-            Game.GetGame().SetDifficulty(Difficulty.HARD);
+
+            Checkbox_Easy.IsChecked = false;
+            Checkbox_Medium.IsChecked = false;
+
+            difficulty = Difficulty.HARD;
+
         }
 
     }
