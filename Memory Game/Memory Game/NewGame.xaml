@@ -79,8 +79,8 @@
           Margin="0 5 0 0"
           HorizontalAlignment="Center"
           Width="200"
-          x:Name="P1Input"
-             />
+          x:Name="P1Input"            
+            />
       <!--Player 2 text-->
       <TextBlock
           Text="Player 2: "
