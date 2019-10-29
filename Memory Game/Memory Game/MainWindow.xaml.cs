@@ -67,5 +67,13 @@ namespace Memory_Game
             this.Close();
 
         }
+
+        private void Rules_Click(object sender, RoutedEventArgs e)
+        {
+            Rules Rules = new Rules();
+            Rules.Show();
+
+            this.Close();
+        }
     }
 }

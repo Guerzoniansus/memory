@@ -74,7 +74,7 @@
             x:Name="Rules"
             Content="Rules"
                   MaxHeight="40px"
-            Background="White" Margin="0.4,0.2,0,0.2" RenderTransformOrigin="0.5,0.5" Grid.Column="3" Grid.Row="4"
+            Background="White" Margin="0.4,0.2,0,0.2" RenderTransformOrigin="0.5,0.5" Grid.Column="3" Grid.Row="4" Click="Rules_Click"
             >
             <Button.RenderTransform>
                 <TransformGroup>
