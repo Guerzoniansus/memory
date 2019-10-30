@@ -108,7 +108,12 @@ namespace Memory_Game
         private void ButtonClickReset(object sender, RoutedEventArgs e)
         {
             Game.PlaySound("click");
-            game.Reset();
+
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure you want to reset?", "Reset", System.Windows.MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
+            {
+                game.Reset();
+            }
         }
 
         private void ButtonClickSave(object sender, RoutedEventArgs e)
