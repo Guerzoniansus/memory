@@ -8,40 +8,82 @@
         Title="GameWindow"
         Background="#00FFE1"
         WindowStyle="None"
-        WindowState="Maximized">
+        WindowState="Maximized"
+        Width="1920"
+        >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="126*"/>
             <RowDefinition Height="403*"/>
         </Grid.RowDefinitions>
-        <Button 
-            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300*"/>
+                <RowDefinition Height="300*"/>
+                <RowDefinition Height="300*"/>
+                <RowDefinition Height="300*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="500*"/>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="600*"/>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="350*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="textPlayer1Score" FontSize="36" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" HorizontalAlignment="Center">
+                0
+            </Label>
+            <Label x:Name="textPlayer1" FontSize="36" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
+                player1
+            </Label>
+            <Label x:Name="textPlayer2Score" FontSize="36" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" HorizontalAlignment="Center">
+                0
+            </Label>
+            <Label x:Name="textPlayer2" FontSize="36" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2">
+                player2
+            </Label>
+            <Label x:Name="textTurn" FontSize="36" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Center">
+                turn
+            </Label>
+            <Label x:Name="textTime" FontSize="18" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Center">
+                2:36
+            </Label>
+            <Label x:Name="textDifficulty" FontSize="24" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                difficulty
+            </Label>
+            <Button 
+            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" FontSize="24px"
             x:Name="Menu"
             Click="ButtonClickMenu"
-            Content="Menu"
-            Background="White" RenderTransformOrigin="0.98,0.575" Margin="687.915,38,0,45.965"
+            Content="MENU" Grid.Row="0" Grid.Column="9"
+            Background="White" RenderTransformOrigin="0.98,0.575"
          />
-        <Button 
-            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
+            <Button 
+            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" FontSize="24px"
             x:Name="Reset"
             Click="ButtonClickReset"
-            Content="Reset"
-            Background="White" RenderTransformOrigin="0.98,0.575" Margin="609.387,36.4,78.685,48.365"
+            Content="RESET" Grid.Row="2" Grid.Column="9"
+            Background="White" RenderTransformOrigin="0.98,0.575"
          />
-        <Button 
-            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
+            <Button 
+            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" FontSize="24px"
             x:Name="Save"
             Click="ButtonClickSave"
-            Content="Save"
-            Background="White" RenderTransformOrigin="0.98,0.575" Margin="523.4,35.6,152.213,46.765"
+            Content="SAVE" Grid.Row="0" Grid.Column="7"
+            Background="White" RenderTransformOrigin="0.98,0.575"
          />
-        <Button 
-            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" MaxHeight="50px" MaxWidth="80px" FontSize="24px"
+            <Button 
+            Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" FontSize="24px"
             x:Name="Load"
             Click="ButtonClickLoad"
-            Content="Load"
-            Background="White" RenderTransformOrigin="0.98,0.575" Margin="423.669,35.6,238.2,49.165"
+            Content="LOAD" Grid.Row="0" Grid.Column="6"
+            Background="White" RenderTransformOrigin="0.98,0.575" 
          />
+        </Grid>
         <Grid x:Name="GameGrid" Margin="0,5.328,0,0" Grid.Row="1"/>
     </Grid>
 

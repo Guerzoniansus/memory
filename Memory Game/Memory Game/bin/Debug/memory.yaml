@@ -1,11 +1,11 @@
 version: 1
 game:
-  player1: undefined
-  player2: undefined2
+  player1: Frank
+  player2: Thijs
   difficulty: undefined
-  isMultiplayer: False
+  isMultiplayer: True
   time: 300
-  turn: undefined
+  turn: Frank
   amountOfCards: 16
   scorePlayer1: 0
   scorePlayer2: 0
@@ -58,12 +58,12 @@ cards:
   9:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   10:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   11:
     frontImageUrl: frontTestImage.png

@@ -12,7 +12,7 @@ namespace Memory_Game
         private static Game game;
 
         // Misschien verschillende tijden per difficulty, 300 seconden = 5 min
-        public const int STARTING_TIME = 300;
+        public const int STARTING_TIME = 280;
 
         // TODO wat constanten voor de score formules
 
@@ -33,11 +33,13 @@ namespace Memory_Game
         // String = player, double = de score van de player
         private Dictionary<string, double> scores;
 
+        private GameWindow gameWindow;
+
         public Game()
         {
             // For debugging purposes, you're supposed to change these yourself somewhere else from user input
             this.player1 = "undefined";
-            this.player2 = "undefined2";
+            this.player2 = "undefeined2";
             this.difficulty = Difficulty.UNDEFINED;
             this.isMultiplayer = false;
             this.time = STARTING_TIME;
@@ -66,6 +68,10 @@ namespace Memory_Game
             return Game.game;
         }
 
+        public void SetGameWindow(GameWindow window)
+        {
+            this.gameWindow = window;
+        }
 
         public void Reset()
         {
@@ -75,6 +81,8 @@ namespace Memory_Game
             scores.Add(player1, 0);
             scores.Add(player2, 0);
             memoryGrid.Reset();
+
+            gameWindow.UpdateWindow();
         }
 
         public void SetGrid(MemoryGrid grid)
@@ -116,11 +124,13 @@ namespace Memory_Game
         public void SetTurn(string playerName)
         {
             turn = playerName;
+            if (gameWindow != null) gameWindow.UpdateWindow();
         }
 
         public void SetScore(string player, double newScore)
         {
             scores[player] = newScore;
+            if (gameWindow != null) gameWindow.UpdateWindow();
         }
 
         public double getScore(string player)
@@ -161,6 +171,7 @@ namespace Memory_Game
         public void SetTime(int newTime)
         {
             time = newTime;
+            if (gameWindow != null) gameWindow.UpdateWindow();
         }
 
         public int GetTimeLeft()
