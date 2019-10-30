@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 
 namespace Memory_Game
@@ -45,6 +48,9 @@ namespace Memory_Game
 
             this.flipped = false;
             this.found = false;
+
+            this.MouseEnter += new MouseEventHandler(MyMouseEnterEvent);
+            this.MouseLeave += new MouseEventHandler(MyMouseLeaveEvent);
         }
 
         /// <summary>
@@ -68,6 +74,19 @@ namespace Memory_Game
 
             // if not flipped and not found, image = back image, otherwise image = frontImage;
             Image = (flipped == false && found == false) ? backImage : frontImage;
+
+            this.MouseEnter += new MouseEventHandler(MyMouseEnterEvent);
+            this.MouseLeave += new MouseEventHandler(MyMouseLeaveEvent);
+        }
+
+        private void MyMouseEnterEvent(object sender, MouseEventArgs e) 
+        {
+            this.Effect = new DropShadowEffect() { ShadowDepth = 0, BlurRadius = 10 };
+        }
+
+        private void MyMouseLeaveEvent(object sender, MouseEventArgs e)
+        {
+            this.Effect = null;
         }
 
         public bool IsFlipped()

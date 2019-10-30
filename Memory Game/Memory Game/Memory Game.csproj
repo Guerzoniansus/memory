@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Memory_Game</RootNamespace>
     <AssemblyName>Memory Game</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -58,6 +58,7 @@
     <Compile Include="DifficultyWindow.xaml.cs">
       <DependentUpon>DifficultyWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HighscoreData.cs" />
     <Compile Include="Highscores.cs" />
     <Compile Include="NewGame.xaml.cs">
       <DependentUpon>NewGame.xaml</DependentUpon>
@@ -114,6 +115,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="highscores.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="img\desktop.ini" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -135,6 +139,28 @@
     <Resource Include="img\4.jpg" />
     <Resource Include="img\4.png" />
     <Resource Include="img\k.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\volume_button.png" />
+    <Resource Include="img\volume_muted.png" />
+    <Content Include="sounds\bgmusic.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\click.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\flip_card.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\flip_card_wrong.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\game_over.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\match.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
