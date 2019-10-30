@@ -40,7 +40,7 @@ namespace Memory_Game
         {
             // For debugging purposes, you're supposed to change these yourself somewhere else from user input
             this.player1 = "undefined";
-            this.player2 = "undefeined2";
+            this.player2 = "undefined";
             this.difficulty = Difficulty.UNDEFINED;
             this.isMultiplayer = false;
             this.time = STARTING_TIME;
@@ -74,6 +74,9 @@ namespace Memory_Game
             this.gameWindow = window;
         }
 
+        /// <summary>
+        /// Resets the game. Resets time, turn, scores, resets the grid and updates the window
+        /// </summary>
         public void Reset()
         {
             this.time = STARTING_TIME;
@@ -102,8 +105,6 @@ namespace Memory_Game
         /// <param name="sound">Name of the sound file</param>
         public static void PlaySound(string sound)
         {
-            //SoundPlayer player = new SoundPlayer(@"sounds\" + sound + ".wav");
-
             var player = new System.Windows.Media.MediaPlayer();
             player.Open(new Uri(@"sounds\" + sound + ".wav", UriKind.Relative));
             
@@ -111,6 +112,9 @@ namespace Memory_Game
             player.Play();
         }
 
+        /// <summary>
+        /// Easy lazy static method to play background music
+        /// </summary>
         public static void PlayMusic()
         {
             SoundPlayer player = new SoundPlayer(@"sounds\bgmusic.wav");
@@ -118,6 +122,9 @@ namespace Memory_Game
             player.Dispose();
         }
 
+        /// <summary>
+        /// Easy lazy static method to stop the background music
+        /// </summary>
         public static void StopMusic()
         {
             SoundPlayer player = new SoundPlayer(@"sounds\bgmusic.wav");
@@ -125,6 +132,7 @@ namespace Memory_Game
             player.Dispose();
         }
 
+        // Old code that is no longer used
         //public void SetGridWindow(MainWindow window)
         //{
         //    this.gridWindow = window;
@@ -198,6 +206,10 @@ namespace Memory_Game
             return difficulty;
         }
 
+        /// <summary>
+        /// Set the amount of time left in seconds
+        /// </summary>
+        /// <param name="newTime">New time in seconds</param>
         public void SetTime(int newTime)
         {
             time = newTime;

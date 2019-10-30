@@ -36,6 +36,7 @@ namespace Memory_Game
             LoadScores();
         }
 
+        // Deconstructor, make sure everything gets saved
         ~Highscores()
         {
             SaveScores();
@@ -176,11 +177,19 @@ namespace Memory_Game
             PrintDebugStuff();
         }
 
+        /// <summary>
+        /// Get singleplayer highscores
+        /// </summary>
+        /// <returns>List<HighscoreData> filed with high scores, ordered from high (first index) to low (last index)</returns>
         public List<HighscoreData> GetScoresSingleplayer()
         {
             return scoresSingleplayer;
         }
 
+        /// <summary>
+        /// Get multiplayer highscores
+        /// </summary>
+        /// <returns>List<HighscoreData> filed with high scores, ordered from high (first index) to low (last index)</returns>
         public List<HighscoreData> GetScoresMultiplayer()
         {
             return scoresMultiplayer;
