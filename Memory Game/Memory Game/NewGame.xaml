@@ -79,7 +79,8 @@
           Margin="0 5 0 0"
           HorizontalAlignment="Center"
           Width="200"
-          x:Name="P1Input"            
+          x:Name="P1Input"
+          MaxLength="20"
             />
       <!--Player 2 text-->
       <TextBlock
@@ -98,6 +99,7 @@
           HorizontalAlignment="Center"
           Width="200"
           x:Name="P2Input"
+          MaxLength="20"
                 
              />
       <!--Number of cards-->
