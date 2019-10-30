@@ -58,6 +58,7 @@
     <Compile Include="DifficultyWindow.xaml.cs">
       <DependentUpon>DifficultyWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HighscoreData.cs" />
     <Compile Include="Highscores.cs" />
     <Compile Include="NewGame.xaml.cs">
       <DependentUpon>NewGame.xaml</DependentUpon>
@@ -114,6 +115,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="highscores.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="img\desktop.ini" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

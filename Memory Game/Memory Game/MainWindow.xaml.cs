@@ -29,13 +29,23 @@ namespace Memory_Game
             game = new Game();
             Game.SetGame(game);
             InitializeComponent();
-
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             // quit knop die ervoor zorgt dat de app afsluit
             Application.Current.Shutdown();
+        }
+
+        public void LoadClick(object sender, RoutedEventArgs e)
+        {
+            GameWindow gameWindow = new GameWindow();
+
+            SaveUtils.LoadGame();
+
+            gameWindow.Show();
+
+            this.Close();
         }
 
         private void Highscore_Click(object sender, RoutedEventArgs e)

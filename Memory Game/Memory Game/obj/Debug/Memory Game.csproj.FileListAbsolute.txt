@@ -1,3 +1,4 @@
+C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\bin\Debug\highscores.yaml
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\bin\Debug\Memory Game.exe.config
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\bin\Debug\Memory Game.exe
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\bin\Debug\Memory Game.pdb
