@@ -108,5 +108,17 @@ namespace Memory_Game
             SaveUtils.LoadGame();
 
         }
+
+        private void MouseEnterEvent(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Background = Brushes.LightGray;
+        }
+
+        private void MouseLeaveEvent(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Background = Brushes.White;
+        }
     }
 }

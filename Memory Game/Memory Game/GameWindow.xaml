@@ -59,28 +59,36 @@
             Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" FontSize="24px"
             x:Name="Menu"
             Click="ButtonClickMenu"
-            Content="MENU" Grid.Row="0" Grid.Column="9"
+            MouseEnter="MouseEnterEvent"
+            MouseLeave="MouseLeaveEvent"
+            Content="Menu" Grid.Row="0" Grid.Column="9"
             Background="White" RenderTransformOrigin="0.98,0.575"
          />
             <Button 
             Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" FontSize="24px"
             x:Name="Reset"
             Click="ButtonClickReset"
-            Content="RESET" Grid.Row="2" Grid.Column="9"
+            MouseEnter="MouseEnterEvent"
+            MouseLeave="MouseLeaveEvent"
+            Content="Reset" Grid.Row="2" Grid.Column="9"
             Background="White" RenderTransformOrigin="0.98,0.575"
          />
             <Button 
             Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" FontSize="24px"
             x:Name="Save"
             Click="ButtonClickSave"
-            Content="SAVE" Grid.Row="0" Grid.Column="7"
+            MouseEnter="MouseEnterEvent"
+            MouseLeave="MouseLeaveEvent"
+            Content="Save" Grid.Row="0" Grid.Column="7"
             Background="White" RenderTransformOrigin="0.98,0.575"
          />
             <Button 
             Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" FontSize="24px"
             x:Name="Load"
             Click="ButtonClickLoad"
-            Content="LOAD" Grid.Row="0" Grid.Column="6"
+            MouseEnter="MouseEnterEvent"
+            MouseLeave="MouseLeaveEvent"
+            Content="Load" Grid.Row="0" Grid.Column="6"
             Background="White" RenderTransformOrigin="0.98,0.575" 
          />
         </Grid>

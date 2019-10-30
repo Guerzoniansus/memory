@@ -38,7 +38,8 @@
             Content="Quit"
             Click="Exit_Click"
             MaxHeight="40px"
-
+            MouseEnter="MouseEnterEvent"
+            MouseLeave="MouseLeaveEvent"
             Background="White" Margin="0.4,0.4,0,1" RenderTransformOrigin="0.5,0.5" Grid.Column="3" Grid.Row="6"
             >
             <Button.RenderTransform>
@@ -56,7 +57,9 @@
             x:Name="Highscore"
             Content="Highscores"
             Click="Highscore_Click"
-                  MaxHeight="40px"
+            MaxHeight="40px"
+            MouseEnter="MouseEnterEvent"
+            MouseLeave="MouseLeaveEvent"
             Background="White" Margin="0.4,0.8,0,0.6" RenderTransformOrigin="0.5,0.5" Grid.Column="3" Grid.Row="5"
             >
             <Button.RenderTransform>
@@ -74,6 +77,8 @@
             x:Name="Rules"
             Content="Rules"
                   MaxHeight="40px"
+            MouseEnter="MouseEnterEvent"
+            MouseLeave="MouseLeaveEvent"
             Background="White" Margin="0.4,0.2,0,0.2" RenderTransformOrigin="0.5,0.5" Grid.Column="3" Grid.Row="4"
             >
             <Button.RenderTransform>
@@ -92,6 +97,8 @@
             Content="Load Game"
             Click="LoadGameClick"
                   MaxHeight="40px"
+            MouseEnter="MouseEnterEvent"
+            MouseLeave="MouseLeaveEvent"
             Background="White" Margin="0.4,0.6,0,0.8" RenderTransformOrigin="0.5,0.503" Grid.Column="3" Grid.Row="3"
             >
             <Button.RenderTransform>
@@ -110,6 +117,8 @@
             Content="New Game"
             Click="NewGame_Click"
                   MaxHeight="40px"
+            MouseEnter="MouseEnterEvent"
+            MouseLeave="MouseLeaveEvent"
             Background="White" Margin="0.4,0,0,0.4" RenderTransformOrigin="0.5,0.5" Grid.Column="3" Grid.Row="2"
             >
             <Button.RenderTransform>
