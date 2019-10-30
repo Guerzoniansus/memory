@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Windows;
 
@@ -12,7 +13,7 @@ namespace Memory_Game
         private static Game game;
 
         // Misschien verschillende tijden per difficulty, 300 seconden = 5 min
-        public const int STARTING_TIME = 280;
+        public const int STARTING_TIME = 300;
 
         // TODO wat constanten voor de score formules
 
@@ -93,6 +94,35 @@ namespace Memory_Game
         public MemoryGrid GetGrid()
         {
             return memoryGrid;
+        }
+
+        /// <summary>
+        /// Easy lazy static method to play sounds
+        /// </summary>
+        /// <param name="sound">Name of the sound file</param>
+        public static void PlaySound(string sound)
+        {
+            //SoundPlayer player = new SoundPlayer(@"sounds\" + sound + ".wav");
+
+            var player = new System.Windows.Media.MediaPlayer();
+            player.Open(new Uri(@"sounds\" + sound + ".wav", UriKind.Relative));
+            
+
+            player.Play();
+        }
+
+        public static void PlayMusic()
+        {
+            SoundPlayer player = new SoundPlayer(@"sounds\bgmusic.wav");
+            player.PlayLooping();
+            player.Dispose();
+        }
+
+        public static void StopMusic()
+        {
+            SoundPlayer player = new SoundPlayer(@"sounds\bgmusic.wav");
+            player.Stop();
+            player.Dispose();
         }
 
         //public void SetGridWindow(MainWindow window)

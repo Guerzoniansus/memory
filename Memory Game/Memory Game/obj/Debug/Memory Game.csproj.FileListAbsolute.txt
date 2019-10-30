@@ -24,3 +24,10 @@ C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\Memory Game.exe
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\Memory Game.pdb
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\Memory Game.csprojAssemblyReference.cache
+C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\Memory Game_Content.g.cs
+C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\bin\Debug\sounds\click.wav
+C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\bin\Debug\sounds\bgmusic.wav
+C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\bin\Debug\sounds\flip_card_wrong.wav
+C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\bin\Debug\sounds\game_over.wav
+C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\bin\Debug\sounds\match.wav
+C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\bin\Debug\sounds\flip_card.wav

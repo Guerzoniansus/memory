@@ -1,11 +1,11 @@
 version: 1
 game:
-  player1: Frank
-  player2: Thijs
+  player1: undefined
+  player2: undefeined2
   difficulty: undefined
-  isMultiplayer: True
+  isMultiplayer: False
   time: 300
-  turn: Frank
+  turn: undefined
   amountOfCards: 16
   scorePlayer1: 0
   scorePlayer2: 0
@@ -28,7 +28,7 @@ cards:
   3:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: False
+    flipped: True
     found: False
   4:
     frontImageUrl: frontTestImage.png
@@ -43,12 +43,12 @@ cards:
   6:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: False
+    flipped: True
     found: False
   7:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: False
+    flipped: True
     found: False
   8:
     frontImageUrl: frontTestImage.png
@@ -63,12 +63,12 @@ cards:
   10:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: False
+    flipped: True
     found: False
   11:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: False
+    flipped: True
     found: False
   12:
     frontImageUrl: frontTestImage.png
@@ -88,6 +88,6 @@ cards:
   15:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: False
+    flipped: True
     found: False
 ...

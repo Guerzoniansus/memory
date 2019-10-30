@@ -33,12 +33,16 @@ namespace Memory_Game
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
+            Game.PlaySound("click");
+
             // quit knop die ervoor zorgt dat de app afsluit
             Application.Current.Shutdown();
         }
 
         public void LoadClick(object sender, RoutedEventArgs e)
         {
+            Game.PlaySound("click");
+
             GameWindow gameWindow = new GameWindow();
 
             SaveUtils.LoadGame();
@@ -50,11 +54,13 @@ namespace Memory_Game
 
         private void Highscore_Click(object sender, RoutedEventArgs e)
         {
-
+            Game.PlaySound("click");
         }
 
         private void NewGame_Click(object sender, RoutedEventArgs e)
         {
+            Game.PlaySound("click");
+
             // hier moet code komen dat die naar window1 gaat
             //NewGame NewGame = new NewGame();
 
@@ -69,7 +75,8 @@ namespace Memory_Game
 
         private void LoadGameClick(object sender, RoutedEventArgs e)
         {
-         
+            Game.PlaySound("click");
+
             GameWindow GameWindow = new GameWindow();
             SaveUtils.LoadGame();
             GameWindow.Show();

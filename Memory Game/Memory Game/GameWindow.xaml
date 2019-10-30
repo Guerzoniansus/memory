@@ -29,7 +29,9 @@
                 <ColumnDefinition Width="50*"/>
                 <ColumnDefinition Width="600*"/>
                 <ColumnDefinition Width="50*"/>
-                <ColumnDefinition Width="350*"/>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="100*"/>
@@ -52,16 +54,20 @@
             <Label x:Name="textTime" FontSize="18" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Center">
                 2:36
             </Label>
-            <Label x:Name="textDifficulty" FontSize="24" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label x:Name="textDifficulty" FontSize="20" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
                 difficulty
             </Label>
+            <Image x:Name="VolumeButton" Source="img/volume_button.png" Grid.Row="0" Grid.Column="6" 
+                   HorizontalAlignment="Center" Height="32" VerticalAlignment="Center" MouseDown="VolumeButtonClick">
+                
+            </Image>
             <Button 
             Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" FontSize="24px"
             x:Name="Menu"
             Click="ButtonClickMenu"
             MouseEnter="MouseEnterEvent"
             MouseLeave="MouseLeaveEvent"
-            Content="Menu" Grid.Row="0" Grid.Column="9"
+            Content="Menu" Grid.Row="0" Grid.Column="9" Height="50"
             Background="White" RenderTransformOrigin="0.98,0.575"
          />
             <Button 
@@ -70,7 +76,7 @@
             Click="ButtonClickReset"
             MouseEnter="MouseEnterEvent"
             MouseLeave="MouseLeaveEvent"
-            Content="Reset" Grid.Row="2" Grid.Column="9"
+            Content="Reset" Grid.Row="0" Grid.Column="10" Height="50"
             Background="White" RenderTransformOrigin="0.98,0.575"
          />
             <Button 
@@ -79,7 +85,7 @@
             Click="ButtonClickSave"
             MouseEnter="MouseEnterEvent"
             MouseLeave="MouseLeaveEvent"
-            Content="Save" Grid.Row="0" Grid.Column="7"
+            Content="Save" Grid.Row="0" Grid.Column="8" Height="50"
             Background="White" RenderTransformOrigin="0.98,0.575"
          />
             <Button 
@@ -88,7 +94,7 @@
             Click="ButtonClickLoad"
             MouseEnter="MouseEnterEvent"
             MouseLeave="MouseLeaveEvent"
-            Content="Load" Grid.Row="0" Grid.Column="6"
+            Content="Load" Grid.Row="0" Grid.Column="7" Height="50"
             Background="White" RenderTransformOrigin="0.98,0.575" 
          />
         </Grid>

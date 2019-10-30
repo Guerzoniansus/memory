@@ -26,6 +26,11 @@ namespace Memory_Game
 
         Game game;
 
+        bool isMusicMuted;
+
+        private ImageSource imageVolume;
+        private ImageSource imageVolumeMuted;
+
         public GameWindow()
         {
             game = new Game();
@@ -40,6 +45,11 @@ namespace Memory_Game
 
             UpdateWindow();
 
+            Game.PlayMusic();
+            isMusicMuted = false;
+
+            imageVolume = new BitmapImage(new Uri("img/volume_button.png", UriKind.Relative));
+            imageVolumeMuted = new BitmapImage(new Uri("img/volume_muted.png", UriKind.Relative));
         }
 
         /// <summary>
@@ -86,6 +96,8 @@ namespace Memory_Game
 
         private void ButtonClickMenu(object sender, RoutedEventArgs e)
         {
+            Game.PlaySound("click");
+            Game.StopMusic();
             //TODO: game.Pause() or something
 
             MainWindow menu = new MainWindow();
@@ -95,16 +107,19 @@ namespace Memory_Game
         }
         private void ButtonClickReset(object sender, RoutedEventArgs e)
         {
+            Game.PlaySound("click");
             game.Reset();
         }
 
         private void ButtonClickSave(object sender, RoutedEventArgs e)
         {
+            Game.PlaySound("click");
             SaveUtils.SaveGame();
         }
 
         private void ButtonClickLoad(object sender, RoutedEventArgs e)
         {
+            Game.PlaySound("click");
             SaveUtils.LoadGame();
 
         }
@@ -119,6 +134,14 @@ namespace Memory_Game
         {
             Button button = (Button)sender;
             button.Background = Brushes.White;
+        }
+
+        private void VolumeButtonClick(object sender, MouseButtonEventArgs e)
+        {
+            if (isMusicMuted) Game.PlayMusic(); else Game.StopMusic();
+            VolumeButton.Source = isMusicMuted ? imageVolume : imageVolumeMuted;    
+            isMusicMuted = isMusicMuted ? false : true;
+
         }
     }
 }
