@@ -40,7 +40,7 @@ namespace Memory_Game
         {
             // For debugging purposes, you're supposed to change these yourself somewhere else from user input
             this.player1 = "undefined";
-            this.player2 = "undefined";
+            this.player2 = "undefined2";
             this.difficulty = Difficulty.UNDEFINED;
             this.isMultiplayer = false;
             this.time = STARTING_TIME;

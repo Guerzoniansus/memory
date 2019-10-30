@@ -1,7 +1,7 @@
 version: 1
 game:
   player1: undefined
-  player2: undefeined2
+  player2: undefined2
   difficulty: undefined
   isMultiplayer: False
   time: 300
@@ -23,12 +23,12 @@ cards:
   2:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   3:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: False
+    flipped: True
     found: False
   4:
     frontImageUrl: frontTestImage.png
@@ -43,12 +43,12 @@ cards:
   6:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   7:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: False
+    flipped: True
     found: False
   8:
     frontImageUrl: frontTestImage.png
@@ -68,7 +68,7 @@ cards:
   11:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: False
+    flipped: True
     found: False
   12:
     frontImageUrl: frontTestImage.png
@@ -88,6 +88,6 @@ cards:
   15:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: False
+    flipped: True
     found: False
 ...
