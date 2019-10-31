@@ -7,11 +7,13 @@
         mc:Ignorable="d"
         WindowStyle="None"
         WindowState="Maximized"
+        Width="1920"
+        Height="1080"
         Title="Difficulty" Background="#00FFE1" >
-        
+
 
     <Viewbox>
-        <Grid ShowGridLines="False">
+        <Grid ShowGridLines="False" Height="1080" Width="1920" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="267*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -28,20 +30,55 @@
             </StackPanel>
 
 
-            <CheckBox x:Name="Checkbox_Medium" Content="Medium" FontSize="30" Margin="140,33,131,144" RenderTransformOrigin="2.654,0.824" Grid.Column="2" Checked="CheckBox_Checked_Medium" Unchecked="Checkbox_Unchecked_Medium" Grid.Row="1"/>
-            <CheckBox x:Name="Checkbox_Hard" Content="Hard" FontSize="30" Margin="139,33,144,144" RenderTransformOrigin="2.654,0.824" Grid.Column="3" Checked="CheckBox_Checked_Hard" Unchecked="Checkbox_Unchecked_Hard"  Grid.Row="1"/>
-            <CheckBox x:Name="Checkbox_Easy" Content="Easy" FontSize="30" Margin="151,33,166,144" RenderTransformOrigin="2.654,0.824" Grid.Row="1" Checked="CheckBox_Checked_Easy" Unchecked="Checkbox_Unchecked_Easy"/>
+            <CheckBox HorizontalAlignment="Center" VerticalContentAlignment="Center"
+                x:Name="Checkbox_Medium" Content="Medium" FontSize="30" Margin="140,33,131,144" RenderTransformOrigin="2.654,0.824" Grid.Column="2" Checked="CheckBox_Checked_Medium" Unchecked="Checkbox_Unchecked_Medium" Grid.Row="1"/>
+            <CheckBox HorizontalAlignment="Center" VerticalContentAlignment="Center"
+                x:Name="Checkbox_Hard" Content="Hard" FontSize="30" Margin="163,33,392,144" RenderTransformOrigin="2.654,0.824" Grid.Column="3" Checked="CheckBox_Checked_Hard" Unchecked="Checkbox_Unchecked_Hard"  Grid.Row="1"/>
+            <CheckBox HorizontalAlignment="Center" VerticalContentAlignment="Center" 
+                x:Name="Checkbox_Easy" Content="Easy" FontSize="30" Margin="390,33,172,144" RenderTransformOrigin="2.654,0.824" Grid.Row="1" Checked="CheckBox_Checked_Easy" Unchecked="Checkbox_Unchecked_Easy"/>
 
 
-          
-            <Button x:Name="button1" Content="Start Game" Foreground="White" FontSize="30" Background="Black" Click="Button_Click1" Margin="131,174,131,10" Grid.Row="2" Grid.Column="2" />
-            <Button x:Name="Closebutton" Background="White" Content="Back" Click="Closebutton_Click" Margin="278,183,50,17" Grid.Row="2" />
 
-            <Label Content="Start Game" Background="White" BorderBrush="Black" BorderThickness="2" FontSize="50" Grid.Column="2" Margin="82,10,82,127"/>
-            <Label FontSize="40" Content="Choose Difficulty!" Grid.Column="2" Margin="51,158,51,11"/>
+            <!--<Button x:Name="button1" Content="Start Game" Foreground="White" FontSize="30" Background="Black" Click="Button_Click1" Margin="131,174,131,10" Grid.Row="2" Grid.Column="2" />-->
+
+            <Button x:Name="button1" Background="White" Content="Next" Click="NextButtonClick" Grid.Row="2" 
+             Style="{StaticResource RoundButtonTemplate}"
+            FontSize="36"
+            Height="70"
+            Width="200" Margin="380,267,60,23" Grid.Column="3" />
+
+            <Button x:Name="Closebutton" Background="White" Content="Back" Click="Closebutton_Click" Grid.Row="2" 
+             Style="{StaticResource RoundButtonTemplate}"
+            FontSize="36"
+             Height="70"
+            Width="200" Margin="60,267,380,23" />
+
+            <Border
+          BorderThickness="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+          BorderBrush="Black"
+          CornerRadius="10"
+          Background="White"
+          Margin="169,51,169,231"
+          Padding="5"
+          Width="300"
+          Grid.Row="0"
+            Grid.Column="2"
+                >
+                <TextBlock
+            Text="Start Game"
+            FontSize="50"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center" Margin="0,0,22,0"
+
+                    />
+            </Border>
+
+            <Label HorizontalAlignment="Center" FontWeight="Bold" FontSize="40" Content="Choose Difficulty" Grid.Column="2" Margin="52,282,50,247" Grid.RowSpan="2"/>
 
 
-            <Image Source="/img/2.png" Width="175" Height="175" Stretch="Fill" Grid.Column="3" Margin="50,114,50,137" Grid.Row="1" Grid.RowSpan="2">
+            <Image Source="/img/2.png" Width="175" Height="175" Stretch="Fill" Grid.Column="3" Margin="112,175,353,10" Grid.Row="1">
                 <Image.Effect>
                     <DropShadowEffect>
 
@@ -49,7 +86,7 @@
                 </Image.Effect>
             </Image>
 
-            <Image Source="/img/4.png" Width="175" Height="175" Stretch="Fill" Margin="50,115,49,137" Grid.Row="1" Grid.RowSpan="2">
+            <Image Source="/img/4.png" Width="175" Height="175" Stretch="Fill" Margin="354,175,111,10" Grid.Row="1">
                 <Image.Effect>
                     <DropShadowEffect>
 
@@ -57,7 +94,7 @@
                 </Image.Effect>
             </Image>
 
-            <Image Source="/img/3.png" Width="175" Height="175" Stretch="Fill"  Grid.Column="2" Margin="49,115,50,137" Grid.Row="1" Grid.RowSpan="2">
+            <Image Source="/img/3.png" Width="175" Height="175" Stretch="Fill"  Margin="231,175,232,10" Grid.Column="2"  Grid.Row="1">
                 <Image.Effect>
                     <DropShadowEffect>
 

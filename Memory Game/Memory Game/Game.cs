@@ -36,6 +36,14 @@ namespace Memory_Game
 
         private GameWindow gameWindow;
 
+        public const double scoreMatchBonus = 100;
+        public const double scoreStreakBonusEasy = 20;
+        public const double scoreStreakBonusMedium = 30;
+        public const double scoreStreakBonusHard = 50;
+        public const double scoreTimeBonusEasy = 2.5;
+        public const double scoreTimeBonusMedium = 2.75;
+        public const double scoreTimeBonusHard = 3;
+
         public Game()
         {
             // For debugging purposes, you're supposed to change these yourself somewhere else from user input
@@ -245,7 +253,7 @@ namespace Memory_Game
         public void CalculateScore(int streakscore, string player)
         {
             double currentScore = GetScore(player);
-            currentScore += 100;
+            currentScore += scoreMatchBonus;
 
             switch (GetDifficulty())
             {

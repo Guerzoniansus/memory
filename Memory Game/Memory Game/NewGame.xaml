@@ -37,6 +37,7 @@
         <!--New game text-->
         <Border
           BorderThickness="1"
+            VerticalAlignment="Center"
           BorderBrush="Black"
           CornerRadius="10"
           Background="White"

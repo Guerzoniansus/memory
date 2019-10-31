@@ -29,25 +29,19 @@ namespace Memory_Game
 
         }
 
-        
-        public void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Are you sure you want to quit?");
-        }
-        public void Button_Click1(object sender, RoutedEventArgs e)
+        public void NextButtonClick(object sender, RoutedEventArgs e)
         {
 
-            Game.GetGame().SetDifficulty(difficulty);
-
-
-            NewGame newgame = new NewGame();
-            newgame.Show();
+            NewGame newGame = new NewGame();
+            newGame.Show();
             this.Close();
         }
 
         private void Closebutton_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            MainWindow mWindow = new MainWindow();
+            mWindow.Show();
+            this.Close();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
