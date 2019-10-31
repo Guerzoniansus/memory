@@ -33,9 +33,8 @@ namespace Memory_Game
 
         public GameWindow()
         {
-            game = new Game();
-            game.SetGameWindow(this);
-            Game.SetGame(game);     
+            game = Game.GetGame();
+            game.SetGameWindow(this);    
 
             InitializeComponent();
 

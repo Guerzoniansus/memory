@@ -42,7 +42,7 @@ namespace Memory_Game
             this.player1 = "undefined";
             this.player2 = "undefined2";
             this.difficulty = Difficulty.UNDEFINED;
-            this.isMultiplayer = false;
+            this.isMultiplayer = true;
             this.time = STARTING_TIME;
             this.turn = player1;
             this.amountOfCards = 16;
@@ -147,6 +147,10 @@ namespace Memory_Game
         {
             this.player1 = player1;
             this.player2 = player2;
+
+            scores.Add(player1, 0);
+            scores.Add(player2, 0);
+            SetTurn(player1);
         }
 
         public double GetScore(string player)

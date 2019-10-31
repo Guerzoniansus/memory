@@ -39,8 +39,8 @@ namespace Memory_Game
             Game.GetGame().SetDifficulty(difficulty);
 
 
-            GameWindow gameWindow = new GameWindow();
-            gameWindow.Show();
+            NewGame newgame = new NewGame();
+            newgame.Show();
             this.Close();
         }
 

@@ -19,22 +19,22 @@ namespace Memory_Game
     /// </summary>
     public partial class NewGame : Window
     {
-        
+
 
         public NewGame()
         {
             InitializeComponent();
-            if (Game.GetGame().GetDifficulty(Hard))
+            if (Game.GetGame().GetDifficulty() == Difficulty.HARD)
             {
-                CardAmount.
+                CardAmount.Items.Add("26");
+                CardAmount.Items.Add("28");
             }
 
         }
-         
-        
+
         private void SpBtn_Click(Object sender, RoutedEventArgs e)
         {
-           // Set game op Singleplayer
+            // Set game op Singleplayer
 
             P2Input.Visibility = Visibility.Hidden;
             P2Text.Visibility = Visibility.Hidden;
@@ -47,31 +47,32 @@ namespace Memory_Game
             P2Input.Visibility = Visibility.Visible;
             P2Text.Visibility = Visibility.Visible;
             Game.GetGame().SetMultiplayer(true);
-            
+
         }
 
-    
+
 
         private void ProceedBtn_Click(Object sender, RoutedEventArgs e)
         {
             // Set player Names
             string player1 = P1Input.Text;
             string player2 = P2Input.Text;
-            
+
             // Alleen alphanumerieke input voor player1
             char[] letters = player1.ToCharArray();
-            
+
 
             foreach (char letter in letters)
             {
 
-                if (!(char.IsLetter(letter)) && (!(char.IsNumber(letter)))){
+                if (!(char.IsLetter(letter)) && (!(char.IsNumber(letter))))
+                {
 
                     MessageBox.Show("Alleen letters en cijfers, geen speciale tekens!");
-                    
-                    
-                }                                        
-                
+
+
+                }
+
             }
             // Alleen alphanumerieke input voor player2
             char[] letters2 = player2.ToCharArray();
@@ -89,7 +90,7 @@ namespace Memory_Game
                 }
 
             }
-           
+
             // Laat speler 2 naam leeg
             if (player2 == null)
             {
@@ -120,12 +121,6 @@ namespace Memory_Game
             this.Close();
 
         }
-       
-       
-       
-           
-
-
 
 
     }

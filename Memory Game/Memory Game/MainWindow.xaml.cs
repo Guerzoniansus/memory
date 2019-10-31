@@ -19,7 +19,6 @@ namespace Memory_Game
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     /// 
-    /// test
     public partial class MainWindow : Window
     {
 
@@ -30,29 +29,72 @@ namespace Memory_Game
             game = new Game();
             Game.SetGame(game);
             InitializeComponent();
-
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
+            Game.PlaySound("click");
+
             // quit knop die ervoor zorgt dat de app afsluit
             Application.Current.Shutdown();
         }
 
+        public void LoadClick(object sender, RoutedEventArgs e)
+        {
+            Game.PlaySound("click");
+
+            GameWindow gameWindow = new GameWindow();
+
+            SaveUtils.LoadGame();
+
+            gameWindow.Show();
+
+            this.Close();
+        }
+
         private void Highscore_Click(object sender, RoutedEventArgs e)
         {
-
+            Game.PlaySound("click");
         }
 
         private void NewGame_Click(object sender, RoutedEventArgs e)
         {
-            // hier moet code komen dat die naar window1 gaat
-            NewGame NewGame = new NewGame();
+            Game.PlaySound("click");
 
-            NewGame.Show();
+            // hier moet code komen dat die naar window1 gaat
+            //NewGame NewGame = new NewGame();
+
+            //NewGame.Show();
+
+            DifficultyWindow dWindow = new DifficultyWindow();
+            dWindow.Show();
 
             this.Close();
 
+        }
+
+        private void LoadGameClick(object sender, RoutedEventArgs e)
+        {
+            Game.PlaySound("click");
+
+            GameWindow GameWindow = new GameWindow();
+            SaveUtils.LoadGame();
+            GameWindow.Show();
+
+            this.Hide();
+
+        }
+
+        private void MouseEnterEvent(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Background = Brushes.LightGray;
+        }
+
+        private void MouseLeaveEvent(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Background = Brushes.White;
         }
     }
 }
