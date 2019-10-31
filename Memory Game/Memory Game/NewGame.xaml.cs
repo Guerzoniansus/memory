@@ -20,15 +20,17 @@ namespace Memory_Game
     public partial class NewGame : Window
     {
 
-
         public NewGame()
         {
+
             InitializeComponent();
             if (Game.GetGame().GetDifficulty() == Difficulty.HARD)
             {
                 CardAmount.Items.Add("26");
                 CardAmount.Items.Add("28");
             }
+
+            Game.GetGame().SetMultiplayer(true);
 
         }
 
