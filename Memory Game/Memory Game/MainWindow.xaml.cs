@@ -49,9 +49,9 @@ namespace Memory_Game
 
         private void Highscore_Click(object sender, RoutedEventArgs e)
         {
-            Highscores Highscores = new Highscores();
+            HighscoresWindow HighscoresWindow = new HighscoresWindow();
 
-            Highscores.Show();
+            HighscoresWindow.Show();
 
             this.Close();
         }
