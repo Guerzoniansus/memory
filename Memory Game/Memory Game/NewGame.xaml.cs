@@ -19,19 +19,19 @@ namespace Memory_Game
     /// </summary>
     public partial class NewGame : Window
     {
-        
+
 
         public NewGame()
         {
             InitializeComponent();
-            if (Game.GetGame().GetDifficulty(Hard))
+            if (Game.GetGame().GetDifficulty() == Difficulty.HARD)
             {
-                CardAmount.
+                CardAmount.Items.Add("26");
+                CardAmount.Items.Add("28");               
             }
 
         }
-         
-        
+                
         private void SpBtn_Click(Object sender, RoutedEventArgs e)
         {
            // Set game op Singleplayer
