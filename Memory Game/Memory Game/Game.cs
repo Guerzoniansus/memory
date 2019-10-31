@@ -87,6 +87,11 @@ namespace Memory_Game
             this.gameWindow = window;
         }
 
+        public Window GetGameWindow()
+        {
+            return gameWindow;
+        }
+
         /// <summary>
         /// Resets the game. Resets time, turn, scores, resets the grid and updates the window
         /// </summary>
@@ -159,8 +164,19 @@ namespace Memory_Game
             this.player1 = player1;
             this.player2 = player2;
 
-            scores.Add(player1, 0);
-            scores.Add(player2, 0);
+            // Try catch to fix a stupid bug: "Er is al een item met dezelfde sleutel toegevoegd."
+            try
+            {
+               scores.Add(player1, 0);
+               scores.Add(player2, 0);
+            }
+            catch (System.ArgumentException e)
+            {
+                scores[player1] = 0;
+                scores[player2] = 0;
+            }
+
+            
             SetTurn(player1);
         }
 
@@ -245,9 +261,9 @@ namespace Memory_Game
         {
             return player2;
         }
-        
 
-   
+
+
 
 
         /// <summary>
@@ -269,14 +285,14 @@ namespace Memory_Game
                 case Difficulty.HARD:
                     currentScore += Clamp((streakscore * Convert.ToInt32(scoreStreakBonusHard)), 0, Convert.ToInt32(scoreStreakMaxHard));
                     break;
-                default: 
+                default:
                     break;
             }
 
             SetScore(player, currentScore);
         }
 
-        
+
         private int Clamp(int value, int min, int max)
         {
             return (value < min) ? min : (value > max) ? max : value;

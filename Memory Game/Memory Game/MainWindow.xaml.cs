@@ -46,6 +46,7 @@ namespace Memory_Game
             GameWindow gameWindow = new GameWindow();
 
             SaveUtils.LoadGame();
+            Game.GetGame().SetGameWindow(gameWindow);
 
             gameWindow.Show();
 

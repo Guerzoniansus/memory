@@ -125,6 +125,9 @@ namespace Memory_Game
         {
             Game.PlaySound("click");
             SaveUtils.LoadGame();
+            game = Game.GetGame();
+            game.SetGameWindow(this);
+            UpdateWindow();
         }
 
         private void MyMouseEnterEvent(object sender, MouseEventArgs e)

@@ -25,13 +25,12 @@ namespace Memory_Game
             InitializeComponent();
             Checkbox_Easy.IsChecked = true;
             difficulty = Difficulty.EASY;
-            Game.GetGame().SetDifficulty(difficulty);
-
         }
 
         public void NextButtonClick(object sender, RoutedEventArgs e)
         {
             Game.PlaySound("click");
+            Game.GetGame().SetDifficulty(difficulty);
             NewGame newGame = new NewGame();
             newGame.Show();
             this.Close();

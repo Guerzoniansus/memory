@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Xml.Serialization;
@@ -195,6 +196,7 @@ namespace Memory_Game
 
             // Als je dit niet doet blijft het bestand open in het achtergrond en kan je later weer niet saven
             input.Close();
+
 
             // For debugging
             Console.WriteLine("Loaded game data");
