@@ -4,6 +4,7 @@ using System.Linq;
 using System.Media;
 using System.Text;
 using System.Windows;
+using System.Windows.Media;
 
 namespace Memory_Game
 {
@@ -46,6 +47,8 @@ namespace Memory_Game
         public const double scoreStreakMaxEasy = scoreStreakBonusEasy + 100;
         public const double scoreStreakMaxMedium = scoreStreakBonusMedium + 100;
         public const double scoreStreakMaxHard = scoreStreakBonusHard + 100;
+
+        public static MediaPlayer mediaPlayer = new System.Windows.Media.MediaPlayer();
         public Game()
         {
             // For debugging purposes, you're supposed to change these yourself somewhere else from user input
@@ -115,11 +118,9 @@ namespace Memory_Game
         /// <param name="sound">Name of the sound file</param>
         public static void PlaySound(string sound)
         {
-            var player = new System.Windows.Media.MediaPlayer();
-            player.Open(new Uri(@"sounds\" + sound + ".wav", UriKind.Relative));
-            
-
-            player.Play();
+            //var player = new System.Windows.Media.MediaPlayer();
+            mediaPlayer.Open(new Uri(@"sounds\" + sound + ".wav", UriKind.Relative));
+            mediaPlayer.Play();
         }
 
         /// <summary>

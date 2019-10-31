@@ -18,11 +18,11 @@
             <RowDefinition Height="100*"></RowDefinition>
             <RowDefinition Height="150*"></RowDefinition>
             <RowDefinition Height="50*"></RowDefinition>
-            <RowDefinition Height="50*"></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
             <RowDefinition Height="30*"></RowDefinition>
-            <RowDefinition Height="50*"></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
             <RowDefinition Height="100*"></RowDefinition>
-            <RowDefinition Height="180*"></RowDefinition>
+            <RowDefinition Height="160*"></RowDefinition>
             <RowDefinition Height="100*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -198,7 +198,7 @@
         <Button
             Style="{StaticResource RoundButtonTemplate}"
             FontSize="36"
-            Content="Next"
+            Content="Start"
             x:Name="ProceedBtn"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"

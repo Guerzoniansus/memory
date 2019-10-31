@@ -31,7 +31,7 @@ namespace Memory_Game
 
         public void NextButtonClick(object sender, RoutedEventArgs e)
         {
-
+            Game.PlaySound("click");
             NewGame newGame = new NewGame();
             newGame.Show();
             this.Close();
@@ -39,6 +39,7 @@ namespace Memory_Game
 
         private void Closebutton_Click(object sender, RoutedEventArgs e)
         {
+            Game.PlaySound("click");
             MainWindow mWindow = new MainWindow();
             mWindow.Show();
             this.Close();
@@ -52,7 +53,7 @@ namespace Memory_Game
         public void CheckBox_Checked_Easy(object sender, RoutedEventArgs e)
         {
 
-         
+            Game.PlaySound("click");
             Checkbox_Medium.IsChecked = false;
             Checkbox_Hard.IsChecked = false;
            
@@ -68,7 +69,6 @@ namespace Memory_Game
               Checkbox_Easy.IsChecked = true;
             }
 
-            
         }
 
         public void Checkbox_Unchecked_Medium(object sender, RoutedEventArgs e)
@@ -87,11 +87,12 @@ namespace Memory_Game
             {
                 Checkbox_Hard.IsChecked = true;
             }
+
         }
 
         public void CheckBox_Checked_Medium(object sender, RoutedEventArgs e)
         {
-            
+            Game.PlaySound("click");
             Checkbox_Easy.IsChecked = false;
             Checkbox_Hard.IsChecked = false;
 
@@ -101,7 +102,7 @@ namespace Memory_Game
 
         public void CheckBox_Checked_Hard(object sender, RoutedEventArgs e)
         {
-
+            Game.PlaySound("click");
             Checkbox_Easy.IsChecked = false;
             Checkbox_Medium.IsChecked = false;
 
@@ -109,5 +110,16 @@ namespace Memory_Game
 
         }
 
+        private void MyMouseEnterEvent(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Background = Brushes.LightGray;
+        }
+
+        private void MyMouseLeaveEvent(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Background = Brushes.White;
+        }
     }
 }

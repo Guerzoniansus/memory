@@ -30,10 +30,10 @@
             </StackPanel>
 
 
+            <CheckBox HorizontalAlignment="Right" VerticalContentAlignment="Center"
+                x:Name="Checkbox_Medium" Content="Medium" FontSize="30" Margin="0,33,256,144" RenderTransformOrigin="2.654,0.824" Grid.Column="2" Checked="CheckBox_Checked_Medium" Unchecked="Checkbox_Unchecked_Medium" Grid.Row="1"/>
             <CheckBox HorizontalAlignment="Center" VerticalContentAlignment="Center"
-                x:Name="Checkbox_Medium" Content="Medium" FontSize="30" Margin="140,33,131,144" RenderTransformOrigin="2.654,0.824" Grid.Column="2" Checked="CheckBox_Checked_Medium" Unchecked="Checkbox_Unchecked_Medium" Grid.Row="1"/>
-            <CheckBox HorizontalAlignment="Center" VerticalContentAlignment="Center"
-                x:Name="Checkbox_Hard" Content="Hard" FontSize="30" Margin="163,33,392,144" RenderTransformOrigin="2.654,0.824" Grid.Column="3" Checked="CheckBox_Checked_Hard" Unchecked="Checkbox_Unchecked_Hard"  Grid.Row="1"/>
+                x:Name="Checkbox_Hard" Content="Hard" FontSize="30" Margin="153,33,402,144" RenderTransformOrigin="2.654,0.824" Grid.Column="3" Checked="CheckBox_Checked_Hard" Unchecked="Checkbox_Unchecked_Hard"  Grid.Row="1"/>
             <CheckBox HorizontalAlignment="Center" VerticalContentAlignment="Center" 
                 x:Name="Checkbox_Easy" Content="Easy" FontSize="30" Margin="390,33,172,144" RenderTransformOrigin="2.654,0.824" Grid.Row="1" Checked="CheckBox_Checked_Easy" Unchecked="Checkbox_Unchecked_Easy"/>
 
@@ -44,12 +44,16 @@
             <Button x:Name="button1" Background="White" Content="Next" Click="NextButtonClick" Grid.Row="2" 
              Style="{StaticResource RoundButtonTemplate}"
             FontSize="36"
+                    MouseEnter="MyMouseEnterEvent"
+                    MouseLeave="MyMouseLeaveEvent"
             Height="70"
             Width="200" Margin="380,267,60,23" Grid.Column="3" />
 
             <Button x:Name="Closebutton" Background="White" Content="Back" Click="Closebutton_Click" Grid.Row="2" 
              Style="{StaticResource RoundButtonTemplate}"
             FontSize="36"
+                    MouseEnter="MyMouseEnterEvent"
+                    MouseLeave="MyMouseLeaveEvent"
              Height="70"
             Width="200" Margin="60,267,380,23" />
 
@@ -79,27 +83,12 @@
 
 
             <Image Source="/img/2.png" Width="175" Height="175" Stretch="Fill" Grid.Column="3" Margin="112,175,353,10" Grid.Row="1">
-                <Image.Effect>
-                    <DropShadowEffect>
-
-                    </DropShadowEffect>
-                </Image.Effect>
             </Image>
 
             <Image Source="/img/4.png" Width="175" Height="175" Stretch="Fill" Margin="354,175,111,10" Grid.Row="1">
-                <Image.Effect>
-                    <DropShadowEffect>
-
-                    </DropShadowEffect>
-                </Image.Effect>
             </Image>
 
-            <Image Source="/img/3.png" Width="175" Height="175" Stretch="Fill"  Margin="231,175,232,10" Grid.Column="2"  Grid.Row="1">
-                <Image.Effect>
-                    <DropShadowEffect>
-
-                    </DropShadowEffect>
-                </Image.Effect>
+            <Image Source="/img/3.png" HorizontalAlignment="Center" Width="175" Height="175" Stretch="Fill"  Margin="231,175,232,10" Grid.Column="2"  Grid.Row="1">
             </Image>
 
 
