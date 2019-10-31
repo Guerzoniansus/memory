@@ -42,7 +42,7 @@ namespace Memory_Game
             this.player1 = "undefined";
             this.player2 = "undefined2";
             this.difficulty = Difficulty.UNDEFINED;
-            this.isMultiplayer = true;
+            this.isMultiplayer = false;
             this.time = STARTING_TIME;
             this.turn = player1;
             this.amountOfCards = 16;
@@ -242,9 +242,9 @@ namespace Memory_Game
         /// <summary>
         /// Gets the current score, calculates the new score and sets it
         /// </summary>
-        public void CalculateScore(int streakscore, int player)
+        public void CalculateScore(int streakscore, string player)
         {
-            double currentScore = GetScore("player" + player);
+            double currentScore = GetScore(player);
             currentScore += 100;
 
             switch (GetDifficulty())
@@ -262,11 +262,11 @@ namespace Memory_Game
                     break;
             }
 
-            SetScore("player" + player, currentScore);
+            SetScore(player, currentScore);
         }
 
         
-        public static int Clamp(int value, int min, int max)
+        private int Clamp(int value, int min, int max)
         {
             return (value < min) ? min : (value > max) ? max : value;
         }

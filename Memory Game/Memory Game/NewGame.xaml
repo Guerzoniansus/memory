@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         WindowStyle="None"
         WindowState="Maximized"
-        Title="NewGame" Height="450" Width="800">
-    <Border Padding="10" Background="#00FFE1">
+        Title="NewGame">
+    <Border Background="#00FFE1">
         <StackPanel Background="#00FFE1">
 
             <!--New game text-->
