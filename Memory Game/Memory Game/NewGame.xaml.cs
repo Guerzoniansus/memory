@@ -145,9 +145,9 @@ namespace Memory_Game
             // Returned naar het Main Menu
             Game.PlaySound("click");
 
-            MainWindow mainWindow = new MainWindow();
+            DifficultyWindow dWindow = new DifficultyWindow();
 
-            mainWindow.Show();
+            dWindow.Show();
             this.Close();
 
         }

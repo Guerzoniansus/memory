@@ -24,6 +24,7 @@ namespace Memory_Game
         {
             InitializeComponent();
             Checkbox_Easy.IsChecked = true;
+            difficulty = Difficulty.EASY;
             Game.GetGame().SetDifficulty(difficulty);
 
         }
