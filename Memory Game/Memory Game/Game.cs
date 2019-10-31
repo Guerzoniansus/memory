@@ -87,7 +87,7 @@ namespace Memory_Game
             this.gameWindow = window;
         }
 
-        public Window GetGameWindow()
+        public GameWindow GetGameWindow()
         {
             return gameWindow;
         }

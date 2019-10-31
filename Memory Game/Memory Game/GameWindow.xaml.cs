@@ -57,6 +57,7 @@ namespace Memory_Game
         /// </summary>
         public void UpdateWindow()
         {
+            game = Game.GetGame();
             string player1 = game.GetPlayer1();
             string player2 = game.GetPlayer2();
             string turn = game.GetTurn();

@@ -47,8 +47,9 @@ namespace Memory_Game
 
             SaveUtils.LoadGame();
             Game.GetGame().SetGameWindow(gameWindow);
-
+            gameWindow.UpdateWindow();
             gameWindow.Show();
+           
 
             this.Close();
         }
@@ -78,9 +79,12 @@ namespace Memory_Game
         {
             Game.PlaySound("click");
 
-            GameWindow GameWindow = new GameWindow();
+            GameWindow gameWindow = new GameWindow();
+
             SaveUtils.LoadGame();
-            GameWindow.Show();
+            Game.GetGame().SetGameWindow(gameWindow);
+            gameWindow.Show();
+            Game.GetGame().GetGameWindow().UpdateWindow();
 
             this.Hide();
 
