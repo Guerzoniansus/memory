@@ -141,6 +141,9 @@
     <Resource Include="img\k.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="credits.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="img\volume_button.png" />
     <Resource Include="img\volume_muted.png" />
     <Content Include="sounds\bgmusic.wav">
