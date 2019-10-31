@@ -38,12 +38,14 @@ namespace Memory_Game
 
         public const double scoreMatchBonus = 100;
         public const double scoreStreakBonusEasy = 20;
-        public const double scoreStreakBonusMedium = 30;
-        public const double scoreStreakBonusHard = 50;
+        public const double scoreStreakBonusMedium = 40;
+        public const double scoreStreakBonusHard = 100;
         public const double scoreTimeBonusEasy = 2.5;
         public const double scoreTimeBonusMedium = 2.75;
         public const double scoreTimeBonusHard = 3;
-
+        public const double scoreStreakMaxEasy = scoreStreakBonusEasy + 100;
+        public const double scoreStreakMaxMedium = scoreStreakBonusMedium + 100;
+        public const double scoreStreakMaxHard = scoreStreakBonusHard + 100;
         public Game()
         {
             // For debugging purposes, you're supposed to change these yourself somewhere else from user input
@@ -258,13 +260,13 @@ namespace Memory_Game
             switch (GetDifficulty())
             {
                 case Difficulty.EASY:
-                    currentScore += Clamp((streakscore * 20), 0, 120);
+                    currentScore += Clamp((streakscore * Convert.ToInt32(scoreStreakBonusEasy)), 0, Convert.ToInt32(scoreStreakMaxEasy));
                     break;
                 case Difficulty.MEDIUM:
-                    currentScore += Clamp((streakscore * 20), 0, 130);
+                    currentScore += Clamp((streakscore * Convert.ToInt32(scoreStreakBonusMedium)), 0, Convert.ToInt32(scoreStreakMaxMedium));
                     break;
                 case Difficulty.HARD:
-                    currentScore += Clamp((streakscore * 20), 0, 150);
+                    currentScore += Clamp((streakscore * Convert.ToInt32(scoreStreakBonusHard)), 0, Convert.ToInt32(scoreStreakMaxHard));
                     break;
                 default: 
                     break;
