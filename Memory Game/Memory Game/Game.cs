@@ -230,6 +230,43 @@ namespace Memory_Game
         {
             return player2;
         }
+        
+
+   
+
+
+        /// <summary>
+        /// Gets the current score, calculates the new score and sets it
+        /// </summary>
+        public void CalculateScore(int streakscore, int player)
+        {
+            double currentScore = GetScore("player" + player);
+            currentScore += 100;
+
+            switch (GetDifficulty())
+            {
+                case Difficulty.EASY:
+                    currentScore += Clamp((streakscore * 20), 0, 120);
+                    break;
+                case Difficulty.MEDIUM:
+                    currentScore += Clamp((streakscore * 20), 0, 130);
+                    break;
+                case Difficulty.HARD:
+                    currentScore += Clamp((streakscore * 20), 0, 150);
+                    break;
+                default: 
+                    break;
+            }
+
+            SetScore("player" + player, currentScore);
+        }
+
+        
+        public static int Clamp(int value, int min, int max)
+        {
+            return (value < min) ? min : (value > max) ? max : value;
+        }
+
 
     }
 }

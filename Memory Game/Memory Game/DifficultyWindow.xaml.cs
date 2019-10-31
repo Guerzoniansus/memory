@@ -19,17 +19,26 @@ namespace Memory_Game
     /// </summary>
     public partial class DifficultyWindow : Window
     {
+        Difficulty difficulty;
         public DifficultyWindow()
         {
-            InitializeComponent();   
+            InitializeComponent();
+            Checkbox_Easy.IsChecked = true;
+            Game.GetGame().SetDifficulty(difficulty);
+
         }
 
+        
         public void Button_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Are you sure you want to quit?");
         }
         public void Button_Click1(object sender, RoutedEventArgs e)
         {
+
+            Game.GetGame().SetDifficulty(difficulty);
+
+
             GameWindow gameWindow = new GameWindow();
             gameWindow.Show();
             this.Close();
@@ -45,18 +54,65 @@ namespace Memory_Game
 
         }
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        public void CheckBox_Checked_Easy(object sender, RoutedEventArgs e)
         {
+
+         
+            Checkbox_Medium.IsChecked = false;
+            Checkbox_Hard.IsChecked = false;
+           
+
+            difficulty = Difficulty.EASY;
+        }
+
+        public void Checkbox_Unchecked_Easy(object sender, RoutedEventArgs e)
+        {
+
+            if (Checkbox_Medium.IsChecked == false && Checkbox_Hard.IsChecked == false)
+            {
+              Checkbox_Easy.IsChecked = true;
+            }
+
             
         }
 
-        private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
+        public void Checkbox_Unchecked_Medium(object sender, RoutedEventArgs e)
         {
+            if (Checkbox_Easy.IsChecked == false && Checkbox_Hard.IsChecked == false)
+            {
+                Checkbox_Medium.IsChecked = true;
+            }
+            
         }
 
-        private void CheckBox_Checked_2(object sender, RoutedEventArgs e)
+        public void Checkbox_Unchecked_Hard(object sender, RoutedEventArgs e)
         {
 
+            if (Checkbox_Easy.IsChecked == false && Checkbox_Medium.IsChecked == false)
+            {
+                Checkbox_Hard.IsChecked = true;
+            }
         }
+
+        public void CheckBox_Checked_Medium(object sender, RoutedEventArgs e)
+        {
+            
+            Checkbox_Easy.IsChecked = false;
+            Checkbox_Hard.IsChecked = false;
+
+            difficulty = Difficulty.MEDIUM;
+
+        }
+
+        public void CheckBox_Checked_Hard(object sender, RoutedEventArgs e)
+        {
+
+            Checkbox_Easy.IsChecked = false;
+            Checkbox_Medium.IsChecked = false;
+
+            difficulty = Difficulty.HARD;
+
+        }
+
     }
 }
