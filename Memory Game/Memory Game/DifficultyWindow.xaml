@@ -41,17 +41,19 @@
 
             <!--<Button x:Name="button1" Content="Start Game" Foreground="White" FontSize="30" Background="Black" Click="Button_Click1" Margin="131,174,131,10" Grid.Row="2" Grid.Column="2" />-->
 
-            <Button x:Name="button1" Background="White" Content="Next" Click="NextButtonClick" Grid.Row="2" 
+            <Button x:Name="button1" Background="White" Content="NEXT" Click="NextButtonClick" Grid.Row="2" 
              Style="{StaticResource RoundButtonTemplate}"
             FontSize="36"
+                    FontWeight="BOLD"
                     MouseEnter="MyMouseEnterEvent"
                     MouseLeave="MyMouseLeaveEvent"
             Height="70"
             Width="200" Margin="380,267,60,23" Grid.Column="3" />
 
-            <Button x:Name="Closebutton" Background="White" Content="Back" Click="Closebutton_Click" Grid.Row="2" 
+            <Button x:Name="Closebutton" Background="White" Content="BACK" Click="Closebutton_Click" Grid.Row="2" 
              Style="{StaticResource RoundButtonTemplate}"
             FontSize="36"
+                    FontWeight="BOLD"
                     MouseEnter="MyMouseEnterEvent"
                     MouseLeave="MyMouseLeaveEvent"
              Height="70"

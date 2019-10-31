@@ -180,7 +180,8 @@
         <Button
             Style="{StaticResource RoundButtonTemplate}"
             FontSize="36"
-            Content="Back"
+            FontWeight="BOLD"
+            Content="BACK"
             x:Name="BackBtn"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
@@ -198,7 +199,8 @@
         <Button
             Style="{StaticResource RoundButtonTemplate}"
             FontSize="36"
-            Content="Start"
+            FontWeight="BOLD"
+            Content="START"
             x:Name="ProceedBtn"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
