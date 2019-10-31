@@ -112,5 +112,3 @@ C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memo
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\Memory_Game.Properties.Resources.resources
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\Memory Game.csproj.GenerateResource.cache
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\Memory Game.csproj.CopyComplete
-C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\NewGame2.g.cs
-C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\NewGame2.baml

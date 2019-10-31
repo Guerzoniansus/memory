@@ -65,8 +65,8 @@
             Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" FontSize="24px"
             x:Name="Menu"
             Click="ButtonClickMenu"
-            MouseEnter="MouseEnterEvent"
-            MouseLeave="MouseLeaveEvent"
+            MouseEnter="MyMouseEnterEvent"
+            MouseLeave="MyMouseLeaveEvent"
             Content="Menu" Grid.Row="0" Grid.Column="9" Height="50"
             Background="White" RenderTransformOrigin="0.98,0.575"
          />
@@ -74,8 +74,8 @@
             Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" FontSize="24px"
             x:Name="Reset"
             Click="ButtonClickReset"
-            MouseEnter="MouseEnterEvent"
-            MouseLeave="MouseLeaveEvent"
+            MouseEnter="MyMouseEnterEvent"
+            MouseLeave="MyMouseLeaveEvent"
             Content="Reset" Grid.Row="0" Grid.Column="10" Height="50"
             Background="White" RenderTransformOrigin="0.98,0.575"
          />
@@ -83,8 +83,8 @@
             Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" FontSize="24px"
             x:Name="Save"
             Click="ButtonClickSave"
-            MouseEnter="MouseEnterEvent"
-            MouseLeave="MouseLeaveEvent"
+            MouseEnter="MyMouseEnterEvent"
+            MouseLeave="MyMouseLeaveEvent"
             Content="Save" Grid.Row="0" Grid.Column="8" Height="50"
             Background="White" RenderTransformOrigin="0.98,0.575"
          />
@@ -92,8 +92,8 @@
             Style="{StaticResource RoundButtonTemplate}" BorderBrush="#fff" FontSize="24px"
             x:Name="Load"
             Click="ButtonClickLoad"
-            MouseEnter="MouseEnterEvent"
-            MouseLeave="MouseLeaveEvent"
+            MouseEnter="MyMouseEnterEvent"
+            MouseLeave="MyMouseLeaveEvent"
             Content="Load" Grid.Row="0" Grid.Column="7" Height="50"
             Background="White" RenderTransformOrigin="0.98,0.575" 
          />

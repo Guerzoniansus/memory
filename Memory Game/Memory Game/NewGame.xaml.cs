@@ -36,6 +36,7 @@ namespace Memory_Game
 
         private void SpBtn_Click(Object sender, RoutedEventArgs e)
         {
+            Game.PlaySound("click");
             // Set game op Singleplayer
 
             P2Input.Visibility = Visibility.Hidden;
@@ -44,6 +45,7 @@ namespace Memory_Game
         }
         private void MpBtn_Click(Object sender, RoutedEventArgs e)
         {
+            Game.PlaySound("click");
             // Set game op Multiplayer
 
             P2Input.Visibility = Visibility.Visible;
@@ -56,6 +58,7 @@ namespace Memory_Game
 
         private void ProceedBtn_Click(Object sender, RoutedEventArgs e)
         {
+            Game.PlaySound("click");
             // Set player Names
             string player1 = P1Input.Text;
             string player2 = P2Input.Text;
@@ -70,8 +73,8 @@ namespace Memory_Game
                 if (!(char.IsLetter(letter)) && (!(char.IsNumber(letter))))
                 {
 
-                    MessageBox.Show("Alleen letters en cijfers, geen speciale tekens!");
-
+                    MessageBox.Show("Please only enter letters and numbers. No special characters.");
+                    return;
 
                 }
 
@@ -86,11 +89,35 @@ namespace Memory_Game
                 if (!(char.IsLetter(letter)) && (!(char.IsNumber(letter))))
                 {
 
-                    MessageBox.Show("Alleen letters en cijfers, geen speciale tekens!");
-
+                    MessageBox.Show("Please only enter letters and numbers. No special characters.");
+                    return;
 
                 }
 
+            }
+
+            if (Game.GetGame().IsGameMultiplayer())
+            {
+                if (player1.Equals("") || player2.Equals(""))
+                {
+                    MessageBox.Show("You didn't enter player names!", "Error");
+                    return;
+                }
+
+                if (player1.Equals(player2))
+                {
+                    MessageBox.Show("Please enter two seperate names", "Error");
+                    return;
+                }
+            }
+
+            else
+            {
+                if (player1.Equals(""))
+                {
+                    MessageBox.Show("You didn't enter your name!", "Error");
+                    return;
+                }
             }
 
             // Laat speler 2 naam leeg
@@ -116,6 +143,7 @@ namespace Memory_Game
         private void BackBtn_Click(Object sender, RoutedEventArgs e)
         {
             // Returned naar het Main Menu
+            Game.PlaySound("click");
 
             MainWindow mainWindow = new MainWindow();
 
@@ -124,6 +152,16 @@ namespace Memory_Game
 
         }
 
+        private void MyMouseEnterEvent(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Background = Brushes.LightGray;
+        }
 
+        private void MyMouseLeaveEvent(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Background = Brushes.White;
+        }
     }
 }
