@@ -42,7 +42,7 @@
           Background="White"
           Margin="5"
           Padding="5"
-          Width="260"
+          Width="300"
           Grid.Row="1"
             Grid.Column="2"
             Grid.ColumnSpan="2"
@@ -50,6 +50,8 @@
             <TextBlock
             Text="New Game"
             FontSize="50"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
 
                     />
         </Border>
@@ -94,6 +96,7 @@
         <TextBlock
           Text="Player 1: "
           FontWeight="Bold"
+            FontSize="20"
           HorizontalAlignment="Center"
             VerticalAlignment="Top"
           x:Name="P1Text"
@@ -119,6 +122,7 @@
         <!--Player 2 text-->
         <TextBlock
           Text="Player 2: "
+          FontSize="20"
           FontWeight="Bold"
           HorizontalAlignment="Center"
             VerticalAlignment="Top"
@@ -149,7 +153,7 @@
           HorizontalAlignment="Center"
             VerticalAlignment="Center"
           FontWeight="Bold"
-            FontSize="18"
+            FontSize="20"
             Grid.Column="2"
             Grid.Row="8"
             Grid.ColumnSpan="2"
@@ -157,7 +161,8 @@
                 />
 
         <!--Number of cards dropdown-->
-        <ComboBox Width="125" Height="30" Padding="2" SelectedIndex="0" x:Name="CardAmount"
+        <ComboBox Width="135" Height="40" Padding="2" SelectedIndex="0" x:Name="CardAmount"
+            FontSize="18"
             VerticalAlignment="Bottom"
                   VerticalContentAlignment="Center"
             Grid.Column="2"
@@ -174,7 +179,7 @@
         <Button
             Style="{StaticResource RoundButtonTemplate}"
             FontSize="36"
-            Content="Return"
+            Content="Back"
             x:Name="BackBtn"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"

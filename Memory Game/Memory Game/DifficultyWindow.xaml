@@ -35,7 +35,7 @@
 
           
             <Button x:Name="button1" Content="Start Game" Foreground="White" FontSize="30" Background="Black" Click="Button_Click1" Margin="131,174,131,10" Grid.Row="2" Grid.Column="2" />
-            <Button x:Name="Closebutton" Background="White" Content="Return" Click="Closebutton_Click" Margin="278,183,50,17" Grid.Row="2" />
+            <Button x:Name="Closebutton" Background="White" Content="Back" Click="Closebutton_Click" Margin="278,183,50,17" Grid.Row="2" />
 
             <Label Content="Start Game" Background="White" BorderBrush="Black" BorderThickness="2" FontSize="50" Grid.Column="2" Margin="82,10,82,127"/>
             <Label FontSize="40" Content="Choose Difficulty!" Grid.Column="2" Margin="51,158,51,11"/>
