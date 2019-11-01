@@ -126,6 +126,7 @@ namespace Memory_Game
             Game.PlaySound("click");
             Checkbox_Easy.IsChecked = false;
             Checkbox_Medium.IsChecked = false;
+            Checkbox_Hard.IsChecked = true;
 
             difficulty = Difficulty.HARD;
         }
@@ -135,7 +136,7 @@ namespace Memory_Game
             Game.PlaySound("click");
             Checkbox_Medium.IsChecked = false;
             Checkbox_Hard.IsChecked = false;
-
+            Checkbox_Easy.IsChecked = true;
 
             difficulty = Difficulty.EASY;
         }
@@ -145,6 +146,7 @@ namespace Memory_Game
             Game.PlaySound("click");
             Checkbox_Easy.IsChecked = false;
             Checkbox_Hard.IsChecked = false;
+            Checkbox_Medium.IsChecked = true;
 
             difficulty = Difficulty.MEDIUM;
         }
