@@ -23,7 +23,12 @@ namespace Memory_Game
 
         Game game;
 
-        public WinWindow()
+        // Needed to prevent crashes
+        bool isClosing;
+
+        GameWindow gameWindow;
+
+        public WinWindow(GameWindow gameWindow)
         {
             InitializeComponent();
 
@@ -31,7 +36,8 @@ namespace Memory_Game
 
             AddText();
 
-            
+            isClosing = false;
+            this.gameWindow = gameWindow;
         }
 
         private void AddText()
@@ -43,7 +49,14 @@ namespace Memory_Game
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            isClosing = true;
+
+            MainWindow menu = new MainWindow();
+            menu.Show();
+
+            Game.StopMusic();
+            gameWindow.Close();
+            this.Close();
         }
 
         private void MyMouseEnterEvent(object sender, MouseEventArgs e)
@@ -56,6 +69,24 @@ namespace Memory_Game
         {
             Button button = (Button)sender;
             button.Background = Brushes.White;
+        }
+
+        /// <summary>
+        /// Makes sure that if you click outside the window (and the window gets minimized), it actually gets closed
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnDeactivated(EventArgs e)
+        {
+            base.OnDeactivated(e);
+            if (isClosing == false)
+            {
+                MainWindow menu = new MainWindow();
+                menu.Show();
+
+                Game.StopMusic();
+                gameWindow.Close();
+                Close();
+            }
         }
     }
 }

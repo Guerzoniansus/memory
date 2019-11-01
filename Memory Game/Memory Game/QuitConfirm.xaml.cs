@@ -17,21 +17,29 @@ namespace Memory_Game
     /// Interaction logic for QuitConfirm.xaml
     /// </summary>
     public partial class QuitConfirm : Window
+        
     {
+        // Needed to prevent crashes
+        private bool isClosing;
+
         public QuitConfirm()
         {
             InitializeComponent();
+
+            isClosing = false;
         }
 
         private void Confirm(object sender, RoutedEventArgs e)
         {
+            isClosing = true;
             Application.Current.Shutdown();
         }
 
         private void Return(object sender, RoutedEventArgs e)
         {
             Game.PlaySound("click");
-            this.Close();
+            isClosing = true;
+            Close();          
         }
 
         private void MyMouseEnterEvent(object sender, MouseEventArgs e)
@@ -44,6 +52,16 @@ namespace Memory_Game
         {
             Button button = (Button)sender;
             button.Background = Brushes.White;
+        }
+
+        /// <summary>
+        /// Makes sure that if you click outside the window (and the window gets minimized), it actually gets closed.
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnDeactivated(EventArgs e)
+        {
+            base.OnDeactivated(e);
+            if (isClosing == false) Close();
         }
     }
 }
