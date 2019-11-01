@@ -146,6 +146,44 @@
     </Resource>
     <Resource Include="img\volume_button.png" />
     <Resource Include="img\volume_muted.png" />
+    <Resource Include="img\Easy\1.png" />
+    <Resource Include="img\Easy\10.png" />
+    <Resource Include="img\Easy\11.png" />
+    <Resource Include="img\Easy\12.png" />
+    <Resource Include="img\Easy\2.png" />
+    <Resource Include="img\Easy\3.png" />
+    <Resource Include="img\Easy\4.png" />
+    <Resource Include="img\Easy\5.png" />
+    <Resource Include="img\Easy\6.png" />
+    <Resource Include="img\Easy\7.png" />
+    <Resource Include="img\Easy\8.png" />
+    <Resource Include="img\Easy\9.png" />
+    <Resource Include="img\Harder\1.png" />
+    <Resource Include="img\Harder\10.png" />
+    <Resource Include="img\Harder\11.png" />
+    <Resource Include="img\Harder\12.png" />
+    <Resource Include="img\Harder\13.png" />
+    <Resource Include="img\Harder\14.png" />
+    <Resource Include="img\Harder\2.png" />
+    <Resource Include="img\Harder\3.png" />
+    <Resource Include="img\Harder\4.png" />
+    <Resource Include="img\Harder\5.png" />
+    <Resource Include="img\Harder\6.png" />
+    <Resource Include="img\Harder\7.png" />
+    <Resource Include="img\Harder\8.png" />
+    <Resource Include="img\Harder\9.png" />
+    <Resource Include="img\Medium\1.png" />
+    <Resource Include="img\Medium\10.png" />
+    <Resource Include="img\Medium\11.png" />
+    <Resource Include="img\Medium\12.png" />
+    <Resource Include="img\Medium\2.png" />
+    <Resource Include="img\Medium\3.png" />
+    <Resource Include="img\Medium\4.png" />
+    <Resource Include="img\Medium\5.png" />
+    <Resource Include="img\Medium\6.png" />
+    <Resource Include="img\Medium\7.png" />
+    <Resource Include="img\Medium\8.png" />
+    <Resource Include="img\Medium\9.png" />
     <Content Include="sounds\bgmusic.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
