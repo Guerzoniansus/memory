@@ -11,8 +11,11 @@
            MinHeight="400" MinWidth="650">
     <Grid Background="	#00FFE1">
         <Grid.RowDefinitions>
-            <RowDefinition Height="172*"/>
-            <RowDefinition Height="207*"/>
+            <RowDefinition Height="89*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="139*"/>
+            <RowDefinition Height="69*"/>
             <RowDefinition Height="64*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -30,7 +33,7 @@
             FontSize="24"
             BorderThickness="65"
             MaxHeight="60px"
-            Background="white" Margin="0,70.138,0,37.093" RenderTransformOrigin="0.5,0.5" Grid.Column="1"
+            Background="white" Margin="10" RenderTransformOrigin="0.5,0.5" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"
             >
 
 
@@ -44,10 +47,10 @@
         </Button>
         <Button
             Style="{StaticResource RoundButtonTemplate}"
-            Content="Back" Margin="17.8,10,10,10" Click="Button_Click" Grid.Row="2" RenderTransformOrigin="0.36,0.514"
+            Content="Back" Margin="17.8,10,10,10" Click="Button_Click" Grid.Row="5" RenderTransformOrigin="0.36,0.514"
             />
 
-        <ListView  Background="LightGoldenrodYellow" Margin="28,27.6,26.4,27.6" Name="lvDataBinding" Grid.Column="1" Grid.Row="1">
+        <ListView  Background="LightGoldenrodYellow" Margin="28,27.6,26.4,15.8" Name="lvDataBinding" Grid.Column="1" Grid.Row="3">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
@@ -67,7 +70,7 @@
         </ListView>
 
 
-        <ListView  Background="LightGoldenrodYellow" Margin="37.2,27.6,26.3,27.6" x:Name="lvDataBinding_Copy" Grid.Column="3" Grid.Row="1">
+        <ListView  Background="LightGoldenrodYellow" Margin="37.2,27.6,36.4,15.8" x:Name="lvDataBinding_Copy" Grid.Column="3" Grid.Row="3">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
@@ -85,6 +88,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="28,10.8,26.4,0" Grid.Row="2" TextWrapping="Wrap"  Text="SINGLEPLAYER" FontWeight="Black" VerticalAlignment="Top" Width="104.8"/>
+        <TextBlock Grid.Column="3" HorizontalAlignment="Center" Margin="37.2,10.8,36.4,0" Grid.Row="2" TextWrapping="Wrap"  Text="MULTIPLAYER" FontWeight="Black" VerticalAlignment="Top" Width="104.8"/>
 
 
     </Grid>

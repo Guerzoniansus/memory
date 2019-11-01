@@ -64,3 +64,6 @@ C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Mem
 C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\HighscoresWindow.g.cs
 C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\bin\Debug\highscores.yaml
 C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\HighscoresWindow.baml
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\Memory Game_Content.g.cs
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\WinWindow.g.cs
+C:\Users\frank\OneDrive\Documenten\Huiswerk\AAProject joe\memory\Memory Game\Memory Game\obj\Debug\WinWindow.baml

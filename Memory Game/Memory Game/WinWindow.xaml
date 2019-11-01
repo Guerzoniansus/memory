@@ -1,0 +1,46 @@
+﻿<Window x:Class="Memory_Game.WinWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Memory_Game"
+        mc:Ignorable="d"
+        Title="WinWindow"
+        Height="300" Width="500"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Background="{x:Null}"
+        WindowStartupLocation="CenterScreen"
+        >
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard>
+                <Storyboard FillBehavior="HoldEnd" AutoReverse="False">
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.4"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="185*"/>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="185*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border BorderThickness="4" Background="#00FFE1" CornerRadius="20" BorderBrush="#FF707070" Grid.ColumnSpan="3">
+            <TextBlock x:Name="PlayerName" TextAlignment="Center" FontWeight="Black" FontSize="24" TextWrapping="Wrap" Text="HIER DISPLAY HIGHSCORE" Margin="6,6,6,39.2"/>
+
+
+
+        </Border>
+        <Button
+                Style="{StaticResource RoundButtonTemplate}"
+                Content="OK" FontWeight="Bold" HorizontalAlignment="Center"  Click="Button_Click" RenderTransformOrigin="0.507,0.515" Margin="22.8,250,32.6,10" Width="75" Height="40" Grid.Column="1"
+            />
+    </Grid>
+</Window>

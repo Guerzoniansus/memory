@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Memory_Game"
         mc:Ignorable="d"    Title="MainWindow"
-        WindowStyle="None"
-        WindowState="Maximized"
      Height="450" Width="800"
+         WindowState="Maximized"
+        WindowStyle="None"
            MinHeight="400" MinWidth="650">
     <Grid Background="	#00FFE1" >
         <Grid.RowDefinitions>
@@ -129,7 +129,7 @@
             FontSize="24"
             BorderThickness="65"
                   MaxHeight="60px"
-            Background="white" Margin="0.4,64,3.8,18.6" RenderTransformOrigin="0.5,0.5" Grid.Column="2" Grid.ColumnSpan="3"
+            Background="white" Margin="0.4,64,3.8,18.6" RenderTransformOrigin="0.5,0.5" Grid.Column="2" Grid.ColumnSpan="3" Click="Hoofdmenu_Click"
             >
 
 

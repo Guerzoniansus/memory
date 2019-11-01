@@ -85,5 +85,12 @@ namespace Memory_Game
 
             this.Close();
         }
+
+        private void Hoofdmenu_Click(object sender, RoutedEventArgs e)
+        {
+            WinWindow WinWindow = new WinWindow();
+            WinWindow.Show();
+
+        }
     }
 }
