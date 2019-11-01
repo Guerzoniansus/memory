@@ -184,7 +184,13 @@
     <Resource Include="img\Medium\7.png" />
     <Resource Include="img\Medium\8.png" />
     <Resource Include="img\Medium\9.png" />
-    <Content Include="sounds\bgmusic.wav">
+    <Content Include="sounds\bgmusic_easy.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\bgmusic_hard.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\bgmusic_medium.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="sounds\click.wav">

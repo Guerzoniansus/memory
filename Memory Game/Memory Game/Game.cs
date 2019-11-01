@@ -133,7 +133,19 @@ namespace Memory_Game
         /// </summary>
         public static void PlayMusic()
         {
-            SoundPlayer player = new SoundPlayer(@"sounds\bgmusic.wav");
+            string musicToPlay = "bgmusic_easy";
+
+            switch (Game.GetGame().GetDifficulty())
+            {
+                case Difficulty.MEDIUM: musicToPlay = "bgmusic_medium";
+                    break;
+                case Difficulty.HARD: musicToPlay = "bgmusic_hard";
+                    break;
+                case Difficulty.EASY: musicToPlay = "bgmusic_easy"; 
+                    break;
+            }
+
+            SoundPlayer player = new SoundPlayer(@"sounds\" + musicToPlay + ".wav");
             player.PlayLooping();
             player.Dispose();
         }
