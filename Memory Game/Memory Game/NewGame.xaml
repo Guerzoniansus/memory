@@ -170,9 +170,7 @@
             Grid.Row="8"
             Grid.ColumnSpan="2">
             <ComboBoxItem>16</ComboBoxItem>
-            <ComboBoxItem>18</ComboBoxItem>
             <ComboBoxItem>20</ComboBoxItem>
-            <ComboBoxItem>22</ComboBoxItem>
             <ComboBoxItem>24</ComboBoxItem>
         </ComboBox>
 

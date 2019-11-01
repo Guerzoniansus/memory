@@ -26,7 +26,6 @@ namespace Memory_Game
             InitializeComponent();
             if (Game.GetGame().GetDifficulty() == Difficulty.HARD)
             {
-                CardAmount.Items.Add("26");
                 CardAmount.Items.Add("28");
             }
 
