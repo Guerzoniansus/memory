@@ -1,11 +1,11 @@
 version: 1
 game:
-  player1: fwf
-  player2: fwfw
-  difficulty: medium
+  player1: as
+  player2: s
+  difficulty: hard
   isMultiplayer: True
   time: 300
-  turn: fwf
+  turn: as
   amountOfCards: 16
   scorePlayer1: 0
   scorePlayer2: 0

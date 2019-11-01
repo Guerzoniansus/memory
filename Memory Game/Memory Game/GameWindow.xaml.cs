@@ -125,6 +125,13 @@ namespace Memory_Game
         private void ButtonClickLoad(object sender, RoutedEventArgs e)
         {
             Game.PlaySound("click");
+
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure you want to load? Your current progress will be lost", "Load", System.Windows.MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.No)
+            {
+                return;
+            }
+
             SaveUtils.LoadGame();
             game = Game.GetGame();
             game.SetGameWindow(this);
