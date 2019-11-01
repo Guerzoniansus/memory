@@ -23,12 +23,12 @@ cards:
   2:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   3:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   4:
     frontImageUrl: frontTestImage.png
@@ -38,17 +38,17 @@ cards:
   5:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   6:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   7:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   8:
     frontImageUrl: frontTestImage.png
@@ -58,7 +58,7 @@ cards:
   9:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   10:
     frontImageUrl: frontTestImage.png
@@ -68,7 +68,7 @@ cards:
   11:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   12:
     frontImageUrl: frontTestImage.png
@@ -78,16 +78,16 @@ cards:
   13:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   14:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   15:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
 ...
