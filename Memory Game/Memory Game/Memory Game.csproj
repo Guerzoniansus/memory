@@ -184,6 +184,9 @@
     <Resource Include="img\Medium\7.png" />
     <Resource Include="img\Medium\8.png" />
     <Resource Include="img\Medium\9.png" />
+    <Resource Include="img\Backgrounds\EasyBackground.jpg" />
+    <Resource Include="img\Backgrounds\HardBackground.jpg" />
+    <Resource Include="img\Backgrounds\MediumBackground.jpg" />
     <Content Include="sounds\bgmusic_easy.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -209,8 +212,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="img\Backgrounds\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -101,8 +101,8 @@ namespace Memory_Game
                     // ImageSource frontImage =
                     // Replace de line hieronder met: Card card = new Card(cardId, frontImage, backImage) zodra je de TODOS hierboven hebt gedaan;
 
-                    Card card = new Card(cardId, "/img/" + difficulty + "/" + images[cardId] + ".png", "backTestImage.png");
-                    //"/img/Backgrounds/" + difficulty + "Background.png"
+                    Card card = new Card(cardId, "/img/" + difficulty + "/" + images[cardId] + ".png", "/img/Backgrounds/" + difficulty + "Background.jpg");
+                    
                     //"frontTestImage.png"
                     card.MouseDown += new MouseButtonEventHandler(CardClick);
 

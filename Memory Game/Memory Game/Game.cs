@@ -37,18 +37,18 @@ namespace Memory_Game
 
         private GameWindow gameWindow;
 
+        public static MediaPlayer mediaPlayer = new System.Windows.Media.MediaPlayer();
+
         public const double scoreMatchBonus = 100;
         public const double scoreStreakBonusEasy = 20;
-        public const double scoreStreakBonusMedium = 40;
-        public const double scoreStreakBonusHard = 100;
+        public const double scoreStreakBonusMedium = 30;
+        public const double scoreStreakBonusHard = 50;
         public const double scoreTimeBonusEasy = 2.5;
         public const double scoreTimeBonusMedium = 2.75;
         public const double scoreTimeBonusHard = 3;
         public const double scoreStreakMaxEasy = scoreStreakBonusEasy + 100;
         public const double scoreStreakMaxMedium = scoreStreakBonusMedium + 100;
         public const double scoreStreakMaxHard = scoreStreakBonusHard + 100;
-
-        public static MediaPlayer mediaPlayer = new System.Windows.Media.MediaPlayer();
         public Game()
         {
             // For debugging purposes, you're supposed to change these yourself somewhere else from user input
