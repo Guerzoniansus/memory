@@ -58,12 +58,12 @@ cards:
   9:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   10:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: True
+    flipped: False
     found: False
   11:
     frontImageUrl: frontTestImage.png

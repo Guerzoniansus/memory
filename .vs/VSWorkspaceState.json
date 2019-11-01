@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Memory Game",
-    "\\Memory Game\\Memory Game"
+    "\\Memory Game"
   ],
-  "SelectedNode": "\\Memory Game\\Memory Game\\NewGame.xaml.cs",
-  "PreviewInSolutionExplorer": true
+  "SelectedNode": "\\Memory Game\\Memory Game.sln",
+  "PreviewInSolutionExplorer": false
 }
