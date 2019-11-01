@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Memory_Game
 {
-    enum Difficulty
+    public enum Difficulty
     {
         EASY,
         MEDIUM,

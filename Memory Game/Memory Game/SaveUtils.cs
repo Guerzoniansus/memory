@@ -187,16 +187,31 @@ namespace Memory_Game
                 cards.Add(card);
             }
 
+            int[] size = new int[] { };
 
-            MemoryGrid grid = new MemoryGrid(GameWindow.getWindowGrid(), 4, 4, difficulty, amountOfCards, cards);
-            game.SetGrid(grid);
+            switch (game.GetAmountOfCards())
+            {
+                case 16:
+                    size = new int[] { 4,4};
+                    break;
+                case 20:
+                    size = new int[] { 5, 4 };
+                    break;
+                case 24:
+                    size = new int[] { 6, 4 };
+                    break;
+                case 28:
+                    size = new int[] { 7, 4 };
+                    break;
+            }
 
-            // Zet de game als de nieuwe game
             Game.SetGame(game);
+            MemoryGrid grid = new MemoryGrid(GameWindow.getWindowGrid(), size[0], size[1], difficulty, amountOfCards, cards);
+            game.SetGrid(grid);
+            // Zet de game als de nieuwe game
 
             // Als je dit niet doet blijft het bestand open in het achtergrond en kan je later weer niet saven
             input.Close();
-
 
             // For debugging
             Console.WriteLine("Loaded game data");

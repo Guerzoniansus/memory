@@ -8,7 +8,7 @@ using System.Windows.Media.Imaging;
 
 namespace Memory_Game
 {
-    class MemoryGrid
+    public class MemoryGrid
     {
 
         private Grid grid;
@@ -50,6 +50,9 @@ namespace Memory_Game
             this.rows = rows;
             this.difficulty = difficulty;
             this.amountOfCards = amountOfCards;
+
+
+            InitializeGameGrid(cols, rows);
             LoadImages();
         }
         public void Reset()
@@ -170,11 +173,14 @@ namespace Memory_Game
 
         private void InitializeGameGrid(int cols, int rows)
         {
+
+            grid.RowDefinitions.Clear();
             for (int i = 0; i < rows; i++)
             {
                 grid.RowDefinitions.Add(new RowDefinition());
             }
 
+            grid.ColumnDefinitions.Clear();
             for (int i = 0; i < cols; i++)
             {
                 grid.ColumnDefinitions.Add(new ColumnDefinition());

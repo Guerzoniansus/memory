@@ -57,9 +57,9 @@ namespace Memory_Game
                     break;
             }
 
-            grid = new MemoryGrid(GameGrid, size[0], size[1], game.GetDifficulty(), game.GetAmountOfCards());
-            game.SetGrid(grid);
-            windowGrid = GameGrid;
+                grid = new MemoryGrid(GameGrid, size[0], size[1], game.GetDifficulty(), game.GetAmountOfCards());
+                game.SetGrid(grid);
+                windowGrid = GameGrid;
 
             UpdateWindow();
 
@@ -163,7 +163,7 @@ namespace Memory_Game
 
         }
 
-        private void ButtonClickLoad(object sender, RoutedEventArgs e)
+        public void ButtonClickLoad(object sender, RoutedEventArgs e)
         {
             Game.PlaySound("click");
 
