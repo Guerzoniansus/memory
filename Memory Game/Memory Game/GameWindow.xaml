@@ -16,6 +16,18 @@
             <RowDefinition Height="126*"/>
             <RowDefinition Height="403*"/>
         </Grid.RowDefinitions>
+
+        <Label
+            
+            Panel.ZIndex="100"
+            FontSize="42"
+            FontWeight="Bold"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Grid.RowSpan="2"
+            Foreground="White"
+            Visibility="Hidden">Save succesfull!</Label>
+        
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="300*"/>
@@ -36,6 +48,19 @@
                 <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="100*"/>
             </Grid.ColumnDefinitions>
+
+            <Label
+            x:Name="SaveConfirmationText"
+            Panel.ZIndex="100"
+            FontSize="36"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+                Grid.Column="3"
+                Grid.Row="3"
+            Grid.RowSpan="2"
+            Foreground="#ff4d4d"
+            Visibility="Hidden">Save succesfull!</Label>
+
             <Label x:Name="textPlayer1Score" FontSize="36" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" HorizontalAlignment="Center">
                 0
             </Label>

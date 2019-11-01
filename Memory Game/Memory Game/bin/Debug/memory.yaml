@@ -1,11 +1,11 @@
 version: 1
 game:
-  player1: as
-  player2: s
-  difficulty: hard
+  player1: aa
+  player2: aaa
+  difficulty: medium
   isMultiplayer: True
   time: 300
-  turn: as
+  turn: aa
   amountOfCards: 16
   scorePlayer1: 0
   scorePlayer2: 0
@@ -58,7 +58,7 @@ cards:
   9:
     frontImageUrl: frontTestImage.png
     backImageUrl: backTestImage.png
-    flipped: False
+    flipped: True
     found: False
   10:
     frontImageUrl: frontTestImage.png

@@ -31,6 +31,14 @@ namespace Memory_Game
             InitializeComponent();
         }
 
+        static void MainWindowPreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.LWin)
+            {
+                e.Handled = true;
+            }
+        }
+
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Game.PlaySound("click");

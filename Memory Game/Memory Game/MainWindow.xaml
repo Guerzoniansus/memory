@@ -8,7 +8,7 @@
         WindowStyle="None"
         WindowState="Maximized"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="	#00FFE1" >
+    <Grid Background="#00FFE1">
         <Grid.RowDefinitions>
             <RowDefinition Height="169*"/>
             <RowDefinition Height="1*"/>
