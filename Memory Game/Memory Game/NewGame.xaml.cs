@@ -135,6 +135,9 @@ namespace Memory_Game
             // Opent het speelveld
             GameWindow gameWindow = new GameWindow();
             gameWindow.Show();
+
+            Game.PlayMusic();
+
             this.Close();
 
         }

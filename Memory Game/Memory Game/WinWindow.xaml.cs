@@ -18,7 +18,6 @@ namespace Memory_Game
     /// </summary>
     public partial class WinWindow : Window
 
-        
     {
 
         Game game;
@@ -42,9 +41,14 @@ namespace Memory_Game
 
         private void AddText()
         {
-            PlayerName.Text = "Player 1 = " + game.GetPlayer1() + Environment.NewLine + "Player 2 = " + game.GetPlayer2() + Environment.NewLine + Environment.NewLine + "Player (X) heeeft gewonnen met (X) aantal punten" ;
-          
-            // string winner = game.GetWinner();
+            string winner = "WINNER";
+            // winner = game.GetWinner();
+            string player1 = game.GetPlayer1();
+            string player2 = game.GetPlayer2();
+            if (game.IsGameMultiplayer())
+                PlayerName.Text = player1 + ": " + game.getScore(player1) + Environment.NewLine + player2 + ": " + game.getScore(player2) + Environment.NewLine + Environment.NewLine + "Player " + winner + " won with " + game.getScore(player1) + " points!";         
+            else
+                PlayerName.Text = "Game ended!" + Environment.NewLine + "You have " + game.getScore(player1) + " points.";
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

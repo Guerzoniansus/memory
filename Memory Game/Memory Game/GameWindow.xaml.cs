@@ -64,7 +64,6 @@ namespace Memory_Game
 
             UpdateWindow();
 
-            Game.PlayMusic();
             isMusicMuted = false;
 
             imageVolume = new BitmapImage(new Uri("img/volume_button.png", UriKind.Relative));
@@ -168,16 +167,19 @@ namespace Memory_Game
         {
             Game.PlaySound("click");
 
-            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure you want to load? Your current progress will be lost", "Load", System.Windows.MessageBoxButton.YesNo);
-            if (messageBoxResult == MessageBoxResult.No)
-            {
-                return;
-            }
+            WinWindow w = new WinWindow(this);
+            w.Show();
 
-            SaveUtils.LoadGame();
-            game = Game.GetGame();
-            game.SetGameWindow(this);
-            UpdateWindow();
+            //MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure you want to load? Your current progress will be lost", "Load", System.Windows.MessageBoxButton.YesNo);
+            //if (messageBoxResult == MessageBoxResult.No)
+            //{
+            //    return;
+            //}
+
+            //SaveUtils.LoadGame();
+            //game = Game.GetGame();
+            //game.SetGameWindow(this);
+            //UpdateWindow();
         }
 
         private void MyMouseEnterEvent(object sender, MouseEventArgs e)

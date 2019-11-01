@@ -32,7 +32,7 @@ namespace Memory_Game
         private void Confirm(object sender, RoutedEventArgs e)
         {
             isClosing = true;
-            Application.Current.Shutdown();
+            Environment.Exit(0);
         }
 
         private void Return(object sender, RoutedEventArgs e)

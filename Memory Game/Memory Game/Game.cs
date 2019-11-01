@@ -100,7 +100,7 @@ namespace Memory_Game
             this.time = STARTING_TIME;
             this.turn = player1;
             scores = new Dictionary<string, double>();
-            scores.Add(player1, 0);
+            scores.Add(player1, 1000);
             scores.Add(player2, 0);
             memoryGrid.Reset();
 

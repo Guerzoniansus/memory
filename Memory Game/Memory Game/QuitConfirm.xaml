@@ -26,9 +26,12 @@
         <Border BorderThickness="4" Background="#00FFE1" CornerRadius="20" Grid.RowSpan="2" BorderBrush="#FF707070">
  
         </Border>
+        <Label
+            HorizontalAlignment="Center"
+            FontSize="24" Margin="82,28,82,215">Are you sure you want to quit?</Label>
         <Button
                 Style="{StaticResource RoundButtonTemplate}"
-                Content="RETURN" FontWeight="Bold" Margin="155.2,48,155,196.4" Click="Return"
+                Content="RETURN" FontWeight="Bold" Margin="155,97,155,147" Click="Return"
             MouseEnter="MyMouseEnterEvent"
             MouseLeave="MyMouseLeaveEvent"
             />

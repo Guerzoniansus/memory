@@ -58,7 +58,9 @@ namespace Memory_Game
             Game.GetGame().SetGameWindow(gameWindow);
             gameWindow.UpdateWindow();
             gameWindow.Show();
-           
+
+
+            Game.PlayMusic();
 
             this.Close();
         }
@@ -100,6 +102,8 @@ namespace Memory_Game
             Game.GetGame().SetGameWindow(gameWindow);
             gameWindow.Show();
             Game.GetGame().GetGameWindow().UpdateWindow();
+
+            Game.PlayMusic();
 
             this.Close();
 
