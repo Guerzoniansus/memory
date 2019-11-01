@@ -18,9 +18,25 @@ namespace Memory_Game
     /// </summary>
     public partial class Rules : Window
     {
+
+        Game game;
         public Rules()
         {
             InitializeComponent();
+
+            game = Game.GetGame();
+
+            AddInfo();
+        }
+
+        private void AddInfo()
+        {
+            Information.Text = "    De basiscore is= " + Game.scoreMatchBonus + Environment.NewLine + Environment.NewLine +
+            "De bonus score voor easy is " + Game.scoreStreakBonusEasy + " met een maximum van " + Game.scoreStreakMaxEasy + " streakscore met een tijdbonus multiplier van " + Game.scoreTimeBonusEasy +  Environment.NewLine + Environment.NewLine +
+            "De bonus score voor medium is " + Game.scoreStreakBonusMedium + " met een maximum van " + Game.scoreStreakMaxMedium + " streakscore met een tijdbonus multiplier van " + Game.scoreTimeBonusMedium +  Environment.NewLine + Environment.NewLine  +
+            "De bonus score voor hard is " + Game.scoreStreakBonusHard + " met een maximum van " + Game.scoreStreakMaxHard + " streakscore met een tijdbonus multiplier van " + Game.scoreTimeBonusHard  + Environment.NewLine + Environment.NewLine ;
+
+            // string winner = game.GetWinner();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

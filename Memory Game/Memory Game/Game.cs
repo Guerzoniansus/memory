@@ -9,6 +9,7 @@ namespace Memory_Game
     class Game
     {
 
+
         private static Game game;
 
         // Misschien verschillende tijden per difficulty, 300 seconden = 5 min
@@ -32,6 +33,17 @@ namespace Memory_Game
 
         // String = player, double = de score van de player
         private Dictionary<string, double> scores;
+
+        public const double scoreMatchBonus = 100;
+        public const double scoreStreakBonusEasy = 20;
+        public const double scoreStreakBonusMedium = 30;
+        public const double scoreStreakBonusHard = 50;
+        public const double scoreTimeBonusEasy = 2.5;
+        public const double scoreTimeBonusMedium = 2.75;
+        public const double scoreTimeBonusHard = 3;
+        public const double scoreStreakMaxEasy = scoreStreakBonusEasy + 100;
+        public const double scoreStreakMaxMedium = scoreStreakBonusMedium + 100;
+        public const double scoreStreakMaxHard = scoreStreakBonusHard + 100;
 
         public Game()
         {
