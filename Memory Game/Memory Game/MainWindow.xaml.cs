@@ -80,11 +80,6 @@ namespace Memory_Game
         {
             Game.PlaySound("click");
 
-            // hier moet code komen dat die naar window1 gaat
-            //NewGame NewGame = new NewGame();
-
-            //NewGame.Show();
-
             DifficultyWindow dWindow = new DifficultyWindow();
             dWindow.Show();
 

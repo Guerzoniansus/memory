@@ -81,11 +81,13 @@ namespace Memory_Game
 
         private void MyMouseEnterEvent(object sender, MouseEventArgs e) 
         {
+            // Add shadow on mouse hover
             this.Effect = new DropShadowEffect() { ShadowDepth = 0, BlurRadius = 10 };
         }
 
         private void MyMouseLeaveEvent(object sender, MouseEventArgs e)
         {
+            // Remove shadow
             this.Effect = null;
         }
 

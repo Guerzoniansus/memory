@@ -143,6 +143,7 @@ namespace Memory_Game
 
             SaveConfirmationText.Visibility = Visibility.Visible;
 
+            // Fade out animation for save confirm text
             var a = new DoubleAnimation
             {
                 From = 1.0,
@@ -167,19 +168,16 @@ namespace Memory_Game
         {
             Game.PlaySound("click");
 
-            WinWindow w = new WinWindow(this);
-            w.Show();
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure you want to load? Your current progress will be lost", "Load", System.Windows.MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.No)
+            {
+                return;
+            }
 
-            //MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure you want to load? Your current progress will be lost", "Load", System.Windows.MessageBoxButton.YesNo);
-            //if (messageBoxResult == MessageBoxResult.No)
-            //{
-            //    return;
-            //}
-
-            //SaveUtils.LoadGame();
-            //game = Game.GetGame();
-            //game.SetGameWindow(this);
-            //UpdateWindow();
+            SaveUtils.LoadGame();
+            game = Game.GetGame();
+            game.SetGameWindow(this);
+            UpdateWindow();
         }
 
         private void MyMouseEnterEvent(object sender, MouseEventArgs e)
@@ -196,6 +194,7 @@ namespace Memory_Game
 
         private void VolumeButtonClick(object sender, MouseButtonEventArgs e)
         {
+            // Mute or unmute music when clicked on the icon
             if (isMusicMuted) Game.PlayMusic(); else Game.StopMusic();
             VolumeButton.Source = isMusicMuted ? imageVolume : imageVolumeMuted;    
             isMusicMuted = isMusicMuted ? false : true;

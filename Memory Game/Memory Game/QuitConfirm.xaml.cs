@@ -61,6 +61,8 @@ namespace Memory_Game
         protected override void OnDeactivated(EventArgs e)
         {
             base.OnDeactivated(e);
+
+            // This is needed to prevent crashses (checks if a player manually clicked on close instead of clicking outside the window)
             if (isClosing == false) Close();
         }
     }
