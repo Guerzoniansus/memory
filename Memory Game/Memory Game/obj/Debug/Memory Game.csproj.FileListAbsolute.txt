@@ -1,6 +1,5 @@
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\bin\Debug\Memory Game.exe
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\bin\Debug\Memory Game.pdb
-C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\Memory Game.csprojAssemblyReference.cache
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\MainWindow.g.cs
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\App.g.cs
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\Memory Game_MarkupCompile.cache
@@ -161,3 +160,4 @@ C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\QuitConfirm.baml
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\Rules.baml
 C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\WinWindow.baml
+C:\Users\Weezi\Desktop\School\Memory Project\memory\Memory Game\Memory Game\obj\Debug\Memory Game.csprojAssemblyReference.cache

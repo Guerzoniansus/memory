@@ -212,9 +212,9 @@
     <Resource Include="img\Medium\7.png" />
     <Resource Include="img\Medium\8.png" />
     <Resource Include="img\Medium\9.png" />
-    <Resource Include="img\Backgrounds\EasyBackground.jpg" />
-    <Resource Include="img\Backgrounds\HardBackground.jpg" />
-    <Resource Include="img\Backgrounds\MediumBackground.jpg" />
+    <Resource Include="img\Backgrounds\EasyBackground.png" />
+    <Resource Include="img\Backgrounds\HardBackground.png" />
+    <Resource Include="img\Backgrounds\MediumBackground.png" />
     <Content Include="sounds\bgmusic_easy.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
