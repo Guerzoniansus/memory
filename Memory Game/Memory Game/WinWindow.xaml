@@ -40,6 +40,8 @@
         </Border>
         <Button
                 Style="{StaticResource RoundButtonTemplate}"
+                MouseEnter="MyMouseEnterEvent"
+            MouseLeave="MyMouseLeaveEvent"
                 Content="OK" FontWeight="Bold" HorizontalAlignment="Center"  Click="Button_Click" RenderTransformOrigin="0.507,0.515" Margin="22.8,250,32.6,10" Width="75" Height="40" Grid.Column="1"
             />
     </Grid>

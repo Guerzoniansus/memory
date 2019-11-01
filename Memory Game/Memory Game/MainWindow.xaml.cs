@@ -119,6 +119,7 @@ namespace Memory_Game
 
         private void Rules_Click(object sender, RoutedEventArgs e)
         {
+            Game.PlaySound("click");
             Rules Rules = new Rules();
             Rules.Show();
 

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Highscores" WindowStyle="None"
         WindowState="Maximized"
-     Height="450" Width="800"
+     Height="1080" Width="1920"
            MinHeight="400" MinWidth="650">
     <Grid Background="	#00FFE1">
         <Grid.RowDefinitions>
@@ -33,7 +33,7 @@
             FontSize="24"
             BorderThickness="65"
             MaxHeight="60px"
-            Background="white" Margin="10" RenderTransformOrigin="0.5,0.5" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"
+            Background="white" Margin="10" RenderTransformOrigin="0.5,0.5" Grid.Column="2" Grid.Row="0" Grid.RowSpan="2"
             >
 
 
@@ -47,22 +47,25 @@
         </Button>
         <Button
             Style="{StaticResource RoundButtonTemplate}"
-            Content="Back" Margin="17.8,10,10,10" Click="Button_Click" Grid.Row="5" RenderTransformOrigin="0.36,0.514"
+            Content="BACK" FontWeight="Bold" Margin="17.8,10,10,10" Click="Button_Click" Grid.Row="5" Grid.Column="0" FontSize="36"
+            RenderTransformOrigin="0.36,0.514" Width="200" Height="70"
+            MouseEnter="MyMouseEnterEvent"
+            MouseLeave="MyMouseLeaveEvent"
             />
 
-        <ListView  Background="LightGoldenrodYellow" Margin="28,27.6,26.4,15.8" Name="lvDataBinding" Grid.Column="1" Grid.Row="3">
+        <ListView Padding="20" FontSize="24" VerticalContentAlignment="Center" Background="LightGoldenrodYellow" Margin="28,27.6,26.4,15.8" Name="lvDataBinding" Grid.Column="1" Grid.Row="3" BorderBrush="Black" BorderThickness="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
-                        <TextBlock Text="Place: " />
+                        <TextBlock Text="" />
                         <TextBlock Text="{Binding place}" FontWeight="Bold" />
-                        <TextBlock Text="Name: " />
+                        <TextBlock Text=".  " />
                         <TextBlock Text="{Binding Name}" FontWeight="Bold" />
-                        <TextBlock Text=", " />
-                        <TextBlock Text="Score: " />
-                        <TextBlock Text="{Binding Score}" FontWeight="Bold" />
+                        <TextBlock Text=" - " />
+                        <TextBlock Text="" />
+                        <TextBlock Text="{Binding Score}"  />
                         <TextBlock Text="   (" />
-                        <TextBlock Text="{Binding Difficulty}" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Difficulty}"/>
                         <TextBlock Text=")" />
                     </WrapPanel>
                 </DataTemplate>
@@ -70,26 +73,26 @@
         </ListView>
 
 
-        <ListView  Background="LightGoldenrodYellow" Margin="37.2,27.6,36.4,15.8" x:Name="lvDataBinding_Copy" Grid.Column="3" Grid.Row="3">
+        <ListView Padding="20" FontSize="24" VerticalContentAlignment="Center"   Background="LightGoldenrodYellow" Margin="37.2,27.6,36.4,15.8" x:Name="lvDataBinding_Copy" Grid.Column="3" Grid.Row="3" BorderBrush="Black" BorderThickness="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
-                        <TextBlock Text="Place: " />
-                        <TextBlock Text="{Binding place}" FontWeight="Bold" />
-                        <TextBlock Text="Name: " />
+                        <TextBlock Text="" />
+                        <TextBlock Text="{Binding place}" FontWeight="Bold"  />
+                        <TextBlock Text=".  " />
                         <TextBlock Text="{Binding Name}" FontWeight="Bold" />
-                        <TextBlock Text=", " />
-                        <TextBlock Text="Score: " />
-                        <TextBlock Text="{Binding Score}" FontWeight="Bold" />
+                        <TextBlock Text=" - " />
+                        <TextBlock Text="" />
+                        <TextBlock Text="{Binding Score}"  />
                         <TextBlock Text="   (" />
-                        <TextBlock Text="{Binding Difficulty}" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Difficulty}"/>
                         <TextBlock Text=")" />
                     </WrapPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="28,10.8,26.4,0" Grid.Row="2" TextWrapping="Wrap"  Text="SINGLEPLAYER" FontWeight="Black" VerticalAlignment="Top" Width="104.8"/>
-        <TextBlock Grid.Column="3" HorizontalAlignment="Center" Margin="37.2,10.8,36.4,0" Grid.Row="2" TextWrapping="Wrap"  Text="MULTIPLAYER" FontWeight="Black" VerticalAlignment="Top" Width="104.8"/>
+        <TextBlock FontSize="24" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="SINGLEPLAYER" FontWeight="Bold" VerticalAlignment="Top"  />
+        <TextBlock FontSize="24" Grid.Column="3" HorizontalAlignment="Center"  Grid.Row="2" TextWrapping="Wrap"  Text="MULTIPLAYER" FontWeight="Bold" VerticalAlignment="Top"/>
 
 
     </Grid>

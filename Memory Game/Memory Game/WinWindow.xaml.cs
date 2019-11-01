@@ -45,5 +45,17 @@ namespace Memory_Game
         {
             this.Hide();
         }
+
+        private void MyMouseEnterEvent(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Background = Brushes.LightGray;
+        }
+
+        private void MyMouseLeaveEvent(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Background = Brushes.White;
+        }
     }
 }

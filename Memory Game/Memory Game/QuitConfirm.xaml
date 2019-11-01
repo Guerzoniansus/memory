@@ -28,11 +28,15 @@
         </Border>
         <Button
                 Style="{StaticResource RoundButtonTemplate}"
-                Content="Quit" Margin="155.2,48,155,196.4" Click="Confirm"
+                Content="RETURN" FontWeight="Bold" Margin="155.2,48,155,196.4" Click="Return"
+            MouseEnter="MyMouseEnterEvent"
+            MouseLeave="MyMouseLeaveEvent"
             />
         <Button
             Style="{StaticResource RoundButtonTemplate}"
-            Content="Return" Margin="155.2,195,155,49.4" Click="Return"
+            Content="QUIT" FontWeight="Bold" Margin="155.2,195,155,49.4" Click="Confirm"
+            MouseEnter="MyMouseEnterEvent"
+            MouseLeave="MyMouseLeaveEvent"
             />
     </Grid>
 </Window>

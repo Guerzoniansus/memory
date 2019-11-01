@@ -105,11 +105,23 @@ namespace Memory_Game
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Game.PlaySound("click");
             MainWindow mainWindow = new MainWindow();
 
             mainWindow.Show();
             this.Close();
+        }
+
+        private void MyMouseEnterEvent(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Background = Brushes.LightGray;
+        }
+
+        private void MyMouseLeaveEvent(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Background = Brushes.White;
         }
     }
 }

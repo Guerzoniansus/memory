@@ -11,83 +11,83 @@ game:
   scorePlayer2: 0
 cards:
   0:
-    frontImageUrl: /img/MEDIUM/1.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
+    frontImageUrl: /img/MEDIUM/4.png
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
     flipped: False
     found: False
   1:
-    frontImageUrl: /img/MEDIUM/2.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
+    frontImageUrl: /img/MEDIUM/6.png
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
     flipped: False
     found: False
   2:
-    frontImageUrl: /img/MEDIUM/4.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
+    frontImageUrl: /img/MEDIUM/5.png
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
     flipped: False
     found: False
   3:
-    frontImageUrl: /img/MEDIUM/7.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
-    flipped: False
+    frontImageUrl: /img/MEDIUM/8.png
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
+    flipped: True
     found: False
   4:
-    frontImageUrl: /img/MEDIUM/8.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
+    frontImageUrl: /img/MEDIUM/6.png
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
     flipped: False
     found: False
   5:
-    frontImageUrl: /img/MEDIUM/5.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
+    frontImageUrl: /img/MEDIUM/1.png
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
     flipped: False
     found: False
   6:
-    frontImageUrl: /img/MEDIUM/1.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
+    frontImageUrl: /img/MEDIUM/8.png
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
     flipped: False
     found: False
   7:
-    frontImageUrl: /img/MEDIUM/6.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
-    flipped: False
+    frontImageUrl: /img/MEDIUM/3.png
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
+    flipped: True
     found: False
   8:
-    frontImageUrl: /img/MEDIUM/2.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
+    frontImageUrl: /img/MEDIUM/1.png
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
     flipped: False
     found: False
   9:
-    frontImageUrl: /img/MEDIUM/3.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
+    frontImageUrl: /img/MEDIUM/2.png
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
     flipped: False
     found: False
   10:
-    frontImageUrl: /img/MEDIUM/3.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
+    frontImageUrl: /img/MEDIUM/7.png
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
     flipped: False
     found: False
   11:
     frontImageUrl: /img/MEDIUM/4.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
     flipped: False
     found: False
   12:
     frontImageUrl: /img/MEDIUM/5.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
     flipped: False
     found: False
   13:
     frontImageUrl: /img/MEDIUM/7.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
     flipped: False
     found: False
   14:
-    frontImageUrl: /img/MEDIUM/8.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
+    frontImageUrl: /img/MEDIUM/2.png
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
     flipped: False
     found: False
   15:
-    frontImageUrl: /img/MEDIUM/6.png
-    backImageUrl: /img/Backgrounds/MEDIUMBackground.jpg
+    frontImageUrl: /img/MEDIUM/3.png
+    backImageUrl: /img/Backgrounds/MEDIUMBackground.png
     flipped: False
     found: False
 ...

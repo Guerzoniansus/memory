@@ -31,7 +31,8 @@ namespace Memory_Game
 
         private void AddInfo()
         {
-            Information.Text = "    De basiscore is= " + Game.scoreMatchBonus + Environment.NewLine + Environment.NewLine +
+            Information.Text = "De basiscore voor een match is " + Game.scoreMatchBonus + Environment.NewLine + Environment.NewLine +
+                "Als je meerdere kaarten achter elkaar goed krijgt, krijg je een streak bonus, en in singleplayer krijg je aan het einde van het spel nog een bonus afhankelijk van de tijd die over is." + Environment.NewLine + Environment.NewLine +
             "De bonus score voor easy is " + Game.scoreStreakBonusEasy + " met een maximum van " + Game.scoreStreakMaxEasy + " streakscore met een tijdbonus multiplier van " + Game.scoreTimeBonusEasy +  Environment.NewLine + Environment.NewLine +
             "De bonus score voor medium is " + Game.scoreStreakBonusMedium + " met een maximum van " + Game.scoreStreakMaxMedium + " streakscore met een tijdbonus multiplier van " + Game.scoreTimeBonusMedium +  Environment.NewLine + Environment.NewLine  +
             "De bonus score voor hard is " + Game.scoreStreakBonusHard + " met een maximum van " + Game.scoreStreakMaxHard + " streakscore met een tijdbonus multiplier van " + Game.scoreTimeBonusHard  + Environment.NewLine + Environment.NewLine ;
@@ -46,6 +47,7 @@ namespace Memory_Game
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Game.PlaySound("click");
             MainWindow mainWindow = new MainWindow();
 
             mainWindow.Show();
@@ -55,6 +57,18 @@ namespace Memory_Game
         private void RulesWindow_Copy_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void MyMouseEnterEvent(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Background = Brushes.LightGray;
+        }
+
+        private void MyMouseLeaveEvent(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Background = Brushes.White;
         }
     }
 }

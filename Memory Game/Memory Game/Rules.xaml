@@ -48,9 +48,12 @@
         </Button>
         <Viewbox Stretch="Uniform" />
 
-        <Button Content="Back" HorizontalAlignment="Left" Margin="20,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="85.6"
-                Style="{StaticResource RoundButtonTemplate}" Height="52"
-                Click="Button_Click" Grid.ColumnSpan="2"
+        <Button Content="BACK" FontWeight="Bold" HorizontalAlignment="Left" Margin="37,2,0,0" Grid.Row="3" Grid.Column="0"
+                FontSize="36" VerticalAlignment="Center" Width="200" Height="70"
+                Style="{StaticResource RoundButtonTemplate}"
+                Click="Button_Click" Grid.ColumnSpan="3"
+                MouseEnter="MyMouseEnterEvent"
+                MouseLeave="MyMouseLeaveEvent"
                 />
 
 
@@ -78,14 +81,19 @@
 
 
         <Viewbox Grid.Row="2" Grid.Column="1" Margin="10,1.231,10,0" Grid.ColumnSpan="2">
-            <TextBlock Margin="10"
-                   Background="White" Width="325.538" Height="256.339"
-                   ><Run Text="     1. If the two cards match, you keep them."/><LineBreak/><Run Text="     2. The game is over when all the cards have been matched"/><LineBreak/><Run Text="     3. If the cards dont match your turn is over"/><LineBreak/><Run Text="     4. Turn over any 2 cards"/><LineBreak/><Run Text="     5. The player with the most matches wins"/><LineBreak/><Run Text="     6. Remember what whas on the cards"/><LineBreak/><Run Text="     7. Watch and remember during the other players turn"/><LineBreak/></TextBlock>
+            <Border BorderThickness="1" BorderBrush="Black" Background="White">
+                <TextBlock
+                   Background="White" Width="325.538" Height="256.339" Padding="5"
+                   ><Run Text="1. If the two cards match, you keep them."/><LineBreak/><Run Text="2. The game is over when all the cards have been matched"/><LineBreak/><Run Text="3. If the cards dont match your turn is over"/><LineBreak/><Run Text="4. Turn over any 2 cards"/><LineBreak/><Run Text="5. The player with the most matches wins"/><LineBreak/><Run Text="6. Remember what whas on the cards"/><LineBreak/><Run Text="7. Watch and remember during the other players turn"/><LineBreak/>
+                </TextBlock>
+            </Border>
         </Viewbox>
 
 
-        <Viewbox Grid.Row="2" Grid.Column="4" Margin="5 0 0 0" >
-            <TextBlock  x:Name="Information" Background="White" TextAlignment="Left"  TextWrapping="Wrap" Text="Highscore INFO" Margin="10" Grid.Column="4" Grid.Row="2" Height="314.881" Width="451.197"/>
+        <Viewbox Grid.Row="2" Grid.Column="4" Margin="5 0 0 0">
+            <Border BorderThickness="1" BorderBrush="Black" Background="White">
+                <TextBlock x:Name="Information" Background="White" TextAlignment="Left" Padding="5" TextWrapping="Wrap" Text="Highscore INFO" Grid.Column="4" Grid.Row="2" Height="314.881" Width="451.197"/>
+            </Border>
         </Viewbox>
 
 
