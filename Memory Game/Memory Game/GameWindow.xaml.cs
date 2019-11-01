@@ -37,10 +37,27 @@ namespace Memory_Game
         {
             game = Game.GetGame();
             game.SetGameWindow(this);
-
             InitializeComponent();
 
-            grid = new MemoryGrid(GameGrid, NR_OF_COLS, NR_OF_ROWS, Difficulty.EASY, 16);
+            int[] size = new int[] { };
+
+            switch (game.GetAmountOfCards())
+            {
+                case 16:
+                    size = new int[] { 4,4};
+                    break;
+                case 20:
+                    size = new int[] { 5, 4 };
+                    break;
+                case 24:
+                    size = new int[] { 6, 4 };
+                    break;
+                case 28:
+                    size = new int[] { 7, 4 };
+                    break;
+            }
+
+            grid = new MemoryGrid(GameGrid, size[0], size[1], game.GetDifficulty(), game.GetAmountOfCards());
             game.SetGrid(grid);
             windowGrid = GameGrid;
 

@@ -91,6 +91,7 @@ namespace Memory_Game
             // TODO bepaal de back image afhankelijk van difficulty
             // ImageSource backImage =
 
+            var images = GetNumbers();
             for (int row = 0; row < rows; row++)
             {
                 for (int col = 0; col < cols; col++)
@@ -98,9 +99,10 @@ namespace Memory_Game
 
                     // TODO: assign a (random) front and back image to every card depending on the difficulty and other stuff, zie powerpoint, replace de twee bitmap images daarmee
                     // ImageSource frontImage =
-
                     // Replace de line hieronder met: Card card = new Card(cardId, frontImage, backImage) zodra je de TODOS hierboven hebt gedaan;
-                    Card card = new Card(cardId, "/img/Medium/1.png", "backTestImage.png");
+
+                    Card card = new Card(cardId, "/img/" + difficulty + "/" + images[cardId] + ".png", "backTestImage.png");
+                    //"/img/Backgrounds/" + difficulty + "Background.png"
                     //"frontTestImage.png"
                     card.MouseDown += new MouseButtonEventHandler(CardClick);
 
@@ -115,6 +117,33 @@ namespace Memory_Game
             }
         }
 
+        private List<int> GetNumbers()
+        {
+            List<int> numbers = new List<int>();
+            for (int i = 0; i < (amountOfCards / 2); i++)
+            {
+                numbers.Add(i + 1);
+            }
+            numbers.AddRange(numbers);
+            numbers = ShuffleList<int>(numbers);
+            return numbers;
+        }
+
+        private List<E> ShuffleList<E>(List<E> inputList)
+        {
+            List<E> randomList = new List<E>();
+
+            Random r = new Random();
+            int randomIndex = 0;
+            while (inputList.Count > 0)
+            {
+                randomIndex = r.Next(0, inputList.Count); //Choose a random object in the list
+                randomList.Add(inputList[randomIndex]); //add it to the new, random list
+                inputList.RemoveAt(randomIndex); //remove to avoid duplicates
+            }
+
+            return randomList; //return the new random list
+        }
         private void CardClick(object sender, MouseButtonEventArgs e)
         {
             Card card = (Card)sender;
