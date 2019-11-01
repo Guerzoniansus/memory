@@ -120,5 +120,33 @@ namespace Memory_Game
             Button button = (Button)sender;
             button.Background = Brushes.White;
         }
+
+        private void ImageClickHard(object sender, MouseButtonEventArgs e)
+        {
+            Game.PlaySound("click");
+            Checkbox_Easy.IsChecked = false;
+            Checkbox_Medium.IsChecked = false;
+
+            difficulty = Difficulty.HARD;
+        }
+
+        private void ImageClickEasy(object sender, MouseButtonEventArgs e)
+        {
+            Game.PlaySound("click");
+            Checkbox_Medium.IsChecked = false;
+            Checkbox_Hard.IsChecked = false;
+
+
+            difficulty = Difficulty.EASY;
+        }
+
+        private void ImageClickMedium(object sender, MouseButtonEventArgs e)
+        {
+            Game.PlaySound("click");
+            Checkbox_Easy.IsChecked = false;
+            Checkbox_Hard.IsChecked = false;
+
+            difficulty = Difficulty.MEDIUM;
+        }
     }
 }

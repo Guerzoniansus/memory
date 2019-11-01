@@ -138,7 +138,7 @@
             Style="{StaticResource RoundButtonTemplate}"
             BorderBrush="Black"
             x:Name="Hoofdmenu"
-            Content="Main Menu"
+            Content="Music Memory"
             FontSize="24"
             BorderThickness="65"
                   MaxHeight="60px"
