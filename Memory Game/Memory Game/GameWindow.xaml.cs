@@ -58,6 +58,7 @@ namespace Memory_Game
             }
 
             grid = new MemoryGrid(GameGrid, size[0], size[1], game.GetDifficulty(), game.GetAmountOfCards());
+
             game.SetGrid(grid);
             windowGrid = GameGrid;
 

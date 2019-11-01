@@ -60,14 +60,30 @@
     </Compile>
     <Compile Include="HighscoreData.cs" />
     <Compile Include="Highscores.cs" />
+    <Compile Include="HighscoresWindow.xaml.cs">
+      <DependentUpon>HighscoresWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NewGame.xaml.cs">
       <DependentUpon>NewGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuitConfirm.xaml.cs">
+      <DependentUpon>QuitConfirm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Rules.xaml.cs">
+      <DependentUpon>Rules.xaml</DependentUpon>
     </Compile>
     <Compile Include="SaveUtils.cs" />
     <Compile Include="GameWindow.xaml.cs">
       <DependentUpon>GameWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WinWindow.xaml.cs">
+      <DependentUpon>WinWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="DifficultyWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HighscoresWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -93,6 +109,18 @@
     <Page Include="NewGame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuitConfirm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Rules.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WinWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

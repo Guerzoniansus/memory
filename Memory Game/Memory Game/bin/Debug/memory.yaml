@@ -1,93 +1,113 @@
 version: 1
 game:
-  player1: aa
-  player2: aaa
-  difficulty: medium
+  player1: a
+  player2: b
+  difficulty: easy
   isMultiplayer: True
   time: 300
-  turn: aa
-  amountOfCards: 16
+  turn: a
+  amountOfCards: 20
   scorePlayer1: 0
   scorePlayer2: 0
 cards:
   0:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
+    frontImageUrl: /img/EASY/8.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
     flipped: False
     found: False
   1:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
+    frontImageUrl: /img/EASY/10.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
     flipped: False
     found: False
   2:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
-    flipped: True
+    frontImageUrl: /img/EASY/5.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
+    flipped: False
     found: False
   3:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
+    frontImageUrl: /img/EASY/1.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
     flipped: False
     found: False
   4:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
+    frontImageUrl: /img/EASY/10.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
     flipped: False
     found: False
   5:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
+    frontImageUrl: /img/EASY/9.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
     flipped: False
     found: False
   6:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
-    flipped: True
+    frontImageUrl: /img/EASY/8.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
+    flipped: False
     found: False
   7:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
+    frontImageUrl: /img/EASY/2.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
     flipped: False
     found: False
   8:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
+    frontImageUrl: /img/EASY/7.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
     flipped: False
     found: False
   9:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
+    frontImageUrl: /img/EASY/6.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
     flipped: False
     found: False
   10:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
+    frontImageUrl: /img/EASY/6.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
     flipped: False
     found: False
   11:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
+    frontImageUrl: /img/EASY/4.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
     flipped: False
     found: False
   12:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
+    frontImageUrl: /img/EASY/9.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
     flipped: False
     found: False
   13:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
+    frontImageUrl: /img/EASY/3.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
     flipped: False
     found: False
   14:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
-    flipped: True
+    frontImageUrl: /img/EASY/4.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
+    flipped: False
     found: False
   15:
-    frontImageUrl: frontTestImage.png
-    backImageUrl: backTestImage.png
+    frontImageUrl: /img/EASY/5.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
+    flipped: False
+    found: False
+  16:
+    frontImageUrl: /img/EASY/7.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
+    flipped: False
+    found: False
+  17:
+    frontImageUrl: /img/EASY/3.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
+    flipped: False
+    found: False
+  18:
+    frontImageUrl: /img/EASY/1.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
+    flipped: False
+    found: False
+  19:
+    frontImageUrl: /img/EASY/2.png
+    backImageUrl: /img/Backgrounds/EASYBackground.jpg
     flipped: False
     found: False
 ...

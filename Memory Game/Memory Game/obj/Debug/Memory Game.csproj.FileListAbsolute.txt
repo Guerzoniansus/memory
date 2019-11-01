@@ -143,3 +143,11 @@ C:\Users\warfu\Documents\GitHub\memory\Memory Game\Memory Game\obj\Debug\Memory 
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\bin\Debug\sounds\bgmusic_medium.wav
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\bin\Debug\sounds\bgmusic_easy.wav
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\bin\Debug\sounds\bgmusic_hard.wav
+C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\HighscoresWindow.g.cs
+C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\QuitConfirm.g.cs
+C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\Rules.g.cs
+C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\WinWindow.g.cs
+C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\HighscoresWindow.baml
+C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\QuitConfirm.baml
+C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\Rules.baml
+C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\WinWindow.baml

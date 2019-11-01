@@ -43,8 +43,9 @@ namespace Memory_Game
         {
             Game.PlaySound("click");
 
-            // quit knop die ervoor zorgt dat de app afsluit
-            Application.Current.Shutdown();
+            QuitConfirm QuitConfirm = new QuitConfirm();
+
+            QuitConfirm.Show();
         }
 
         public void LoadClick(object sender, RoutedEventArgs e)
@@ -65,6 +66,12 @@ namespace Memory_Game
         private void Highscore_Click(object sender, RoutedEventArgs e)
         {
             Game.PlaySound("click");
+
+            HighscoresWindow HighscoresWindow = new HighscoresWindow();
+
+            HighscoresWindow.Show();
+
+            this.Close();
         }
 
         private void NewGame_Click(object sender, RoutedEventArgs e)
@@ -94,7 +101,7 @@ namespace Memory_Game
             gameWindow.Show();
             Game.GetGame().GetGameWindow().UpdateWindow();
 
-            this.Hide();
+            this.Close();
 
         }
 
@@ -108,6 +115,14 @@ namespace Memory_Game
         {
             Button button = (Button)sender;
             button.Background = Brushes.White;
+        }
+
+        private void Rules_Click(object sender, RoutedEventArgs e)
+        {
+            Rules Rules = new Rules();
+            Rules.Show();
+
+            this.Close();
         }
     }
 }
