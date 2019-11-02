@@ -30,8 +30,6 @@ namespace Memory_Game
             game = Game.GetGame();
 
             AddText();
-
-            
         }
 
         private void AddText()

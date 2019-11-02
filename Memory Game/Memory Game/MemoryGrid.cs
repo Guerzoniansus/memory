@@ -19,8 +19,16 @@ namespace Memory_Game
 
         private List<Card> cards;
 
+        private bool hasStarted = false;
+
         Game game;
 
+        private Card firstCard;
+        private Card secondCard;
+        private int player1Streak = 0;
+        private int player2Streak = 0;
+        private int currentPlayer;
+        private int amountCollected;
         
         public MemoryGrid(Grid grid, int cols, int rows, Difficulty difficulty, int amountOfCards)
         {
@@ -147,10 +155,97 @@ namespace Memory_Game
 
             return randomList; //return the new random list
         }
+
+        public void DelayedCardFlip()
+        {
+            firstCard.Flip();
+            secondCard.Flip();
+            firstCard = null;
+            secondCard = null;
+            Game.PlaySound("flip_card_wrong");
+            SwitchTurn();
+        }
         private void CardClick(object sender, MouseButtonEventArgs e)
         {
+            if (!hasStarted)
+            {
+                StartGame();
+            }
+
             Card card = (Card)sender;
-            card.Flip();
+            if (!card.IsFlipped() && secondCard == null)
+            {
+                card.Flip();
+                Game.PlaySound("flip_card");
+                if (firstCard == null)
+                    firstCard = card;
+                else if(firstCard.GetFrontImageUrl() == card.GetFrontImageUrl())
+                {
+                    //Found Correct Card
+                    firstCard = null;
+                    secondCard = null;
+                    Game.PlaySound("match");
+                    if (game.IsGameMultiplayer())
+                    {
+                        amountCollected += 2;
+                        if (amountCollected != amountOfCards)
+                        {
+                            if (currentPlayer == 1)
+                            {
+                                game.CalculateScore(player1Streak, game.GetPlayer1());
+                                player1Streak += 1;
+                            }
+                            else
+                            {
+                                game.CalculateScore(player2Streak, game.GetPlayer2());
+                                player2Streak += 1;
+                            }
+                        }
+                        else
+                        {
+                            //Final pair collected, End Game Multiplayer
+                            timer.isGameRunning = false;
+                            Highscores highscores = new Highscores();
+                            highscores.TryAddNewScore(new HighscoreData(game.GetPlayer1(), game.GetScore(game.GetPlayer1()), game.GetDifficulty(), true));
+                            highscores.TryAddNewScore(new HighscoreData(game.GetPlayer2(), game.GetScore(game.GetPlayer2()), game.GetDifficulty(), true));
+
+                            //Show WinWindow
+                        }
+                    }
+                    else
+                    {
+                        amountCollected += 2;
+
+                        if (amountCollected != amountOfCards)
+                        {
+                            game.CalculateScore(player1Streak, game.GetPlayer1());
+                            player1Streak += 1;
+                        }
+                        else
+                        {
+                            //Final pair collected, End Game Singleplayer
+                            timer.isGameRunning = false;
+                            game.AddTimeBonus(timer.GetRemainingTime());
+                            Highscores highscores = new Highscores();
+                            highscores.TryAddNewScore(new HighscoreData(game.GetPlayer1(), game.GetScore(game.GetPlayer1()), game.GetDifficulty(), false));
+
+                            //Show WinWindow
+                        }
+                    }
+
+                }
+                else
+                {
+                    //Didn't find the correct card
+                    secondCard = card;
+                    timer.DelayedCardFlip();
+                    if (currentPlayer == 1)
+                        player1Streak = 0;
+                    else
+                        player2Streak = 0;
+
+                }
+            }
 
             // Ik gebruikte de code hieronder om saven en laden te testen. 
             // De 2e kaart (boven aan) savet, de derde kaart (boven aan) laadt als je op ze klikt
@@ -169,6 +264,33 @@ namespace Memory_Game
             //{
             //    card.Flip();
             //}
+        }
+
+        public void SwitchTurn()
+        {
+            if (game.IsGameMultiplayer())
+            {
+                if (currentPlayer == 1)
+                {
+                    currentPlayer = 2;
+                    game.SetTurn(game.GetPlayer2());
+                }
+                else
+                {
+                    currentPlayer = 1;
+                    game.SetTurn(game.GetPlayer1());
+                }
+            }
+        }
+        Timer timer;
+        private void StartGame()
+        {
+            hasStarted = true;
+            timer = new Timer(300);
+            timer.isGameRunning = true;
+            game.SetTurn(game.GetPlayer1());
+            currentPlayer = 1;
+            game.GetGameWindow().UpdateWindow();
         }
 
         private void InitializeGameGrid(int cols, int rows)
@@ -191,6 +313,5 @@ namespace Memory_Game
         {
             return cards;
         }
-
     }
 }
