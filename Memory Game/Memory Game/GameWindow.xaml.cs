@@ -116,9 +116,10 @@ namespace Memory_Game
 
         private void ButtonClickMenu(object sender, RoutedEventArgs e)
         {
+            if (grid.isPaused) return;
+
             Game.PlaySound("click");
             Game.StopMusic();
-            grid.DisposeTimer();
 
             MainWindow menu = new MainWindow();
             menu.Show();
@@ -127,6 +128,8 @@ namespace Memory_Game
         }
         private void ButtonClickReset(object sender, RoutedEventArgs e)
         {
+            if (grid.isPaused) return;
+
             Game.PlaySound("click");
 
             MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure you want to reset?", "Reset", System.Windows.MessageBoxButton.YesNo);
@@ -138,6 +141,8 @@ namespace Memory_Game
 
         private void ButtonClickSave(object sender, RoutedEventArgs e)
         {
+            if (grid.isPaused) return;
+
             Game.PlaySound("click");
             SaveUtils.SaveGame();
 
@@ -166,6 +171,7 @@ namespace Memory_Game
 
         private void ButtonClickLoad(object sender, RoutedEventArgs e)
         {
+            if (grid.isPaused) return;
             Game.PlaySound("click");
 
             MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure you want to load? Your current progress will be lost", "Load", System.Windows.MessageBoxButton.YesNo);
@@ -182,12 +188,14 @@ namespace Memory_Game
 
         private void MyMouseEnterEvent(object sender, MouseEventArgs e)
         {
+            if (grid.isPaused) return;
             Button button = (Button)sender;
             button.Background = Brushes.LightGray;
         }
 
         private void MyMouseLeaveEvent(object sender, MouseEventArgs e)
         {
+            if (grid.isPaused) return;
             Button button = (Button)sender;
             button.Background = Brushes.White;
         }

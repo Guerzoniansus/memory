@@ -51,10 +51,6 @@ namespace Memory_Game
            
         }
 
-        public void Dispose()
-        {
-            dispatcherTimer = null;
-        }
 
         public void FinishedCountdown()
         {
