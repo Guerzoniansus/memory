@@ -27,7 +27,7 @@ namespace Memory_Game
 
         GameWindow gameWindow;
 
-        public WinWindow(GameWindow gameWindow)
+        public WinWindow()
         {
             InitializeComponent();
 
@@ -36,16 +36,18 @@ namespace Memory_Game
             AddText();
 
             isClosing = false;
-            this.gameWindow = gameWindow;
+            this.gameWindow = game.GetGameWindow();
         }
 
         private void AddText()
         {
             string winner = "WINNER";
-            // winner = game.GetWinner();
+            winner = game.GetWinner();
             string player1 = game.GetPlayer1();
             string player2 = game.GetPlayer2();
-            if (game.IsGameMultiplayer())
+            if (game.GetWinner().Equals("draw"))
+                PlayerName.Text = player1 + ": " + game.getScore(player1) + Environment.NewLine + player2 + ": " + game.getScore(player2) + Environment.NewLine + Environment.NewLine + "The game was a draw!";
+            else if (game.IsGameMultiplayer())
                 PlayerName.Text = player1 + ": " + game.getScore(player1) + Environment.NewLine + player2 + ": " + game.getScore(player2) + Environment.NewLine + Environment.NewLine + "Player " + winner + " won with " + game.getScore(player1) + " points!";         
             else
                 PlayerName.Text = "Game ended!" + Environment.NewLine + "You have " + game.getScore(player1) + " points.";

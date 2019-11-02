@@ -14,7 +14,7 @@ namespace Memory_Game
         private static Game game;
 
         // Misschien verschillende tijden per difficulty, 300 seconden = 5 min
-        public const int STARTING_TIME = 300;
+        public const int STARTING_TIME = 20;
 
         // TODO wat constanten voor de score formules
 
@@ -101,7 +101,7 @@ namespace Memory_Game
             this.time = STARTING_TIME;
             this.turn = player1;
             scores = new Dictionary<string, double>();
-            scores.Add(player1, 1000);
+            scores.Add(player1, 0);
             scores.Add(player2, 0);
             memoryGrid.Reset();
 
@@ -275,8 +275,17 @@ namespace Memory_Game
             return player2;
         }
 
+        /// <summary>
+        /// Get the name of the player that's in the lead / won the game
+        /// </summary>
+        /// <returns>"draw" (lowercase) if both players have the same scores. Otherwise return whichever player has the highest score</returns>
+        public string GetWinner()
+        {
+            if (GetScore(player1) == GetScore(player2))
+                return "draw";
 
-
+            return (GetScore(player1) > GetScore(player2)) ? player1 : player2;
+        }
 
 
         /// <summary>

@@ -209,7 +209,8 @@ namespace Memory_Game
                             highscores.TryAddNewScore(new HighscoreData(game.GetPlayer1(), game.GetScore(game.GetPlayer1()), game.GetDifficulty(), true));
                             highscores.TryAddNewScore(new HighscoreData(game.GetPlayer2(), game.GetScore(game.GetPlayer2()), game.GetDifficulty(), true));
 
-                            //Show WinWindow
+                            WinWindow winWindow = new WinWindow();
+                            winWindow.Show();
                         }
                     }
                     else
@@ -229,7 +230,8 @@ namespace Memory_Game
                             Highscores highscores = new Highscores();
                             highscores.TryAddNewScore(new HighscoreData(game.GetPlayer1(), game.GetScore(game.GetPlayer1()), game.GetDifficulty(), false));
 
-                            //Show WinWindow
+                            WinWindow winWindow = new WinWindow();
+                            winWindow.Show();
                         }
                     }
 
@@ -286,7 +288,7 @@ namespace Memory_Game
         private void StartGame()
         {
             hasStarted = true;
-            timer = new Timer(300);
+            timer = new Timer(Game.STARTING_TIME);
             timer.isGameRunning = true;
             game.SetTurn(game.GetPlayer1());
             currentPlayer = 1;

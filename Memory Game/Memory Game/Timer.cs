@@ -51,7 +51,8 @@ namespace Memory_Game
 
         public void FinishedCountdown()
         {
-            //Show WinWindow
+            WinWindow winWindow = new WinWindow();
+            winWindow.Show();
         }
     }
 }
