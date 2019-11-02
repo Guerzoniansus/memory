@@ -53,7 +53,6 @@ namespace Memory_Game
             Game.PlaySound("click");
 
             GameWindow gameWindow = new GameWindow();
-
             SaveUtils.LoadGame();
             Game.GetGame().SetGameWindow(gameWindow);
             gameWindow.UpdateWindow();

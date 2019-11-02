@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 
 namespace Memory_Game
 {
-    class Card : Image
+    public class Card : Image
     {
 
         // The current image source

@@ -305,6 +305,45 @@ namespace Memory_Game
             SetScore(player, currentScore);
         }
 
+        public void AddTimeBonus(int remainingTime)
+        {
+            double currentScorePlayer1 = GetScore(GetPlayer1());
+
+            switch (GetDifficulty())
+            {
+                case Difficulty.EASY:
+                    SetScore(GetPlayer1(), currentScorePlayer1 + (remainingTime * scoreTimeBonusEasy));
+                    break;
+                case Difficulty.MEDIUM:
+                    SetScore(GetPlayer1(), currentScorePlayer1 + (remainingTime * scoreTimeBonusMedium));
+                    break;
+                case Difficulty.HARD:
+                    SetScore(GetPlayer1(), currentScorePlayer1 + (remainingTime * scoreTimeBonusHard));
+                    break;
+                default:
+                    break;
+            }
+
+            if (IsGameMultiplayer())
+            {
+                double currentScorePlayer2 = GetScore(GetPlayer2());
+
+                switch (GetDifficulty())
+                {
+                    case Difficulty.EASY:
+                        SetScore(GetPlayer2(), currentScorePlayer2 + (remainingTime * scoreTimeBonusEasy));
+                        break;
+                    case Difficulty.MEDIUM:
+                        SetScore(GetPlayer2(), currentScorePlayer2 + (remainingTime * scoreTimeBonusMedium));
+                        break;
+                    case Difficulty.HARD:
+                        SetScore(GetPlayer2(), currentScorePlayer2 + (remainingTime * scoreTimeBonusHard));
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
 
         private int Clamp(int value, int min, int max)
         {
