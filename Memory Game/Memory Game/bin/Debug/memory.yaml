@@ -4,7 +4,7 @@ game:
   player2: 64
   difficulty: easy
   isMultiplayer: True
-  time: 30
+  time: 15
   turn: 45
   amountOfCards: 16
   scorePlayer1: 0
@@ -23,12 +23,12 @@ cards:
   2:
     frontImageUrl: /img/EASY/5.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
+    flipped: True
     found: False
   3:
     frontImageUrl: /img/EASY/6.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
+    flipped: True
     found: False
   4:
     frontImageUrl: /img/EASY/1.png
@@ -43,12 +43,12 @@ cards:
   6:
     frontImageUrl: /img/EASY/6.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
+    flipped: True
     found: False
   7:
     frontImageUrl: /img/EASY/7.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
+    flipped: True
     found: False
   8:
     frontImageUrl: /img/EASY/1.png
@@ -58,17 +58,17 @@ cards:
   9:
     frontImageUrl: /img/EASY/4.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
+    flipped: True
     found: False
   10:
     frontImageUrl: /img/EASY/4.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
+    flipped: True
     found: False
   11:
     frontImageUrl: /img/EASY/5.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
+    flipped: True
     found: False
   12:
     frontImageUrl: /img/EASY/8.png
@@ -78,16 +78,16 @@ cards:
   13:
     frontImageUrl: /img/EASY/3.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
+    flipped: True
     found: False
   14:
     frontImageUrl: /img/EASY/7.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
+    flipped: True
     found: False
   15:
     frontImageUrl: /img/EASY/8.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
+    flipped: True
     found: False
 ...

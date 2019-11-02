@@ -33,6 +33,8 @@ namespace Memory_Game
         }
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
+            Console.WriteLine(seconds + "AAA");
+
             if (isGameRunning)
                 seconds--;
 
@@ -47,6 +49,11 @@ namespace Memory_Game
             if (seconds == 0)
                 FinishedCountdown();
            
+        }
+
+        public void Dispose()
+        {
+            dispatcherTimer = null;
         }
 
         public void FinishedCountdown()

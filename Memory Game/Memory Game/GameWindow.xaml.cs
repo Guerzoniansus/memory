@@ -118,7 +118,7 @@ namespace Memory_Game
         {
             Game.PlaySound("click");
             Game.StopMusic();
-            //TODO: game.Pause() or something
+            grid.DisposeTimer();
 
             MainWindow menu = new MainWindow();
             menu.Show();

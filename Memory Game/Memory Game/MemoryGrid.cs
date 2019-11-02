@@ -29,6 +29,8 @@ namespace Memory_Game
         private int player2Streak = 0;
         private int currentPlayer;
         private int amountCollected;
+
+        bool isPaused;
         
         public MemoryGrid(Grid grid, int cols, int rows, Difficulty difficulty, int amountOfCards)
         {
@@ -40,6 +42,8 @@ namespace Memory_Game
             this.rows = rows;
             this.difficulty = difficulty;
             this.amountOfCards = amountOfCards;
+
+            isPaused = false;
 
             InitializeGameGrid(cols, rows);
             AddImages();
@@ -164,6 +168,7 @@ namespace Memory_Game
             secondCard = null;
             Game.PlaySound("flip_card_wrong");
             SwitchTurn();
+            isPaused = false;
         }
         private void CardClick(object sender, MouseButtonEventArgs e)
         {
@@ -240,6 +245,7 @@ namespace Memory_Game
                 {
                     //Didn't find the correct card
                     secondCard = card;
+                    isPaused = true;
                     timer.DelayedCardFlip();
                     if (currentPlayer == 1)
                         player1Streak = 0;
@@ -288,7 +294,7 @@ namespace Memory_Game
         private void StartGame()
         {
             hasStarted = true;
-            timer = new Timer(Game.STARTING_TIME);
+            timer = new Timer(game.GetTimeLeft());
             timer.isGameRunning = true;
             game.SetTurn(game.GetPlayer1());
             currentPlayer = 1;
