@@ -31,13 +31,11 @@ namespace Memory_Game
 
         private void AddInfo()
         {
-            Information.Text = "De basiscore voor een match is " + Game.scoreMatchBonus + Environment.NewLine + Environment.NewLine +
-                "Als je meerdere kaarten achter elkaar goed krijgt, krijg je een streak bonus, en in singleplayer krijg je aan het einde van het spel nog een bonus afhankelijk van de tijd die over is." + Environment.NewLine + Environment.NewLine +
-            "De bonus score voor easy is " + Game.scoreStreakBonusEasy + " met een maximum van " + Game.scoreStreakMaxEasy + " streakscore met een tijdbonus multiplier van " + Game.scoreTimeBonusEasy +  Environment.NewLine + Environment.NewLine +
-            "De bonus score voor medium is " + Game.scoreStreakBonusMedium + " met een maximum van " + Game.scoreStreakMaxMedium + " streakscore met een tijdbonus multiplier van " + Game.scoreTimeBonusMedium +  Environment.NewLine + Environment.NewLine  +
-            "De bonus score voor hard is " + Game.scoreStreakBonusHard + " met een maximum van " + Game.scoreStreakMaxHard + " streakscore met een tijdbonus multiplier van " + Game.scoreTimeBonusHard  + Environment.NewLine + Environment.NewLine ;
-
-            // string winner = game.GetWinner();
+            Information.Text = "The base score for a card match is " + Game.scoreMatchBonus + "." +  Environment.NewLine + Environment.NewLine +
+                "You will get an (increasingly higher) streak bonus if you get multiple matches in a row, and in single player you also get a score bonus depending on the time that's left." + Environment.NewLine + Environment.NewLine +
+            "The bonus streak score for Easy is " + Game.scoreStreakBonusEasy + " with a maximum of " + Game.scoreStreakMaxEasy + " streakscore, and a time bonus multiplier of " + Game.scoreTimeBonusEasy +  Environment.NewLine + Environment.NewLine +
+            "The bonus streak score for Medium is " + Game.scoreStreakBonusMedium + " with a maximum of " + Game.scoreStreakMaxMedium + " streakscore, and a time bonus multiplier of " + Game.scoreTimeBonusMedium +  Environment.NewLine + Environment.NewLine  +
+            "The bonus streak score for Medium is " + Game.scoreStreakBonusHard + " with a maximum of " + Game.scoreStreakMaxHard + " streakscore, and a time bonus multiplier of " + Game.scoreTimeBonusHard  + Environment.NewLine + Environment.NewLine ;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

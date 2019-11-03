@@ -294,7 +294,7 @@ namespace Memory_Game
         private void StartGame()
         {
             hasStarted = true;
-            timer = new Timer(game.GetTimeLeft());
+            timer = new Timer(game.GetTimeLeft(), this);
             timer.isGameRunning = true;
             game.SetTurn(game.GetPlayer1());
             currentPlayer = 1;
