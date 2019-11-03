@@ -135,6 +135,7 @@ namespace Memory_Game
             // Opent het speelveld
             GameWindow gameWindow = new GameWindow();
             gameWindow.Show();
+            gameWindow.UpdateWindow();
 
             Game.GetGame().HasStarted = true;
 

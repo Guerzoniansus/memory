@@ -156,6 +156,8 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="backTestImage.png" />
+    <Resource Include="img\Window_Backgrounds\bg_neon.jpg" />
+    <Resource Include="img\Window_Backgrounds\bg_vintage.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="frontTestImage.png" />
@@ -216,6 +218,7 @@
     <Resource Include="img\Backgrounds\EasyBackground.png" />
     <Resource Include="img\Backgrounds\HardBackground.png" />
     <Resource Include="img\Backgrounds\MediumBackground.png" />
+    <Resource Include="img\Window_Backgrounds\bg_cartoon.jpg" />
     <Content Include="sounds\bgmusic_easy.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

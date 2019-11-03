@@ -33,6 +33,8 @@ namespace Memory_Game
         private ImageSource imageVolume;
         private ImageSource imageVolumeMuted;
 
+        bool changedBackgroundAndColor;
+
         public GameWindow()
         {
             game = Game.GetGame();
@@ -62,13 +64,56 @@ namespace Memory_Game
             game.SetGrid(grid);
             windowGrid = GameGrid;
 
-            UpdateWindow();
+            changedBackgroundAndColor = false;
 
             isMusicMuted = false;
 
             imageVolume = new BitmapImage(new Uri("img/volume_button.png", UriKind.Relative));
             imageVolumeMuted = new BitmapImage(new Uri("img/volume_muted.png", UriKind.Relative));
 
+        }
+
+        // Methode die ik gebruik om alle labels te krijgen om dan hun tekst wit te kunnen maken zodat het leesbaar is met de neon background
+        // Ik heb de code hier vandaan https://stackoverflow.com/questions/974598/find-all-controls-in-wpf-window-by-type
+        private IEnumerable<T> FindLogicalChildren<T>(DependencyObject depObj) where T : DependencyObject
+        {
+            if (depObj != null)
+            {
+                foreach (object rawChild in LogicalTreeHelper.GetChildren(depObj))
+                {
+                    if (rawChild is DependencyObject)
+                    {
+                        DependencyObject child = (DependencyObject)rawChild;
+                        if (child is T)
+                        {
+                            yield return (T)child;
+                        }
+
+                        foreach (T childOfChild in FindLogicalChildren<T>(child))
+                        {
+                            yield return childOfChild;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void SetBackground()
+        {
+            ImageBrush myBrush = new ImageBrush();
+
+            string background = "";
+
+            switch (game.GetDifficulty())
+            {
+                case Difficulty.EASY: background = "bg_cartoon"; break;
+                case Difficulty.MEDIUM: background = "bg_neon"; break;
+                case Difficulty.HARD: background = "bg_vintage"; break;
+                default: Console.WriteLine("Wtf er is iets mis gegaan in SetBackground in GameWindow"); break;
+            }
+
+            myBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/img/Window_Backgrounds/" + background + ".jpg"));
+            Background = myBrush;
         }
 
         /// <summary>
@@ -103,6 +148,23 @@ namespace Memory_Game
             difficulty = new string(letters);
 
             textDifficulty.Content = "(" + difficulty + ")";
+
+            // Do this only once
+            if (changedBackgroundAndColor == false)
+            {
+                SetBackground();
+
+                // Maak alle tekst wit voor neon omdat het anders niet leesbaar is
+                if (game.GetDifficulty() == Difficulty.MEDIUM)
+                {
+                    foreach (Label label in FindLogicalChildren<Label>(this))
+                    {
+                        label.Foreground = Brushes.White;
+                    }
+                }
+
+                changedBackgroundAndColor = true;
+            }
         }
 
         /// <summary>

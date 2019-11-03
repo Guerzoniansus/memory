@@ -11,7 +11,7 @@
         WindowState="Maximized"
         Width="1920"
         >
-    <Grid>
+    <Grid x:Name="RootGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="126*"/>
             <RowDefinition Height="403*"/>
@@ -61,22 +61,22 @@
             Foreground="#ff4d4d"
             Visibility="Hidden">Save succesfull!</Label>
 
-            <Label x:Name="textPlayer1Score" FontSize="36" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" HorizontalAlignment="Center">
+            <Label x:Name="textPlayer1Score" FontSize="36" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" HorizontalAlignment="Center" FontWeight="Bold">
                 0
             </Label>
-            <Label x:Name="textPlayer1" FontSize="36" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
+            <Label x:Name="textPlayer1" FontSize="36" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" FontWeight="Bold">
                 player1
             </Label>
-            <Label x:Name="textPlayer2Score" FontSize="36" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" HorizontalAlignment="Center">
+            <Label x:Name="textPlayer2Score" FontSize="36" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" HorizontalAlignment="Center" FontWeight="Bold">
                 0
             </Label>
-            <Label x:Name="textPlayer2" FontSize="36" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2">
+            <Label x:Name="textPlayer2" FontSize="36" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" FontWeight="Bold">
                 player2
             </Label>
-            <Label x:Name="textTurn" FontSize="36" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Center">
+            <Label x:Name="textTurn" FontSize="36" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Center" FontWeight="Bold">
                 turn
             </Label>
-            <Label x:Name="textTime" FontSize="18" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Center">
+            <Label x:Name="textTime" FontSize="22" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Center" FontWeight="Bold">
                 2:36
             </Label>
             <Label x:Name="textDifficulty" FontSize="20" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">

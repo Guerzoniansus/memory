@@ -91,15 +91,15 @@ namespace Memory_Game
             Game.PlaySound("click");
 
             GameWindow gameWindow = new GameWindow();
-
-            SaveUtils.LoadGame();
+            SaveUtils.LoadGame();       
             Game.GetGame().SetGameWindow(gameWindow);
             gameWindow.Show();
-            Game.GetGame().GetGameWindow().UpdateWindow();
 
             Game.PlayMusic();
 
             Game.GetGame().HasStarted = true;
+
+            Game.GetGame().GetGameWindow().UpdateWindow();
 
             this.Close();
 
