@@ -154,6 +154,7 @@ namespace Memory_Game
         /// </summary>
         public static void PlayMusic()
         {
+            StopMusic();
             string musicToPlay = "bgmusic_easy";
 
             switch (Game.GetGame().GetDifficulty())

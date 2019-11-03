@@ -77,7 +77,7 @@
                 turn
             </Label>
             <Label x:Name="textTime" FontSize="22" Grid.Row="2" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Center" FontWeight="Bold">
-                2:36
+                
             </Label>
             <Label x:Name="textDifficulty" FontWeight="Bold" FontSize="24" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
                 difficulty

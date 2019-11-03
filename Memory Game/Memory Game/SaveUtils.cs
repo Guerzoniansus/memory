@@ -181,6 +181,7 @@ namespace Memory_Game
                 string backImageUrl = cardData.Children[new YamlScalarNode("backImageUrl")].ToString();
                 bool flipped = Convert.ToBoolean(cardData.Children[new YamlScalarNode("flipped")].ToString());
                 bool found = Convert.ToBoolean(cardData.Children[new YamlScalarNode("found")].ToString());
+                Console.WriteLine("AAAAAAAAAAAAAAA " + found);
 
                 Card card = new Card(id, frontImageUrl, backImageUrl, flipped, found);
                 cards.Add(card);
@@ -207,6 +208,7 @@ namespace Memory_Game
             Game.SetGame(game);
             MemoryGrid grid = new MemoryGrid(GameWindow.getWindowGrid(), size[0], size[1], difficulty, amountOfCards, cards);
             game.SetGrid(grid);
+            Game.PlayMusic();
             // Zet de game als de nieuwe game
 
             // Als je dit niet doet blijft het bestand open in het achtergrond en kan je later weer niet saven

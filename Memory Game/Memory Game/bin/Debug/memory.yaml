@@ -1,93 +1,93 @@
 version: 1
 game:
-  player1: dfg
-  player2: ''
+  player1: saewges
+  player2: gesges
   difficulty: easy
-  isMultiplayer: False
+  isMultiplayer: True
   time: 20
-  turn: dfg
+  turn: gesges
   amountOfCards: 16
-  scorePlayer1: 320
-  scorePlayer2: 0
+  scorePlayer1: 200
+  scorePlayer2: 580
 cards:
   0:
+    frontImageUrl: /img/EASY/8.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  1:
+    frontImageUrl: /img/EASY/2.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: True
+    found: True
+  2:
     frontImageUrl: /img/EASY/1.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
     flipped: True
-    found: False
-  1:
-    frontImageUrl: /img/EASY/5.png
-    backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
-    found: False
-  2:
-    frontImageUrl: /img/EASY/3.png
-    backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
-    found: False
+    found: True
   3:
     frontImageUrl: /img/EASY/4.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
-    found: False
+    flipped: True
+    found: True
   4:
-    frontImageUrl: /img/EASY/6.png
+    frontImageUrl: /img/EASY/3.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
-    found: False
+    flipped: True
+    found: True
   5:
     frontImageUrl: /img/EASY/1.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
     flipped: True
-    found: False
+    found: True
   6:
+    frontImageUrl: /img/EASY/6.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: True
+    found: True
+  7:
     frontImageUrl: /img/EASY/4.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
-    found: False
-  7:
-    frontImageUrl: /img/EASY/3.png
-    backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
-    found: False
+    flipped: True
+    found: True
   8:
     frontImageUrl: /img/EASY/6.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
-    found: False
+    flipped: True
+    found: True
   9:
-    frontImageUrl: /img/EASY/7.png
+    frontImageUrl: /img/EASY/5.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
-    found: False
+    flipped: True
+    found: True
   10:
     frontImageUrl: /img/EASY/8.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: True
-    found: False
-  11:
-    frontImageUrl: /img/EASY/7.png
-    backImageUrl: /img/Backgrounds/EASYBackground.png
     flipped: False
     found: False
+  11:
+    frontImageUrl: /img/EASY/3.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: True
+    found: True
   12:
-    frontImageUrl: /img/EASY/8.png
+    frontImageUrl: /img/EASY/7.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
     flipped: True
-    found: False
+    found: True
   13:
-    frontImageUrl: /img/EASY/2.png
+    frontImageUrl: /img/EASY/5.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
     flipped: True
-    found: False
+    found: True
   14:
     frontImageUrl: /img/EASY/2.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
     flipped: True
-    found: False
+    found: True
   15:
-    frontImageUrl: /img/EASY/5.png
+    frontImageUrl: /img/EASY/7.png
     backImageUrl: /img/Backgrounds/EASYBackground.png
-    flipped: False
-    found: False
+    flipped: True
+    found: True
 ...

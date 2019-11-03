@@ -81,6 +81,16 @@ namespace Memory_Game
 
             MemoryGrid.isPaused = false;
 
+            int i = 0;
+            foreach (Card card in cards)
+            {
+                if (card.IsFound())
+                {
+                    i++;
+                }
+            }
+            amountCollected = i;
+
 
             InitializeGameGrid(cols, rows);
             LoadImages();
@@ -201,6 +211,7 @@ namespace Memory_Game
             Game.PlaySound("flip_card_wrong");
             SwitchTurn();
             MemoryGrid.isPaused = false;
+            game.GetGameWindow().UpdateWindow();
         }
 
         /// <summary>
@@ -228,13 +239,16 @@ namespace Memory_Game
                 else if (firstCard.GetFrontImageUrl() == card.GetFrontImageUrl())
                 {
                     //Found Correct Card
+                    secondCard = card;
+                    firstCard.SetFound(true);
+                    secondCard.SetFound(true);          
                     firstCard = null;
                     secondCard = null;
                     Game.PlaySound("match");
                     isPaused = false;
                     if (game.IsGameMultiplayer())
                     {
-                        amountCollected += 2;
+                        amountCollected += 2; 
                         if (amountCollected != amountOfCards)
                         {
                             if (currentPlayer == 1)
@@ -251,13 +265,15 @@ namespace Memory_Game
                         else
                         {
                             //Final pair collected, End Game Multiplayer
-                            
+
+                            isPaused = true;
                             Highscores highscores = new Highscores();
                             highscores.TryAddNewScore(new HighscoreData(game.GetPlayer1(), game.GetScore(game.GetPlayer1()), game.GetDifficulty(), true));
                             highscores.TryAddNewScore(new HighscoreData(game.GetPlayer2(), game.GetScore(game.GetPlayer2()), game.GetDifficulty(), true));
 
                             WinWindow winWindow = new WinWindow();
                             winWindow.Show();
+                            
                         }
                     }
                     else
@@ -272,7 +288,8 @@ namespace Memory_Game
                         else
                         {
                             //Final pair collected, End Game Singleplayer
-                        
+
+                            isPaused = true;
                             Highscores highscores = new Highscores();
                             highscores.TryAddNewScore(new HighscoreData(game.GetPlayer1(), game.GetScore(game.GetPlayer1()), game.GetDifficulty(), false));
 
@@ -360,8 +377,13 @@ namespace Memory_Game
         private void StartGame()
         {
             hasStarted = true;
-            game.SetTurn(game.GetPlayer1());
-            currentPlayer = 1;
+            
+            if (game.GetTurn().Equals(game.GetPlayer1()))
+                currentPlayer = 1;
+
+            else if (game.GetTurn().Equals(game.GetPlayer2()))
+                currentPlayer = 2;
+
             game.GetGameWindow().UpdateWindow();
         }
 

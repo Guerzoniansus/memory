@@ -91,13 +91,9 @@ namespace Memory_Game
             textPlayer1Score.Content = game.getScore(player1.ToString());
             textPlayer2Score.Content = game.IsGameMultiplayer() ? game.getScore(player2).ToString() : "";
 
-            textTurn.Content = turn + "'s turn";
-
-            // Refresh the time
-            TimeSpan t = TimeSpan.FromSeconds(game.GetTimeLeft());
-            string time = string.Format("{0:D2}:{1:D2}", t.Minutes, t.Seconds);
-
-            textTime.Content = time;
+            if (game.IsGameMultiplayer())
+                textTurn.Content = turn + "'s turn";
+            else textTurn.Content = "";
 
             // Wat code om de difficulty zo te formatten dat alleen de eerste letter een hoofdletter is en dan te drawen
             string difficulty = game.GetDifficulty().ToString().ToLower();
@@ -108,8 +104,11 @@ namespace Memory_Game
 
             textDifficulty.Content = "(" + difficulty + ")";
 
+            ChangeButtonColors();
+
             // Do this only once
-            if (changedBackgroundAndColor == false)
+            // Later on I decided to do this every time, screw good code
+            if (changedBackgroundAndColor == false || changedBackgroundAndColor == true)
             {
                 SetBackground();
 
@@ -122,15 +121,28 @@ namespace Memory_Game
                     }
                 }
 
-                changedBackgroundAndColor = true;
             }
         }
 
+        /// <summary>
+        /// Change colors of the buttons depending on if the player should be able to click on them or not
+        /// </summary>
         private void ChangeButtonColors()
         {
             if (MemoryGrid.isPaused)
             {
-                //Background = Brushes.White;
+                Load.Background = Brushes.LightGray;
+                Save.Background = Brushes.LightGray;
+                Reset.Background = Brushes.LightGray;
+                Menu.Background = Brushes.LightGray;
+            }
+
+            else
+            {
+                Load.Background = Brushes.White;
+                Save.Background = Brushes.White;
+                Reset.Background = Brushes.White;
+                Menu.Background = Brushes.White;
             }
         }
 
