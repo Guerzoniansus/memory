@@ -8,7 +8,7 @@ using System.Windows.Media.Imaging;
 
 namespace Memory_Game
 {
-    class MemoryGrid
+    public class MemoryGrid
     {
 
         private Grid grid;
@@ -30,7 +30,7 @@ namespace Memory_Game
         private int currentPlayer;
         private int amountCollected;
 
-        public bool isPaused = false;
+        bool isPaused;
         
         public MemoryGrid(Grid grid, int cols, int rows, Difficulty difficulty, int amountOfCards)
         {
@@ -63,7 +63,6 @@ namespace Memory_Game
             this.difficulty = difficulty;
             this.amountOfCards = amountOfCards;
 
-            isPaused = false;
 
             InitializeGameGrid(cols, rows);
             LoadImages();
@@ -169,7 +168,7 @@ namespace Memory_Game
             secondCard = null;
             Game.PlaySound("flip_card_wrong");
             SwitchTurn();
-            //isPaused = false;
+            isPaused = false;
         }
         private void CardClick(object sender, MouseButtonEventArgs e)
         {
@@ -292,12 +291,10 @@ namespace Memory_Game
             }
         }
         Timer timer;
-        
-
         private void StartGame()
         {
             hasStarted = true;
-            timer = new Timer(game.GetTimeLeft(), this);
+            timer = new Timer(game.GetTimeLeft());
             timer.isGameRunning = true;
             game.SetTurn(game.GetPlayer1());
             currentPlayer = 1;
