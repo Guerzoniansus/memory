@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
+using System.Timers;
 
 namespace Memory_Game
 {
@@ -30,7 +32,7 @@ namespace Memory_Game
         private int currentPlayer;
         private int amountCollected;
 
-        public bool isPaused;
+        public static bool isPaused;
         
         public MemoryGrid(Grid grid, int cols, int rows, Difficulty difficulty, int amountOfCards)
         {
@@ -71,6 +73,13 @@ namespace Memory_Game
         {
             cards = new List<Card>();
             AddImages();
+
+            firstCard = null;
+            secondCard = null;
+            player1Streak = 0;
+            player2Streak = 0;
+            currentPlayer = 0;
+            amountCollected = 0;
         }
 
         /// <summary>
@@ -160,16 +169,27 @@ namespace Memory_Game
             return randomList; //return the new random list
         }
 
+        /// <summary>
+        /// Flips the selected back.
+        /// </summary>
         public void DelayedCardFlip()
         {
             firstCard.Flip();
-            secondCard.Flip();
+            if (secondCard != null)
+                secondCard.Flip();
             firstCard = null;
             secondCard = null;
             Game.PlaySound("flip_card_wrong");
             SwitchTurn();
             isPaused = false;
+
         }
+
+        /// <summary>
+        /// Called when card is clicked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CardClick(object sender, MouseButtonEventArgs e)
         {
             if (!hasStarted)
@@ -183,13 +203,17 @@ namespace Memory_Game
                 card.Flip();
                 Game.PlaySound("flip_card");
                 if (firstCard == null)
+                {
                     firstCard = card;
-                else if(firstCard.GetFrontImageUrl() == card.GetFrontImageUrl())
+                    isPaused = true;
+                }
+                else if (firstCard.GetFrontImageUrl() == card.GetFrontImageUrl())
                 {
                     //Found Correct Card
                     firstCard = null;
                     secondCard = null;
                     Game.PlaySound("match");
+                    isPaused = false;
                     if (game.IsGameMultiplayer())
                     {
                         amountCollected += 2;
@@ -209,7 +233,7 @@ namespace Memory_Game
                         else
                         {
                             //Final pair collected, End Game Multiplayer
-                            timer.isGameRunning = false;
+                            
                             Highscores highscores = new Highscores();
                             highscores.TryAddNewScore(new HighscoreData(game.GetPlayer1(), game.GetScore(game.GetPlayer1()), game.GetDifficulty(), true));
                             highscores.TryAddNewScore(new HighscoreData(game.GetPlayer2(), game.GetScore(game.GetPlayer2()), game.GetDifficulty(), true));
@@ -230,8 +254,7 @@ namespace Memory_Game
                         else
                         {
                             //Final pair collected, End Game Singleplayer
-                            timer.isGameRunning = false;
-                            game.AddTimeBonus(timer.GetRemainingTime());
+                        
                             Highscores highscores = new Highscores();
                             highscores.TryAddNewScore(new HighscoreData(game.GetPlayer1(), game.GetScore(game.GetPlayer1()), game.GetDifficulty(), false));
 
@@ -246,14 +269,21 @@ namespace Memory_Game
                     //Didn't find the correct card
                     secondCard = card;
                     isPaused = true;
-                    timer.DelayedCardFlip();
+
                     if (currentPlayer == 1)
                         player1Streak = 0;
                     else
                         player2Streak = 0;
 
+                    
+                    dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+                    dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+                    dispatcherTimer.Start();
+                    delayedFlipActive = true;
                 }
             }
+
+            game.GetGameWindow().UpdateWindow();
 
             // Ik gebruikte de code hieronder om saven en laden te testen. 
             // De 2e kaart (boven aan) savet, de derde kaart (boven aan) laadt als je op ze klikt
@@ -274,6 +304,21 @@ namespace Memory_Game
             //}
         }
 
+        System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+        private bool delayedFlipActive;
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            if(delayedFlipActive == true)
+            {
+                DelayedCardFlip();
+                delayedFlipActive = false;
+                dispatcherTimer.Stop();
+            }
+        }
+
+        /// <summary>
+        /// Switches the turn to the other player.
+        /// </summary>
         public void SwitchTurn()
         {
             if (game.IsGameMultiplayer())
@@ -290,20 +335,25 @@ namespace Memory_Game
                 }
             }
         }
-        Timer timer;
+
+        /// <summary>
+        /// Handles what needs to happen when the game starts.
+        /// </summary>
         private void StartGame()
         {
             hasStarted = true;
-            timer = new Timer(game.GetTimeLeft(), this);
-            timer.isGameRunning = true;
             game.SetTurn(game.GetPlayer1());
             currentPlayer = 1;
             game.GetGameWindow().UpdateWindow();
         }
 
+        /// <summary>
+        /// Initializes the game grid.
+        /// </summary>
+        /// <param name="cols"></param>
+        /// <param name="rows"></param>
         private void InitializeGameGrid(int cols, int rows)
         {
-
             grid.RowDefinitions.Clear();
             for (int i = 0; i < rows; i++)
             {

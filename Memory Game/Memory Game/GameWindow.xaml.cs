@@ -116,7 +116,7 @@ namespace Memory_Game
 
         private void ButtonClickMenu(object sender, RoutedEventArgs e)
         {
-            if (grid.isPaused) return;
+            if (MemoryGrid.isPaused) return;
 
             Game.PlaySound("click");
             Game.StopMusic();
@@ -128,7 +128,7 @@ namespace Memory_Game
         }
         private void ButtonClickReset(object sender, RoutedEventArgs e)
         {
-            if (grid.isPaused) return;
+            if (MemoryGrid.isPaused) return;
 
             Game.PlaySound("click");
 
@@ -141,7 +141,7 @@ namespace Memory_Game
 
         private void ButtonClickSave(object sender, RoutedEventArgs e)
         {
-            if (grid.isPaused) return;
+            if (MemoryGrid.isPaused) return;
 
             Game.PlaySound("click");
             SaveUtils.SaveGame();
@@ -171,7 +171,7 @@ namespace Memory_Game
 
         private void ButtonClickLoad(object sender, RoutedEventArgs e)
         {
-            if (grid.isPaused) return;
+            if (MemoryGrid.isPaused) return;
 
             Game.PlaySound("click");
 
@@ -189,7 +189,7 @@ namespace Memory_Game
 
         private void MyMouseEnterEvent(object sender, MouseEventArgs e)
         {
-            if (grid.isPaused) return;
+            if (MemoryGrid.isPaused) return;
 
             Button button = (Button)sender;
             button.Background = Brushes.LightGray;
@@ -197,7 +197,7 @@ namespace Memory_Game
 
         private void MyMouseLeaveEvent(object sender, MouseEventArgs e)
         {
-            if (grid.isPaused) return;
+            if (MemoryGrid.isPaused) return;
 
             Button button = (Button)sender;
             button.Background = Brushes.White;
