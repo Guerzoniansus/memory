@@ -30,7 +30,7 @@ namespace Memory_Game
         private int currentPlayer;
         private int amountCollected;
 
-        bool isPaused;
+        public bool isPaused;
         
         public MemoryGrid(Grid grid, int cols, int rows, Difficulty difficulty, int amountOfCards)
         {
