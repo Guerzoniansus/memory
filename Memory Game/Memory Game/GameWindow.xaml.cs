@@ -126,6 +126,14 @@ namespace Memory_Game
             }
         }
 
+        private void ChangeButtonColors()
+        {
+            if (MemoryGrid.isPaused)
+            {
+                //Background = Brushes.White;
+            }
+        }
+
         // Methode die ik gebruik om alle labels te krijgen om dan hun tekst wit te kunnen maken zodat het leesbaar is met de neon background
         // Ik heb de code hier vandaan https://stackoverflow.com/questions/974598/find-all-controls-in-wpf-window-by-type
         private IEnumerable<T> FindLogicalChildren<T>(DependencyObject depObj) where T : DependencyObject

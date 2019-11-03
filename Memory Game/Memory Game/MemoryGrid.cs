@@ -202,7 +202,10 @@ namespace Memory_Game
                 card.Flip();
                 Game.PlaySound("flip_card");
                 if (firstCard == null)
+                {
                     firstCard = card;
+                    isPaused = true;
+                }
                 else if(firstCard.GetFrontImageUrl() == card.GetFrontImageUrl())
                 {
                     //Found Correct Card
@@ -273,6 +276,8 @@ namespace Memory_Game
 
                 }
             }
+
+            game.GetGameWindow().UpdateWindow();
 
             // Ik gebruikte de code hieronder om saven en laden te testen. 
             // De 2e kaart (boven aan) savet, de derde kaart (boven aan) laadt als je op ze klikt
