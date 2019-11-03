@@ -73,52 +73,9 @@ namespace Memory_Game
 
         }
 
-        // Methode die ik gebruik om alle labels te krijgen om dan hun tekst wit te kunnen maken zodat het leesbaar is met de neon background
-        // Ik heb de code hier vandaan https://stackoverflow.com/questions/974598/find-all-controls-in-wpf-window-by-type
-        private IEnumerable<T> FindLogicalChildren<T>(DependencyObject depObj) where T : DependencyObject
-        {
-            if (depObj != null)
-            {
-                foreach (object rawChild in LogicalTreeHelper.GetChildren(depObj))
-                {
-                    if (rawChild is DependencyObject)
-                    {
-                        DependencyObject child = (DependencyObject)rawChild;
-                        if (child is T)
-                        {
-                            yield return (T)child;
-                        }
-
-                        foreach (T childOfChild in FindLogicalChildren<T>(child))
-                        {
-                            yield return childOfChild;
-                        }
-                    }
-                }
-            }
-        }
-
-        private void SetBackground()
-        {
-            ImageBrush myBrush = new ImageBrush();
-
-            string background = "";
-
-            switch (game.GetDifficulty())
-            {
-                case Difficulty.EASY: background = "bg_cartoon"; break;
-                case Difficulty.MEDIUM: background = "bg_neon"; break;
-                case Difficulty.HARD: background = "bg_vintage"; break;
-                default: Console.WriteLine("Wtf er is iets mis gegaan in SetBackground in GameWindow"); break;
-            }
-
-            myBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/img/Window_Backgrounds/" + background + ".jpg"));
-            Background = myBrush;
-        }
-
         /// <summary>
         /// Refreshes the players (in case of saving and loading), the scores, the time, and whose turn it is. 
-        /// Used when initializing the window and after every turn. 
+        /// Used when initializing the window and after every turn. Also draws the difficulty, the background, and makes the text white for Neon.
         /// </summary>
         public void UpdateWindow()
         {
@@ -127,6 +84,7 @@ namespace Memory_Game
             string player2 = game.GetPlayer2();
             string turn = game.GetTurn();
 
+            // Set player names, scores and turn
             textPlayer1.Content = player1;
             textPlayer2.Content = game.IsGameMultiplayer() ? player2 : "";
 
@@ -135,12 +93,13 @@ namespace Memory_Game
 
             textTurn.Content = turn + "'s turn";
 
+            // Refresh the time
             TimeSpan t = TimeSpan.FromSeconds(game.GetTimeLeft());
             string time = string.Format("{0:D2}:{1:D2}", t.Minutes, t.Seconds);
 
             textTime.Content = time;
 
-            // Wat code om de difficulty zo te formatten dat alleen de eerste letter een hoofdletter is
+            // Wat code om de difficulty zo te formatten dat alleen de eerste letter een hoofdletter is en dan te drawen
             string difficulty = game.GetDifficulty().ToString().ToLower();
             char[] letters = difficulty.ToCharArray();
             char firstletter = letters[0].ToString().ToUpper().ToCharArray()[0]; ;
@@ -167,6 +126,52 @@ namespace Memory_Game
             }
         }
 
+        // Methode die ik gebruik om alle labels te krijgen om dan hun tekst wit te kunnen maken zodat het leesbaar is met de neon background
+        // Ik heb de code hier vandaan https://stackoverflow.com/questions/974598/find-all-controls-in-wpf-window-by-type
+        private IEnumerable<T> FindLogicalChildren<T>(DependencyObject depObj) where T : DependencyObject
+        {
+            if (depObj != null)
+            {
+                foreach (object rawChild in LogicalTreeHelper.GetChildren(depObj))
+                {
+                    if (rawChild is DependencyObject)
+                    {
+                        DependencyObject child = (DependencyObject)rawChild;
+                        if (child is T)
+                        {
+                            yield return (T)child;
+                        }
+
+                        foreach (T childOfChild in FindLogicalChildren<T>(child))
+                        {
+                            yield return childOfChild;
+                        }
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Automatically set the background image depending on the difficulty being used
+        /// </summary>
+        private void SetBackground()
+        {
+            ImageBrush myBrush = new ImageBrush();
+
+            string background = "";
+
+            switch (game.GetDifficulty())
+            {
+                case Difficulty.EASY: background = "bg_cartoon"; break;
+                case Difficulty.MEDIUM: background = "bg_neon"; break;
+                case Difficulty.HARD: background = "bg_vintage"; break;
+                default: Console.WriteLine("Wtf er is iets mis gegaan in SetBackground in GameWindow"); break;
+            }
+
+            myBrush.ImageSource = new BitmapImage(new Uri("pack://application:,,,/img/Window_Backgrounds/" + background + ".jpg"));
+            Background = myBrush;
+        }
+
         /// <summary>
         /// Get the grid of the window (aka GameGrid)
         /// </summary>
@@ -178,7 +183,7 @@ namespace Memory_Game
 
         private void ButtonClickMenu(object sender, RoutedEventArgs e)
         {
-            if (grid.isPaused) return;
+            if (MemoryGrid.isPaused) return;
 
             Game.PlaySound("click");
             Game.StopMusic();
@@ -190,7 +195,7 @@ namespace Memory_Game
         }
         private void ButtonClickReset(object sender, RoutedEventArgs e)
         {
-            if (grid.isPaused) return;
+            if (MemoryGrid.isPaused) return;
 
             Game.PlaySound("click");
 
@@ -203,7 +208,7 @@ namespace Memory_Game
 
         private void ButtonClickSave(object sender, RoutedEventArgs e)
         {
-            if (grid.isPaused) return;
+            if (MemoryGrid.isPaused) return;
 
             Game.PlaySound("click");
             SaveUtils.SaveGame();
@@ -233,7 +238,7 @@ namespace Memory_Game
 
         private void ButtonClickLoad(object sender, RoutedEventArgs e)
         {
-            if (grid.isPaused) return;
+            if (MemoryGrid.isPaused) return;
 
             Game.PlaySound("click");
 
@@ -251,7 +256,7 @@ namespace Memory_Game
 
         private void MyMouseEnterEvent(object sender, MouseEventArgs e)
         {
-            if (grid.isPaused) return;
+            if (MemoryGrid.isPaused) return;
 
             Button button = (Button)sender;
             button.Background = Brushes.LightGray;
@@ -259,12 +264,17 @@ namespace Memory_Game
 
         private void MyMouseLeaveEvent(object sender, MouseEventArgs e)
         {
-            if (grid.isPaused) return;
+            if (MemoryGrid.isPaused) return;
 
             Button button = (Button)sender;
             button.Background = Brushes.White;
         }
 
+        /// <summary>
+        /// Event for when the volume button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void VolumeButtonClick(object sender, MouseButtonEventArgs e)
         {
             // Mute or unmute music when clicked on the icon

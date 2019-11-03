@@ -87,11 +87,19 @@ namespace Memory_Game
             return Game.game;
         }
 
+        /// <summary>
+        /// Set the instance of the GameWindow that is used to display the game
+        /// </summary>
+        /// <param name="window">The GameWindow instance that is being used</param>
         public void SetGameWindow(GameWindow window)
         {
             this.gameWindow = window;
         }
 
+        /// <summary>
+        /// Get the Game Window that the game is currently using
+        /// </summary>
+        /// <returns>GameWindow currently in use</returns>
         public GameWindow GetGameWindow()
         {
             return gameWindow;
@@ -112,11 +120,19 @@ namespace Memory_Game
             gameWindow.UpdateWindow();
         }
 
+        /// <summary>
+        /// Sets the grid the game uses
+        /// </summary>
+        /// <param name="grid">A MemoryGrid instance</param>
         public void SetGrid(MemoryGrid grid)
         {
             this.memoryGrid = grid;
         }
 
+        /// <summary>
+        /// Get the MemoryGrid the game uses
+        /// </summary>
+        /// <returns>The MemoryGrid the game uses</returns>
         public MemoryGrid GetGrid()
         {
             return memoryGrid;
@@ -125,7 +141,7 @@ namespace Memory_Game
         /// <summary>
         /// Easy lazy static method to play sounds
         /// </summary>
-        /// <param name="sound">Name of the sound file</param>
+        /// <param name="sound">Name of the sound file, without path or file extension</param>
         public static void PlaySound(string sound)
         {
             //var player = new System.Windows.Media.MediaPlayer();
@@ -134,7 +150,7 @@ namespace Memory_Game
         }
 
         /// <summary>
-        /// Easy lazy static method to play background music
+        /// Easy lazy static method to play background music, which automatically chooses the song depending on the difficulty
         /// </summary>
         public static void PlayMusic()
         {
@@ -176,6 +192,11 @@ namespace Memory_Game
         //    return gridWindow;
         //}
 
+        /// <summary>
+        /// Set the names of the players
+        /// </summary>
+        /// <param name="player1">The name of player 1</param>
+        /// <param name="player2">The name of player 2</param>
         public void SetPlayers(string player1, string player2)
         {
             this.player1 = player1;
@@ -197,58 +218,105 @@ namespace Memory_Game
             SetTurn(player1);
         }
 
+        /// <summary>
+        /// Get the current score of a player
+        /// </summary>
+        /// <param name="player">The name of the player you want to know the score of</param>
+        /// <returns></returns>
         public double GetScore(string player)
         {
             return scores[player];
         }
 
+        /// <summary>
+        /// See whose turn it is
+        /// </summary>
+        /// <returns>The name of the player whose turn it is</returns>
         public string GetTurn()
         {
             return turn;
         }
 
+        /// <summary>
+        /// Choose which player's turn it is now
+        /// </summary>
+        /// <param name="playerName">Name of the player whose turn it is now</param>
         public void SetTurn(string playerName)
         {
             turn = playerName;
             if (gameWindow != null) gameWindow.UpdateWindow();
         }
 
+        /// <summary>
+        /// Set the new score of a player
+        /// </summary>
+        /// <param name="player">Name of the player you want to change the score of</param>
+        /// <param name="newScore">New score</param>
         public void SetScore(string player, double newScore)
         {
             scores[player] = newScore;
             if (gameWindow != null) gameWindow.UpdateWindow();
         }
 
+        /// <summary>
+        /// Get the score of a player
+        /// </summary>
+        /// <param name="player">Name of the player whose score you want to get</param>
+        /// <returns></returns>
         public double getScore(string player)
         {
             return scores[player];
         }
 
+        /// <summary>
+        ///  Set whether or not the game is multiplayer
+        /// </summary>
+        /// <param name="isTheGameMultiplayer">Whether the game should be multiplayer (true) or not (false) </param>
         public void SetMultiplayer(bool isTheGameMultiplayer)
         {
             isMultiplayer = isTheGameMultiplayer;
         }
 
+        /// <summary>
+        /// Check if the game is multiplayer or not
+        /// </summary>
+        /// <returns>true if multiplayer, false if singleplayer</returns>
         public bool IsGameMultiplayer()
         {
             return isMultiplayer;
         }
 
+        /// <summary>
+        /// Set the amount of cards the game should be using
+        /// </summary>
+        /// <param name="amountOfCards"></param>
         public void SetAmountOfCards(int amountOfCards)
         {
             this.amountOfCards = amountOfCards;
         }
 
+        /// <summary>
+        /// Get the amount of cards the game is using
+        /// </summary>
+        /// <returns>The amount of cards the game is using/returns>
         public int GetAmountOfCards()
         {
             return amountOfCards;
         }
 
+        /// <summary>
+        /// Set the difficulty of the game
+        /// </summary>
+        /// <param name="difficulty">The difficulty of the game</param>
         public void SetDifficulty(Difficulty difficulty)
         {
             this.difficulty = difficulty;
         }
 
+        /// <summary>
+        /// Get the difficulty of the game
+        /// </summary>
+        /// <returns>The difficulty of the game</returns>
         public Difficulty GetDifficulty()
         {
             return difficulty;

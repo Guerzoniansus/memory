@@ -96,6 +96,10 @@ namespace Memory_Game
             return flipped;
         }
 
+        /// <summary>
+        /// Get the ID / index of this card used for the grid and for save files
+        /// </summary>
+        /// <returns>The ID / index of this card</returns>
         public int getId()
         {
             return id;
@@ -121,16 +125,27 @@ namespace Memory_Game
             return backImage;
         }
 
+        /// <summary>
+        /// Get the image url of the front image. You can use it to check if two cards match
+        /// </summary>
+        /// <returns>Image url of the front image</returns>
         public string GetFrontImageUrl()
         {
             return frontImageUrl;
         }
 
+        /// <summary>
+        /// Get the image url of the back image. You can use it to check if two cards match
+        /// </summary>
+        /// <returns>Image url of the back image</returns>
         public string GetBackImageUrl()
         {
             return backImageUrl;
         }
 
+        /// <summary>
+        /// Changes isFlipped and the current image to the opposite
+        /// </summary>
         public void Flip()
         {
             // if (image == frontImage) image = backImage, ELSE image = frontImage

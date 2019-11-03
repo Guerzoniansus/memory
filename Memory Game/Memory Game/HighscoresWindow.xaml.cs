@@ -34,12 +34,9 @@ namespace Memory_Game
             ShowScores();
         }
 
-
-
-
-
-
-
+        /// <summary>
+        /// Dynamically draw the high score text on screen
+        /// </summary>
         private void ShowScores()
         {
             Highscores highscores = new Highscores();
@@ -63,14 +60,6 @@ namespace Memory_Game
                 
                 place = 1 + place;
 
-                // whatever code je verder zelf nodig hebt om het op het scherm te zetten, je hebt hier de variabelen die je nodig hebt
-                // je moet ze nog wel zelf converten naar strings enzo
-                // VOORBEELD (als ze strings zijn ipv double en Difficulty)
-                // Console.WriteLine(rank+ ". " + playerName + " - " + score+ " (" + difficulty + ")");
-                // output: 1. bob - 700 (HARD)
-
-
-
                 items.Add(new Data() { place = place , Name = playerName, Score = (int)score, Difficulty = difficultyString });
             }
 
@@ -79,7 +68,8 @@ namespace Memory_Game
 
             items = new List<Data>();
             place = 0;
-            // dit is single player, moet nog een keer doen voor multiplayer
+
+            // dit is multiplayer
             for (int i = 0; i < multiplayerScores.Count; i++)
             {
 
@@ -92,11 +82,7 @@ namespace Memory_Game
                 string difficultyString = difficulty.ToString().ToUpper();
 
                 place = 1 + place;
-                // whatever code je verder zelf nodig hebt om het op het scherm te zetten, je hebt hier de variabelen die je nodig hebt
-                // je moet ze nog wel zelf converten naar strings enzo
-                // VOORBEELD (als ze strings zijn ipv double en Difficulty)
-                // Console.WriteLine(rank+ ". " + playerName + " - " + score+ " (" + difficulty + ")");
-                //// output: 1. bob - 700 (HARD)
+
                 items.Add(new Data() { place = place, Name = playerName, Score = (int)score, Difficulty = difficultyString });
 
             }

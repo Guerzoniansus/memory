@@ -75,7 +75,6 @@ namespace Memory_Game
 
         }
 
-
         private static void SaveGameData(YamlMappingNode rootMappingNode, Game game)
         {
             // Voeg alle game data toe aan rootMappingNode in de yaml file

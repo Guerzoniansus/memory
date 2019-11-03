@@ -195,6 +195,9 @@ namespace Memory_Game
             return scoresMultiplayer;
         }
 
+        /// <summary>
+        /// Load the highscores from the save file into memory
+        /// </summary>
         public void LoadScores()
         {
             // Ik heb dit gebruikt van deze code https://dotnetfiddle.net/rrR2Bb wat onderdeel is van https://aaubry.net/pages/yamldotnet.html

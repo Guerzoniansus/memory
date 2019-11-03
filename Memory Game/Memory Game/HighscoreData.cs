@@ -15,6 +15,13 @@ namespace Memory_Game
 
         public bool IsMultiplayer { get; private set; }
 
+        /// <summary>
+        /// A HighscoreData object can be used by the Highscores class to give high score data
+        /// </summary>
+        /// <param name="playerName">Name of the player</param>
+        /// <param name="score">Score the player got</param>
+        /// <param name="difficultty">Difficulty the player was playing on</param>
+        /// <param name="isMultiplayer">Whether the player played singleplayer or multiplayer</param>
         public HighscoreData(string playerName, double score, Difficulty difficultty, bool isMultiplayer)
         {
             this.PlayerName = playerName;

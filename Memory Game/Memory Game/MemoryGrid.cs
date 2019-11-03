@@ -30,8 +30,16 @@ namespace Memory_Game
         private int currentPlayer;
         private int amountCollected;
 
-        public bool isPaused;
-        
+        public static bool isPaused;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="grid">GameGrid</param>
+        /// <param name="cols">Amount of grid columns</param>
+        /// <param name="rows">Amount of grid rows</param>
+        /// <param name="difficulty">Difficulty</param>
+        /// <param name="amountOfCards">Amount of cards/param>
         public MemoryGrid(Grid grid, int cols, int rows, Difficulty difficulty, int amountOfCards)
         {
             game = Game.GetGame();
@@ -43,7 +51,7 @@ namespace Memory_Game
             this.difficulty = difficulty;
             this.amountOfCards = amountOfCards;
 
-            isPaused = false;
+            MemoryGrid.isPaused = false;
 
             InitializeGameGrid(cols, rows);
             AddImages();
@@ -52,6 +60,12 @@ namespace Memory_Game
         /// <summary>
         /// Deze is speciaal voor wanneer het spel geladen wordt en je al van te voren een bestaande lijst met kaarten hebt (van je save file)
         /// </summary>
+        /// <param name="grid">GameGrid</param>
+        /// <param name="cols">Amount of grid columns</param>
+        /// <param name="rows">Amount of grid rows</param>
+        /// <param name="difficulty">Difficulty</param>
+        /// <param name="amountOfCards">Amount of Cards</param>
+        /// <param name="cards">Pre-existing list of cards</param>
         public MemoryGrid(Grid grid, int cols, int rows, Difficulty difficulty, int amountOfCards, List<Card> cards)
         {
             game = Game.GetGame();
@@ -63,10 +77,14 @@ namespace Memory_Game
             this.difficulty = difficulty;
             this.amountOfCards = amountOfCards;
 
+            MemoryGrid.isPaused = false;
+
 
             InitializeGameGrid(cols, rows);
             LoadImages();
         }
+
+        // Reset the grid
         public void Reset()
         {
             cards = new List<Card>();
@@ -132,6 +150,7 @@ namespace Memory_Game
             }
         }
 
+
         private List<int> GetNumbers()
         {
             List<int> numbers = new List<int>();
@@ -168,7 +187,7 @@ namespace Memory_Game
             secondCard = null;
             Game.PlaySound("flip_card_wrong");
             SwitchTurn();
-            isPaused = false;
+            MemoryGrid.isPaused = false;
         }
         private void CardClick(object sender, MouseButtonEventArgs e)
         {
@@ -245,7 +264,7 @@ namespace Memory_Game
                 {
                     //Didn't find the correct card
                     secondCard = card;
-                    isPaused = true;
+                    MemoryGrid.isPaused = true;
                     timer.DelayedCardFlip();
                     if (currentPlayer == 1)
                         player1Streak = 0;
