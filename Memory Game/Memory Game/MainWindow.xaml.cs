@@ -99,6 +99,8 @@ namespace Memory_Game
 
             Game.PlayMusic();
 
+            Game.GetGame().HasStarted = true;
+
             this.Close();
 
         }

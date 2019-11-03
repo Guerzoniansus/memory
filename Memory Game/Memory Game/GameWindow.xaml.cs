@@ -68,7 +68,6 @@ namespace Memory_Game
 
             imageVolume = new BitmapImage(new Uri("img/volume_button.png", UriKind.Relative));
             imageVolumeMuted = new BitmapImage(new Uri("img/volume_muted.png", UriKind.Relative));
-
         }
 
         /// <summary>
@@ -116,14 +115,14 @@ namespace Memory_Game
 
         private void ButtonClickMenu(object sender, RoutedEventArgs e)
         {
-            if (grid.isPaused) return;
+            if (grid.isPaused == true) return;
 
-            Game.PlaySound("click");
-            Game.StopMusic();
+            //Game.PlaySound("click");
+            //Game.StopMusic();
 
-            MainWindow menu = new MainWindow();
-            menu.Show();
-            this.Close();
+            //MainWindow menu = new MainWindow();
+            //menu.Show();
+            //this.Close();
 
         }
         private void ButtonClickReset(object sender, RoutedEventArgs e)

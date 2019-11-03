@@ -39,6 +39,8 @@ namespace Memory_Game
 
         public static MediaPlayer mediaPlayer = new System.Windows.Media.MediaPlayer();
 
+        public bool HasStarted;
+
         // Public constants for score formulas
         public const double scoreMatchBonus = 100;
         public const double scoreStreakBonusEasy = 20;
@@ -63,6 +65,8 @@ namespace Memory_Game
             scores = new Dictionary<string, double>();
             scores.Add(player1, 0);
             scores.Add(player2, 0);
+
+            HasStarted = false;
         }
 
         /// <summary>

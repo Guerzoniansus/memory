@@ -92,7 +92,7 @@ namespace Memory_Game
                 menu.Show();
 
                 Game.StopMusic();
-                gameWindow.Close();
+                if (gameWindow != null) gameWindow.Close();
                 Close();
             }
         }

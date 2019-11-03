@@ -136,6 +136,8 @@ namespace Memory_Game
             GameWindow gameWindow = new GameWindow();
             gameWindow.Show();
 
+            Game.GetGame().HasStarted = true;
+
             Game.PlayMusic();
 
             this.Close();
