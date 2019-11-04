@@ -32,10 +32,10 @@ namespace Memory_Game
         private void AddInfo()
         {
             Information.Text = "The base score for a card match is " + Game.scoreMatchBonus + "." +  Environment.NewLine + Environment.NewLine +
-                "You will get an (increasingly higher) streak bonus if you get multiple matches in a row." + Environment.NewLine + Environment.NewLine +
-            "The bonus streak score for Easy is " + Game.scoreStreakBonusEasy + " with a maximum of " + Game.scoreStreakMaxEasy + " streakscore, and a time bonus multiplier of " + Game.scoreTimeBonusEasy + "." +  Environment.NewLine + Environment.NewLine +
-            "The bonus streak score for Medium is " + Game.scoreStreakBonusMedium + " with a maximum of " + Game.scoreStreakMaxMedium + " streakscore, and a time bonus multiplier of " + Game.scoreTimeBonusMedium + "." + Environment.NewLine + Environment.NewLine  +
-            "The bonus streak score for Medium is " + Game.scoreStreakBonusHard + " with a maximum of " + Game.scoreStreakMaxHard + " streakscore, and a time bonus multiplier of " + Game.scoreTimeBonusHard  + "." + Environment.NewLine + Environment.NewLine ;
+                "You will get an increasingly higher streak bonus if you get multiple matches in a row." + Environment.NewLine + Environment.NewLine +
+            "The starting bonus streak score for Easy is " + Game.scoreStreakBonusEasy + " with a maximum of " + Game.scoreStreakMaxEasy + "." +  Environment.NewLine + Environment.NewLine +
+            "The starting bonus streak score for Medium is " + Game.scoreStreakBonusMedium + " with a maximum of " + Game.scoreStreakMaxMedium + "." + Environment.NewLine + Environment.NewLine  +
+            "The starting bonus streak score for Medium is " + Game.scoreStreakBonusHard + " with a maximum of " + Game.scoreStreakMaxHard + "." + Environment.NewLine + Environment.NewLine ;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
