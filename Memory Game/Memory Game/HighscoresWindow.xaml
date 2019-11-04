@@ -53,7 +53,7 @@
             MouseLeave="MyMouseLeaveEvent"
             />
 
-        <ListView Padding="20" FontSize="24" VerticalContentAlignment="Center" Background="LightGoldenrodYellow" Margin="28,27.6,26.4,15.8" Name="lvDataBinding" Grid.Column="1" Grid.Row="3" BorderBrush="Black" BorderThickness="2">
+        <ListView Padding="20" FontSize="24" VerticalContentAlignment="Center" Background="LightGoldenrodYellow"  Name="lvDataBinding" Grid.Column="1" Grid.Row="3" BorderBrush="Black" BorderThickness="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
@@ -73,7 +73,7 @@
         </ListView>
 
 
-        <ListView Padding="20" FontSize="24" VerticalContentAlignment="Center"   Background="LightGoldenrodYellow" Margin="37.2,27.6,36.4,15.8" x:Name="lvDataBinding_Copy" Grid.Column="3" Grid.Row="3" BorderBrush="Black" BorderThickness="2">
+        <ListView Padding="20" FontSize="24" VerticalContentAlignment="Center"  Background="LightGoldenrodYellow"  x:Name="lvDataBinding_Copy" Grid.Column="3" Grid.Row="3" BorderBrush="Black" BorderThickness="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
