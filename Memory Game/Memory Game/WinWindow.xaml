@@ -32,7 +32,7 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Border BorderThickness="4" Background="#00FFE1" CornerRadius="20" BorderBrush="#FF707070" Grid.ColumnSpan="3">
+        <Border BorderThickness="4" Background="DeepSkyBlue" CornerRadius="20" BorderBrush="#FF707070" Grid.ColumnSpan="3">
             <TextBlock x:Name="PlayerName" TextAlignment="Center" FontWeight="Black" FontSize="24" TextWrapping="Wrap" Text="HIER DISPLAY HIGHSCORE" Margin="6,6,6,39.2"/>
 
 

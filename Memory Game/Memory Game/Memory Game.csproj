@@ -224,6 +224,7 @@
     <Resource Include="img\Window_Backgrounds\bg_cartoon.jpg" />
     <Resource Include="img\volume_button_white.png" />
     <Resource Include="img\volume_muted_white.png" />
+    <Resource Include="img\Window_Backgrounds\bg_menu.png" />
     <Content Include="sounds\bgmusic_easy.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

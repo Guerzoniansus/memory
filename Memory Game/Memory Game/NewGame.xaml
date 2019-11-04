@@ -9,8 +9,10 @@
         Width="1920"
         Height="1080"
         WindowStyle="None"
-        WindowState="Maximized"
-        Background="#00FFE1">
+        WindowState="Maximized">
+    <Window.Background>
+        <ImageBrush ImageSource="/img/Window_Backgrounds/bg_menu.png"/>
+    </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30*"></RowDefinition>
@@ -60,6 +62,7 @@
         <!--Choose mode text-->
         <TextBlock
           Text="Choose mode"
+            Foreground="White"
           HorizontalAlignment="Center"
             VerticalAlignment="Top"
           FontWeight="Bold"
@@ -96,6 +99,7 @@
         <!--Player 1 text-->
         <TextBlock
           Text="Player 1: "
+            Foreground="White"
           FontWeight="Bold"
             FontSize="20"
           HorizontalAlignment="Center"
@@ -122,6 +126,7 @@
             />
         <!--Player 2 text-->
         <TextBlock
+            Foreground="White"
           Text="Player 2: "
           FontSize="20"
           FontWeight="Bold"
@@ -151,6 +156,7 @@
 
         <TextBlock
           Text="Number of Cards"
+            Foreground="White"
           HorizontalAlignment="Center"
             VerticalAlignment="Center"
           FontWeight="Bold"

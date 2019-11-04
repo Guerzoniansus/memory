@@ -9,7 +9,10 @@
         WindowState="Maximized"
      Height="1080" Width="1920"
            MinHeight="400" MinWidth="650">
-    <Grid Background="	#00FFE1">
+    <Window.Background>
+        <ImageBrush ImageSource="/img/Window_Backgrounds/bg_menu.png"/>
+    </Window.Background>
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="89*"/>
             <RowDefinition Height="46*"/>
@@ -91,8 +94,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <TextBlock FontSize="24" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="SINGLEPLAYER" FontWeight="Bold" VerticalAlignment="Top"  />
-        <TextBlock FontSize="24" Grid.Column="3" HorizontalAlignment="Center"  Grid.Row="2" TextWrapping="Wrap"  Text="MULTIPLAYER" FontWeight="Bold" VerticalAlignment="Top"/>
+        <TextBlock Foreground="White" FontSize="36" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="SINGLEPLAYER" FontWeight="Bold" VerticalAlignment="Top"  />
+        <TextBlock Foreground="White" FontSize="36" Grid.Column="3" HorizontalAlignment="Center"  Grid.Row="2" TextWrapping="Wrap"  Text="MULTIPLAYER" FontWeight="Bold" VerticalAlignment="Top"/>
 
 
     </Grid>
