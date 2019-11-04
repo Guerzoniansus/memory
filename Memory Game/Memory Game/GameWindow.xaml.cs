@@ -282,6 +282,7 @@ namespace Memory_Game
             }
 
             SaveUtils.LoadGame();
+            if (isMusicMuted) Game.StopMusic();
             game = Game.GetGame();
             game.SetGameWindow(this);
             UpdateWindow();
