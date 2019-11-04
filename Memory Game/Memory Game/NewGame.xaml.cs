@@ -69,6 +69,8 @@ namespace Memory_Game
             foreach (char letter in letters)
             {
 
+                if (letter == ' ') continue;
+
                 if (!(char.IsLetter(letter)) && (!(char.IsNumber(letter))))
                 {
 
@@ -84,6 +86,8 @@ namespace Memory_Game
 
             foreach (char letter in letters2)
             {
+
+                if (letter == ' ') continue;
 
                 if (!(char.IsLetter(letter)) && (!(char.IsNumber(letter))))
                 {
