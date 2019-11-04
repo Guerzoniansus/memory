@@ -32,6 +32,8 @@ namespace Memory_Game
 
         private ImageSource imageVolume;
         private ImageSource imageVolumeMuted;
+        private ImageSource imageVolumeWhite;
+        private ImageSource imageVolumeMutedWhite;
 
         bool changedBackgroundAndColor;
 
@@ -70,6 +72,8 @@ namespace Memory_Game
 
             imageVolume = new BitmapImage(new Uri("img/volume_button.png", UriKind.Relative));
             imageVolumeMuted = new BitmapImage(new Uri("img/volume_muted.png", UriKind.Relative));
+            imageVolumeWhite = new BitmapImage(new Uri("img/volume_button_white.png", UriKind.Relative));
+            imageVolumeMutedWhite = new BitmapImage(new Uri("img/volume_muted_white.png", UriKind.Relative));
 
         }
 
@@ -105,23 +109,32 @@ namespace Memory_Game
             textDifficulty.Content = "(" + difficulty + ")";
 
             ChangeButtonColors();
-
-            // Do this only once
-            // Later on I decided to do this every time, screw good code
-            if (changedBackgroundAndColor == false || changedBackgroundAndColor == true)
+            
+            // Change the color of the volume button to white 
+            if (game.GetDifficulty() == Difficulty.MEDIUM)
             {
-                SetBackground();
-
-                // Maak alle tekst wit voor neon omdat het anders niet leesbaar is
-                if (game.GetDifficulty() == Difficulty.MEDIUM)
-                {
-                    foreach (Label label in FindLogicalChildren<Label>(this))
-                    {
-                        label.Foreground = Brushes.White;
-                    }
-                }
-
+                VolumeButton.Source = isMusicMuted ? imageVolumeMutedWhite : imageVolumeWhite;
             }
+
+            SetBackground();
+
+            // Maak alle tekst wit voor neon omdat het anders niet leesbaar is
+            if (game.GetDifficulty() == Difficulty.MEDIUM)
+            {
+                foreach (Label label in FindLogicalChildren<Label>(this))
+                {
+                    label.Foreground = Brushes.White;
+                }
+            }
+
+            else
+            {
+                foreach (Label label in FindLogicalChildren<Label>(this))
+                {
+                    label.Foreground = Brushes.Black;
+                }
+            }
+            
         }
 
         /// <summary>
@@ -298,8 +311,13 @@ namespace Memory_Game
         private void VolumeButtonClick(object sender, MouseButtonEventArgs e)
         {
             // Mute or unmute music when clicked on the icon
-            if (isMusicMuted) Game.PlayMusic(); else Game.StopMusic();
-            VolumeButton.Source = isMusicMuted ? imageVolume : imageVolumeMuted;    
+            if (isMusicMuted) Game.PlayMusic();
+            else Game.StopMusic();
+
+            if (game.GetDifficulty() == Difficulty.MEDIUM)
+                VolumeButton.Source = isMusicMuted ? imageVolumeWhite : imageVolumeMutedWhite;
+            else VolumeButton.Source = isMusicMuted ? imageVolume : imageVolumeMuted;   
+            
             isMusicMuted = isMusicMuted ? false : true;
 
         }

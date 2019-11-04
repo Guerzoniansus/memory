@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -218,6 +222,8 @@
     <Resource Include="img\Backgrounds\HardBackground.png" />
     <Resource Include="img\Backgrounds\MediumBackground.png" />
     <Resource Include="img\Window_Backgrounds\bg_cartoon.jpg" />
+    <Resource Include="img\volume_button_white.png" />
+    <Resource Include="img\volume_muted_white.png" />
     <Content Include="sounds\bgmusic_easy.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
