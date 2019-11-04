@@ -1,0 +1,93 @@
+version: 1
+game:
+  player1: Player 1
+  player2: Player 2
+  difficulty: easy
+  isMultiplayer: True
+  time: 20
+  turn: Player 1
+  amountOfCards: 16
+  scorePlayer1: 0
+  scorePlayer2: 0
+cards:
+  0:
+    frontImageUrl: /img/EASY/8.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  1:
+    frontImageUrl: /img/EASY/7.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  2:
+    frontImageUrl: /img/EASY/2.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  3:
+    frontImageUrl: /img/EASY/7.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  4:
+    frontImageUrl: /img/EASY/1.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  5:
+    frontImageUrl: /img/EASY/3.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  6:
+    frontImageUrl: /img/EASY/4.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  7:
+    frontImageUrl: /img/EASY/8.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  8:
+    frontImageUrl: /img/EASY/4.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  9:
+    frontImageUrl: /img/EASY/5.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  10:
+    frontImageUrl: /img/EASY/5.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  11:
+    frontImageUrl: /img/EASY/2.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  12:
+    frontImageUrl: /img/EASY/6.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  13:
+    frontImageUrl: /img/EASY/1.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  14:
+    frontImageUrl: /img/EASY/3.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+  15:
+    frontImageUrl: /img/EASY/6.png
+    backImageUrl: /img/Backgrounds/EASYBackground.png
+    flipped: False
+    found: False
+...

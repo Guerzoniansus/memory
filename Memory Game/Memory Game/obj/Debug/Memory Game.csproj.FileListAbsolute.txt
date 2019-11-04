@@ -171,3 +171,8 @@ C:\Users\warfu\Documents\GitHub\memory\Memory Game\Memory Game\obj\Debug\Highsco
 C:\Users\warfu\Documents\GitHub\memory\Memory Game\Memory Game\obj\Debug\QuitConfirm.baml
 C:\Users\warfu\Documents\GitHub\memory\Memory Game\Memory Game\obj\Debug\Rules.baml
 C:\Users\warfu\Documents\GitHub\memory\Memory Game\Memory Game\obj\Debug\WinWindow.baml
+C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\bin\Debug\Memory Game.exe.manifest
+C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\bin\Debug\Memory Game.application
+C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\Memory Game.exe.manifest
+C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\Memory Game.application
+C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\bin\Debug\memory.yaml
