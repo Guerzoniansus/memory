@@ -35,7 +35,7 @@ namespace Memory_Game
                 "You will get an increasingly higher streak bonus if you get multiple matches in a row." + Environment.NewLine + Environment.NewLine +
             "The starting bonus streak score for Easy is " + Game.scoreStreakBonusEasy + " with a maximum of " + Game.scoreStreakMaxEasy + "." +  Environment.NewLine + Environment.NewLine +
             "The starting bonus streak score for Medium is " + Game.scoreStreakBonusMedium + " with a maximum of " + Game.scoreStreakMaxMedium + "." + Environment.NewLine + Environment.NewLine  +
-            "The starting bonus streak score for Medium is " + Game.scoreStreakBonusHard + " with a maximum of " + Game.scoreStreakMaxHard + "." + Environment.NewLine + Environment.NewLine ;
+            "The starting bonus streak score for Hard is " + Game.scoreStreakBonusHard + " with a maximum of " + Game.scoreStreakMaxHard + "." + Environment.NewLine + Environment.NewLine ;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
