@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("highscores.yaml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("memory.yaml")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/bgmusic_easy.wav")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/bgmusic_hard.wav")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/bgmusic_medium.wav")]

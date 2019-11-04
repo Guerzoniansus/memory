@@ -90,7 +90,6 @@ C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memo
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\Memory Game_MarkupCompile.lref
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\Memory Game.exe
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\Memory Game.pdb
-C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\bin\Debug\highscores.yaml
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\bin\Debug\sounds\click.wav
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\bin\Debug\sounds\flip_card.wav
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\bin\Debug\sounds\flip_card_wrong.wav
@@ -175,4 +174,5 @@ C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memo
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\bin\Debug\Memory Game.application
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\Memory Game.exe.manifest
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\obj\Debug\Memory Game.application
+C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\bin\Debug\highscores.yaml
 C:\Users\Weezi\OneDrive\Bureaublad\School\Memory project\memory\Memory Game\Memory Game\bin\Debug\memory.yaml

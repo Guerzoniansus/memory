@@ -23,7 +23,7 @@
     </Window.Triggers>
 
     <Grid>
-        <Border BorderThickness="4" Background="#00FFE1" CornerRadius="20" Grid.RowSpan="2" BorderBrush="#FF707070">
+        <Border BorderThickness="4" Background="DeepSkyBlue" CornerRadius="20" Grid.RowSpan="2" BorderBrush="#FF707070">
  
         </Border>
         <Label
